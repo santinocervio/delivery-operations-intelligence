@@ -1,0 +1,461 @@
+family,segment,stage,label,orders,dates,mean_min,p90_min,share_total_time
+demand_band_supply_band,High | High,t_created_to_notify_min,Creation to final rider notification,210367,31,11.584996147508797,25.21363022,0.4380095759140024
+demand_band_supply_band,High | High,t_notify_to_accept_min,Final rider notification to acceptance,210367,31,0.23789323082636535,0.5210131299999999,0.008994350263074963
+demand_band_supply_band,High | High,t_accept_to_pu_arrival_min,Final rider approach to merchant,210367,31,2.890159471573885,6.178534053333332,0.10927215756909284
+demand_band_supply_band,High | High,t_wait_at_pu_min,Final rider waiting at pickup,210367,31,4.7445827295947085,10.193421476666666,0.17938483904680128
+demand_band_supply_band,High | High,t_last_mile_min,Pickup to destination arrival,210367,31,6.991553060658911,12.182806186666667,0.2643390772070285
+demand_band_supply_band,High | Medium,t_created_to_notify_min,Creation to final rider notification,23693,23,10.226506347983934,23.440006889999996,0.3930741870752787
+demand_band_supply_band,High | Medium,t_notify_to_accept_min,Final rider notification to acceptance,23693,23,0.25378755815501064,0.5572886333333333,0.009754781810825074
+demand_band_supply_band,High | Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,23693,23,3.410365909134203,7.037935436666666,0.131083555003752
+demand_band_supply_band,High | Medium,t_wait_at_pu_min,Final rider waiting at pickup,23693,23,4.494211317704948,9.49486106,0.17274310503896093
+demand_band_supply_band,High | Medium,t_last_mile_min,Pickup to destination arrival,23693,23,7.631862308807102,13.273360956666664,0.29334437107118333
+demand_band_supply_band,Low | Low,t_created_to_notify_min,Creation to final rider notification,6909,32,8.192636272591304,20.02834346333333,0.34444428435353397
+demand_band_supply_band,Low | Low,t_notify_to_accept_min,Final rider notification to acceptance,6909,32,0.25578883954021325,0.5565503466666665,0.010754170068041158
+demand_band_supply_band,Low | Low,t_accept_to_pu_arrival_min,Final rider approach to merchant,6909,32,4.604739321539538,8.824157549999999,0.19359777335026163
+demand_band_supply_band,Low | Low,t_wait_at_pu_min,Final rider waiting at pickup,6909,32,4.21335273633425,8.821197153333332,0.17714264611635497
+demand_band_supply_band,Low | Low,t_last_mile_min,Pickup to destination arrival,6909,32,6.518566934286197,11.379233359999999,0.2740611261118081
+demand_band_supply_band,Low | Medium,t_created_to_notify_min,Creation to final rider notification,1700,17,8.684391643813726,20.927912338333353,0.3818602062346822
+demand_band_supply_band,Low | Medium,t_notify_to_accept_min,Final rider notification to acceptance,1700,17,0.2606693880784314,0.5871397150000003,0.011461858282451415
+demand_band_supply_band,Low | Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,1700,17,3.436292503215686,6.723328378333334,0.15109675124973895
+demand_band_supply_band,Low | Medium,t_wait_at_pu_min,Final rider waiting at pickup,1700,17,4.192203704892156,9.043916485000002,0.18433482009856883
+demand_band_supply_band,Low | Medium,t_last_mile_min,Pickup to destination arrival,1700,17,6.168774906745098,10.268805185000002,0.27124636413455855
+demand_band_supply_band,Low | Unknown,t_created_to_notify_min,Creation to final rider notification,7,4,70.47460079285715,120.96256337,0.7699086309851323
+demand_band_supply_band,Low | Unknown,t_notify_to_accept_min,Final rider notification to acceptance,7,4,0.1623991904761905,0.34087062333333334,0.0017741503606401423
+demand_band_supply_band,Low | Unknown,t_accept_to_pu_arrival_min,Final rider approach to merchant,7,4,10.936158347619047,15.617565290000003,0.11947343591771559
+demand_band_supply_band,Low | Unknown,t_wait_at_pu_min,Final rider waiting at pickup,7,4,3.0423560142857142,6.530896176666669,0.033236600528079925
+demand_band_supply_band,Low | Unknown,t_last_mile_min,Pickup to destination arrival,7,4,6.920803026190476,10.948525666666667,0.07560718220843218
+demand_band_supply_band,Medium | High,t_created_to_notify_min,Creation to final rider notification,8162,17,10.975885034766804,25.746393816666675,0.4587428090537558
+demand_band_supply_band,Medium | High,t_notify_to_accept_min,Final rider notification to acceptance,8162,17,0.23725644254471948,0.5326262016666667,0.009916256099103543
+demand_band_supply_band,Medium | High,t_accept_to_pu_arrival_min,Final rider approach to merchant,8162,17,2.882254823997386,5.885371951666667,0.1204653356135842
+demand_band_supply_band,Medium | High,t_wait_at_pu_min,Final rider waiting at pickup,8162,17,3.893288703734787,8.437478051666668,0.16272202111731557
+demand_band_supply_band,Medium | High,t_last_mile_min,Pickup to destination arrival,8162,17,5.937324990419015,10.096990283333334,0.2481535781162408
+demand_band_supply_band,Medium | Low,t_created_to_notify_min,Creation to final rider notification,12294,31,6.690977409192832,17.49103922166667,0.30023767595313455
+demand_band_supply_band,Medium | Low,t_notify_to_accept_min,Final rider notification to acceptance,12294,31,0.244918580182745,0.5362486000000005,0.010989991568463474
+demand_band_supply_band,Medium | Low,t_accept_to_pu_arrival_min,Final rider approach to merchant,12294,31,4.097753629696057,7.787800086666667,0.18387448517135008
+demand_band_supply_band,Medium | Low,t_wait_at_pu_min,Final rider waiting at pickup,12294,31,4.198295830043111,8.900657270000007,0.18838601685369294
+demand_band_supply_band,Medium | Low,t_last_mile_min,Pickup to destination arrival,12294,31,7.053656742387885,12.529237445000003,0.31651183045335896
+demand_band_supply_band,Medium | Medium,t_created_to_notify_min,Creation to final rider notification,69246,31,8.589253978158787,20.939251575,0.34990389805079947
+demand_band_supply_band,Medium | Medium,t_notify_to_accept_min,Final rider notification to acceptance,69246,31,0.26698796631887284,0.5755449166666666,0.01087639629532237
+demand_band_supply_band,Medium | Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,69246,31,3.4831321481260047,7.16102925,0.14189375691468378
+demand_band_supply_band,Medium | Medium,t_wait_at_pu_min,Final rider waiting at pickup,69246,31,4.403851812326825,9.245433108333334,0.17940148463295877
+demand_band_supply_band,Medium | Medium,t_last_mile_min,Pickup to destination arrival,69246,31,7.804239916418518,13.797406775,0.3179244641062356
+relative_demand_band_relative_supply_band,High | High,t_created_to_notify_min,Creation to final rider notification,98120,23,9.635082131993817,22.07224525166667,0.3864455926650568
+relative_demand_band_relative_supply_band,High | High,t_notify_to_accept_min,Final rider notification to acceptance,98120,23,0.2517547710521131,0.5452449600000001,0.010097425260386142
+relative_demand_band_relative_supply_band,High | High,t_accept_to_pu_arrival_min,Final rider approach to merchant,98120,23,2.9915040231913306,6.466906486666668,0.11998377692737423
+relative_demand_band_relative_supply_band,High | High,t_wait_at_pu_min,Final rider waiting at pickup,98120,23,4.734702205659397,10.046570753333338,0.18990028054695687
+relative_demand_band_relative_supply_band,High | High,t_last_mile_min,Pickup to destination arrival,98120,23,7.319527752266103,12.814151568333335,0.29357292460022594
+relative_demand_band_relative_supply_band,High | Low,t_created_to_notify_min,Creation to final rider notification,3170,5,8.254624024484752,19.26286792833333,0.35772512858982103
+relative_demand_band_relative_supply_band,High | Low,t_notify_to_accept_min,Final rider notification to acceptance,3170,5,0.23536357605678235,0.502315505,0.010199794110614023
+relative_demand_band_relative_supply_band,High | Low,t_accept_to_pu_arrival_min,Final rider approach to merchant,3170,5,3.0394513495057836,6.323568151666667,0.13171867326959563
+relative_demand_band_relative_supply_band,High | Low,t_wait_at_pu_min,Final rider waiting at pickup,3170,5,4.638523275914826,9.822393004999999,0.20101658542190026
+relative_demand_band_relative_supply_band,High | Low,t_last_mile_min,Pickup to destination arrival,3170,5,6.907363952618296,12.034549703333333,0.2993398186080691
+relative_demand_band_relative_supply_band,High | Medium,t_created_to_notify_min,Creation to final rider notification,27345,20,9.128754898410435,21.02785286666667,0.37780806473170675
+relative_demand_band_relative_supply_band,High | Medium,t_notify_to_accept_min,Final rider notification to acceptance,27345,20,0.2515256712598281,0.5410907766666666,0.010409790617290665
+relative_demand_band_relative_supply_band,High | Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,27345,20,2.89498394594929,6.301669746666667,0.11981352267864182
+relative_demand_band_relative_supply_band,High | Medium,t_wait_at_pu_min,Final rider waiting at pickup,27345,20,4.813652335024686,10.205351466666675,0.1992206706419089
+relative_demand_band_relative_supply_band,High | Medium,t_last_mile_min,Pickup to destination arrival,27345,20,7.073497217708295,12.359078096666668,0.292747951330452
+relative_demand_band_relative_supply_band,High | Unknown,t_created_to_notify_min,Creation to final rider notification,6,3,82.12439968333332,122.71203703333333,0.7953517325750367
+relative_demand_band_relative_supply_band,High | Unknown,t_notify_to_accept_min,Final rider notification to acceptance,6,3,0.13770036944444447,0.25133921666666664,0.0013335893819153
+relative_demand_band_relative_supply_band,High | Unknown,t_accept_to_pu_arrival_min,Final rider approach to merchant,6,3,10.552767491666666,15.786791341666667,0.1022005876490072
+relative_demand_band_relative_supply_band,High | Unknown,t_wait_at_pu_min,Final rider waiting at pickup,6,3,3.3833173055555554,7.520366641666667,0.032766477334394736
+relative_demand_band_relative_supply_band,High | Unknown,t_last_mile_min,Pickup to destination arrival,6,3,7.0572634249999995,11.134640675,0.06834761305964608
+relative_demand_band_relative_supply_band,Low | High,t_created_to_notify_min,Creation to final rider notification,5788,8,21.931462757486752,45.50717399333334,0.6137547445998347
+relative_demand_band_relative_supply_band,Low | High,t_notify_to_accept_min,Final rider notification to acceptance,5788,8,0.20035512857060583,0.4582438116666667,0.005606963480953466
+relative_demand_band_relative_supply_band,Low | High,t_accept_to_pu_arrival_min,Final rider approach to merchant,5788,8,3.1476016805949087,6.2014219383333336,0.08808602905048184
+relative_demand_band_relative_supply_band,Low | High,t_wait_at_pu_min,Final rider waiting at pickup,5788,8,4.61554548317496,10.439956611666668,0.12916662105667936
+relative_demand_band_relative_supply_band,Low | High,t_last_mile_min,Pickup to destination arrival,5788,8,5.8383029215445745,10.070235636666668,0.16338564181205065
+relative_demand_band_relative_supply_band,Low | Low,t_created_to_notify_min,Creation to final rider notification,61052,25,12.263294171288685,27.314077305000005,0.4501707526184548
+relative_demand_band_relative_supply_band,Low | Low,t_notify_to_accept_min,Final rider notification to acceptance,61052,25,0.23737123521779246,0.5246458200000003,0.008713612029151609
+relative_demand_band_relative_supply_band,Low | Low,t_accept_to_pu_arrival_min,Final rider approach to merchant,61052,25,3.3912578822400032,6.86658227,0.12448899062908333
+relative_demand_band_relative_supply_band,Low | Low,t_wait_at_pu_min,Final rider waiting at pickup,61052,25,4.297288533623797,9.248210976666666,0.15774828413797992
+relative_demand_band_relative_supply_band,Low | Low,t_last_mile_min,Pickup to destination arrival,61052,25,7.052216235668228,12.338563096666666,0.25887836058533037
+relative_demand_band_relative_supply_band,Low | Medium,t_created_to_notify_min,Creation to final rider notification,26621,25,12.424146728227715,27.16698575,0.4508964738837227
+relative_demand_band_relative_supply_band,Low | Medium,t_notify_to_accept_min,Final rider notification to acceptance,26621,25,0.24163354726093436,0.5361814333333333,0.008769351877053449
+relative_demand_band_relative_supply_band,Low | Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,26621,25,3.3416132599126,6.8724716,0.12127365113568767
+relative_demand_band_relative_supply_band,Low | Medium,t_wait_at_pu_min,Final rider waiting at pickup,26621,25,4.378173973211625,9.391091633333334,0.15889245754683815
+relative_demand_band_relative_supply_band,Low | Medium,t_last_mile_min,Pickup to destination arrival,26621,25,7.168754709111229,12.645062083333332,0.2601680655566982
+relative_demand_band_relative_supply_band,Medium | High,t_created_to_notify_min,Creation to final rider notification,20114,21,11.99593333971612,26.38266412833334,0.43883860942477265
+relative_demand_band_relative_supply_band,Medium | High,t_notify_to_accept_min,Final rider notification to acceptance,20114,21,0.23777142584186803,0.5236103850000002,0.008698221215679085
+relative_demand_band_relative_supply_band,Medium | High,t_accept_to_pu_arrival_min,Final rider approach to merchant,20114,21,3.3248130176991153,6.856251163333334,0.12162924550887759
+relative_demand_band_relative_supply_band,Medium | High,t_wait_at_pu_min,Final rider waiting at pickup,20114,21,4.517708178459447,9.634390911666673,0.16526807199388646
+relative_demand_band_relative_supply_band,Medium | High,t_last_mile_min,Pickup to destination arrival,20114,21,7.259411974608895,12.814726788333335,0.2655658518567843
+relative_demand_band_relative_supply_band,Medium | Low,t_created_to_notify_min,Creation to final rider notification,36143,25,9.424027174868806,21.380848573333328,0.3860817342123078
+relative_demand_band_relative_supply_band,Medium | Low,t_notify_to_accept_min,Final rider notification to acceptance,36143,25,0.24123917693882632,0.5249883766666666,0.009883040240043496
+relative_demand_band_relative_supply_band,Medium | Low,t_accept_to_pu_arrival_min,Final rider approach to merchant,36143,25,3.177944940963672,6.578775123333332,0.13019343761130073
+relative_demand_band_relative_supply_band,Medium | Low,t_wait_at_pu_min,Final rider waiting at pickup,36143,25,4.535901308867093,9.686415333333333,0.18582593312265816
+relative_demand_band_relative_supply_band,Medium | Low,t_last_mile_min,Pickup to destination arrival,36143,25,7.030296960551605,12.221669809999998,0.2880158548136897
+relative_demand_band_relative_supply_band,Medium | Medium,t_created_to_notify_min,Creation to final rider notification,54018,24,9.40264783778247,21.70642099833334,0.3799699867356136
+relative_demand_band_relative_supply_band,Medium | Medium,t_notify_to_accept_min,Final rider notification to acceptance,54018,24,0.25531413231021755,0.5568354700000001,0.010317488131110036
+relative_demand_band_relative_supply_band,Medium | Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,54018,24,3.02248376606193,6.492702993333334,0.12214145805656501
+relative_demand_band_relative_supply_band,Medium | Medium,t_wait_at_pu_min,Final rider waiting at pickup,54018,24,4.7729439510181795,10.072380301666668,0.19287922732474905
+relative_demand_band_relative_supply_band,Medium | Medium,t_last_mile_min,Pickup to destination arrival,54018,24,7.2923748890302,12.76569935166667,0.2946918397519624
+relative_demand_band_relative_supply_band,Medium | Unknown,t_created_to_notify_min,Creation to final rider notification,1,1,0.57580745,0.57580745,0.027133170751134205
+relative_demand_band_relative_supply_band,Medium | Unknown,t_notify_to_accept_min,Final rider notification to acceptance,1,1,0.31059211666666664,0.31059211666666664,0.014635706668041308
+relative_demand_band_relative_supply_band,Medium | Unknown,t_accept_to_pu_arrival_min,Final rider approach to merchant,1,1,13.236503483333333,13.236503483333333,0.6237298756055796
+relative_demand_band_relative_supply_band,Medium | Unknown,t_wait_at_pu_min,Final rider waiting at pickup,1,1,0.9965882666666667,0.9965882666666667,0.046961184000039485
+relative_demand_band_relative_supply_band,Medium | Unknown,t_last_mile_min,Pickup to destination arrival,1,1,6.102040633333333,6.102040633333333,0.2875400629752054
+lluvia_hora_num,Drizzle | 0,t_created_to_notify_min,Creation to final rider notification,303,1,6.83947843179318,14.83486801,0.32666415010152555
+lluvia_hora_num,Drizzle | 0,t_notify_to_accept_min,Final rider notification to acceptance,303,1,0.22703200544554455,0.5455339233333334,0.010843402438403415
+lluvia_hora_num,Drizzle | 0,t_accept_to_pu_arrival_min,Final rider approach to merchant,303,1,3.4923476181518156,6.742482756666667,0.16679996551192391
+lluvia_hora_num,Drizzle | 0,t_wait_at_pu_min,Final rider waiting at pickup,303,1,3.739186042464247,7.6662049066666675,0.17858935338623871
+lluvia_hora_num,Drizzle | 0,t_last_mile_min,Pickup to destination arrival,303,1,6.6392960714521445,10.956697763333334,0.31710312856190837
+lluvia_hora_num,Drizzle | 1,t_created_to_notify_min,Creation to final rider notification,209,1,5.31579975,11.281584080000002,0.25354114389224675
+lluvia_hora_num,Drizzle | 1,t_notify_to_accept_min,Final rider notification to acceptance,209,1,0.22656068341307814,0.4926331666666668,0.010805985465039575
+lluvia_hora_num,Drizzle | 1,t_accept_to_pu_arrival_min,Final rider approach to merchant,209,1,3.782777462519936,6.547474336666666,0.1804224707556215
+lluvia_hora_num,Drizzle | 1,t_wait_at_pu_min,Final rider waiting at pickup,209,1,4.349440047767144,9.623178683333334,0.2074498771330937
+lluvia_hora_num,Drizzle | 1,t_last_mile_min,Pickup to destination arrival,209,1,7.291643429266347,12.446716003333337,0.34778052275399846
+lluvia_hora_num,Drizzle | 2,t_created_to_notify_min,Creation to final rider notification,97,3,5.221738601030928,12.572127920000007,0.23959996085353827
+lluvia_hora_num,Drizzle | 2,t_notify_to_accept_min,Final rider notification to acceptance,97,3,0.269400856185567,0.47852299333333337,0.012361483315772977
+lluvia_hora_num,Drizzle | 2,t_accept_to_pu_arrival_min,Final rider approach to merchant,97,3,4.727027443642611,8.425289296666671,0.21690009343377747
+lluvia_hora_num,Drizzle | 2,t_wait_at_pu_min,Final rider waiting at pickup,97,3,4.382398784020618,10.158373103333334,0.2010867753680025
+lluvia_hora_num,Drizzle | 2,t_last_mile_min,Pickup to destination arrival,97,3,7.193004658075602,11.494402446666669,0.33005168702890897
+lluvia_hora_num,Drizzle | 3,t_created_to_notify_min,Creation to final rider notification,9,3,51.36248713888889,87.41974119333335,0.7432624911904725
+lluvia_hora_num,Drizzle | 3,t_notify_to_accept_min,Final rider notification to acceptance,9,3,0.29549433703703704,0.6520373066666667,0.004276075192482909
+lluvia_hora_num,Drizzle | 3,t_accept_to_pu_arrival_min,Final rider approach to merchant,9,3,7.230225512962964,10.708989853333335,0.10462802184991732
+lluvia_hora_num,Drizzle | 3,t_wait_at_pu_min,Final rider waiting at pickup,9,3,2.7891619833333334,4.228683356666667,0.040361742578008244
+lluvia_hora_num,Drizzle | 3,t_last_mile_min,Pickup to destination arrival,9,3,7.426733209259258,9.951333170000002,0.10747166918911906
+lluvia_hora_num,Drizzle | 6,t_created_to_notify_min,Creation to final rider notification,7,1,30.02709821428571,41.51991279333333,0.5912979324151455
+lluvia_hora_num,Drizzle | 6,t_notify_to_accept_min,Final rider notification to acceptance,7,1,0.4467702952380953,0.9486586533333335,0.00879786484706358
+lluvia_hora_num,Drizzle | 6,t_accept_to_pu_arrival_min,Final rider approach to merchant,7,1,8.11796997142857,14.303619810000002,0.15986023109053654
+lluvia_hora_num,Drizzle | 6,t_wait_at_pu_min,Final rider waiting at pickup,7,1,4.5186939952380945,9.925678960000004,0.08898277141311764
+lluvia_hora_num,Drizzle | 6,t_last_mile_min,Pickup to destination arrival,7,1,7.671140464285713,9.203574173333333,0.15106120023413666
+lluvia_hora_num,Drizzle | 7,t_created_to_notify_min,Creation to final rider notification,53,2,21.54655544559748,44.24224137000004,0.5413141039378689
+lluvia_hora_num,Drizzle | 7,t_notify_to_accept_min,Final rider notification to acceptance,53,2,0.33832434245283016,0.92235478,0.008499722321631816
+lluvia_hora_num,Drizzle | 7,t_accept_to_pu_arrival_min,Final rider approach to merchant,53,2,5.728747770125786,8.74347584,0.1439233279630935
+lluvia_hora_num,Drizzle | 7,t_wait_at_pu_min,Final rider waiting at pickup,53,2,5.509476706603773,12.676840650000004,0.13841458112095387
+lluvia_hora_num,Drizzle | 7,t_last_mile_min,Pickup to destination arrival,53,2,6.681059877358491,12.030565456666668,0.16784826465645186
+lluvia_hora_num,Drizzle | 8,t_created_to_notify_min,Creation to final rider notification,112,1,4.511188201934524,9.161318280000003,0.22631744786004612
+lluvia_hora_num,Drizzle | 8,t_notify_to_accept_min,Final rider notification to acceptance,112,1,0.2988962313988095,0.6375760166666669,0.014995036615000033
+lluvia_hora_num,Drizzle | 8,t_accept_to_pu_arrival_min,Final rider approach to merchant,112,1,4.996310582589286,8.160429183333333,0.25065508445931145
+lluvia_hora_num,Drizzle | 8,t_wait_at_pu_min,Final rider waiting at pickup,112,1,4.095962488392857,7.657717700000002,0.20548638970682642
+lluvia_hora_num,Drizzle | 8,t_last_mile_min,Pickup to destination arrival,112,1,6.030653602827381,10.394223865000003,0.30254604135881596
+lluvia_hora_num,Drizzle | 9,t_created_to_notify_min,Creation to final rider notification,237,1,5.267412179043601,13.804952500000004,0.2620902395863337
+lluvia_hora_num,Drizzle | 9,t_notify_to_accept_min,Final rider notification to acceptance,237,1,0.2502559486638537,0.5121089600000002,0.012451966793896069
+lluvia_hora_num,Drizzle | 9,t_accept_to_pu_arrival_min,Final rider approach to merchant,237,1,3.7163279298874823,6.637171940000001,0.18491305491541096
+lluvia_hora_num,Drizzle | 9,t_wait_at_pu_min,Final rider waiting at pickup,237,1,4.439954486216596,9.949217723333334,0.22091848814766785
+lluvia_hora_num,Drizzle | 9,t_last_mile_min,Pickup to destination arrival,237,1,6.423753923769339,11.076950790000001,0.31962625055669136
+lluvia_hora_num,Drizzle | 10,t_created_to_notify_min,Creation to final rider notification,600,2,5.211789470333333,13.652367593333334,0.24998099614120345
+lluvia_hora_num,Drizzle | 10,t_notify_to_accept_min,Final rider notification to acceptance,600,2,0.2510824618055556,0.5524188699999999,0.012043050524779565
+lluvia_hora_num,Drizzle | 10,t_accept_to_pu_arrival_min,Final rider approach to merchant,600,2,3.4909462056944447,6.830529856666667,0.16744156972231614
+lluvia_hora_num,Drizzle | 10,t_wait_at_pu_min,Final rider waiting at pickup,600,2,4.46461196825,9.486230761666667,0.21414298362587025
+lluvia_hora_num,Drizzle | 10,t_last_mile_min,Pickup to destination arrival,600,2,7.4303126015,12.326564723333338,0.3563913999858306
+lluvia_hora_num,Drizzle | 12,t_created_to_notify_min,Creation to final rider notification,1641,2,11.80785911275645,25.22600225,0.4188496020506857
+lluvia_hora_num,Drizzle | 12,t_notify_to_accept_min,Final rider notification to acceptance,1641,2,0.24579384816169003,0.5516900166666667,0.008718824852661842
+lluvia_hora_num,Drizzle | 12,t_accept_to_pu_arrival_min,Final rider approach to merchant,1641,2,3.6939879451350803,7.4311880666666665,0.13103352318358338
+lluvia_hora_num,Drizzle | 12,t_wait_at_pu_min,Final rider waiting at pickup,1641,2,4.410640279037172,8.968418033333334,0.15645468903568122
+lluvia_hora_num,Drizzle | 12,t_last_mile_min,Pickup to destination arrival,1641,2,8.032885894799918,13.783374316666668,0.2849433608773877
+lluvia_hora_num,Drizzle | 13,t_created_to_notify_min,Creation to final rider notification,1537,2,12.896777201008456,26.675076830000002,0.448549155890192
+lluvia_hora_num,Drizzle | 13,t_notify_to_accept_min,Final rider notification to acceptance,1537,2,0.2333428807742355,0.5194389633333335,0.008115651730114774
+lluvia_hora_num,Drizzle | 13,t_accept_to_pu_arrival_min,Final rider approach to merchant,1537,2,3.4794442856755583,6.909218723333334,0.12101486851960856
+lluvia_hora_num,Drizzle | 13,t_wait_at_pu_min,Final rider waiting at pickup,1537,2,4.329363487432227,9.23731238333334,0.1505750085903395
+lluvia_hora_num,Drizzle | 13,t_last_mile_min,Pickup to destination arrival,1537,2,7.813276962914769,13.64824841666667,0.27174531526974505
+lluvia_hora_num,Drizzle | 14,t_created_to_notify_min,Creation to final rider notification,2000,3,10.83372983425,23.184625463333337,0.4125704307589719
+lluvia_hora_num,Drizzle | 14,t_notify_to_accept_min,Final rider notification to acceptance,2000,3,0.25336475975833334,0.5299808600000003,0.009648644527037486
+lluvia_hora_num,Drizzle | 14,t_accept_to_pu_arrival_min,Final rider approach to merchant,2000,3,3.31406633895,6.896190091666668,0.1262063756382259
+lluvia_hora_num,Drizzle | 14,t_wait_at_pu_min,Final rider waiting at pickup,2000,3,4.128051070516667,8.594780633333334,0.15720456707105987
+lluvia_hora_num,Drizzle | 14,t_last_mile_min,Pickup to destination arrival,2000,3,7.729891961683333,13.734575208333336,0.2943699820047049
+lluvia_hora_num,Drizzle | 15,t_created_to_notify_min,Creation to final rider notification,1312,3,13.816425666425305,30.907916003333334,0.46817824724720647
+lluvia_hora_num,Drizzle | 15,t_notify_to_accept_min,Final rider notification to acceptance,1312,3,0.26602967472052846,0.6029759533333335,0.00901458234086283
+lluvia_hora_num,Drizzle | 15,t_accept_to_pu_arrival_min,Final rider approach to merchant,1312,3,3.655081126003557,7.985514306666677,0.12385471586020078
+lluvia_hora_num,Drizzle | 15,t_wait_at_pu_min,Final rider waiting at pickup,1312,3,3.997639900660569,8.397743518333336,0.13546253473971023
+lluvia_hora_num,Drizzle | 15,t_last_mile_min,Pickup to destination arrival,1312,3,7.77586082296748,14.216575225000001,0.26348991981201975
+lluvia_hora_num,Drizzle | 16,t_created_to_notify_min,Creation to final rider notification,668,2,22.580288981462076,52.19108932833337,0.6130765946038744
+lluvia_hora_num,Drizzle | 16,t_notify_to_accept_min,Final rider notification to acceptance,668,2,0.20446346504491017,0.4844956766666667,0.005551380009952614
+lluvia_hora_num,Drizzle | 16,t_accept_to_pu_arrival_min,Final rider approach to merchant,668,2,3.612507026297405,7.545482646666668,0.09808304523840408
+lluvia_hora_num,Drizzle | 16,t_wait_at_pu_min,Final rider waiting at pickup,668,2,3.678494389670658,8.459626371666673,0.09987466571132962
+lluvia_hora_num,Drizzle | 16,t_last_mile_min,Pickup to destination arrival,668,2,6.755352038822355,11.878582501666669,0.18341431443643924
+lluvia_hora_num,Drizzle | 17,t_created_to_notify_min,Creation to final rider notification,793,2,12.041512880559058,25.950054976666678,0.42515291069301325
+lluvia_hora_num,Drizzle | 17,t_notify_to_accept_min,Final rider notification to acceptance,793,2,0.23036229823455237,0.5190865566666673,0.008133463176913103
+lluvia_hora_num,Drizzle | 17,t_accept_to_pu_arrival_min,Final rider approach to merchant,793,2,3.8603680218579233,7.652309406666669,0.13629904457345288
+lluvia_hora_num,Drizzle | 17,t_wait_at_pu_min,Final rider waiting at pickup,793,2,4.2254598504833965,8.885211193333342,0.149189439256413
+lluvia_hora_num,Drizzle | 17,t_last_mile_min,Pickup to destination arrival,793,2,7.965078182870953,13.81595674000002,0.2812251423002075
+lluvia_hora_num,Drizzle | 18,t_created_to_notify_min,Creation to final rider notification,990,2,11.56592640661616,28.048304905000002,0.42371058269038664
+lluvia_hora_num,Drizzle | 18,t_notify_to_accept_min,Final rider notification to acceptance,990,2,0.2687150159259259,0.5953580500000002,0.009844208926532658
+lluvia_hora_num,Drizzle | 18,t_accept_to_pu_arrival_min,Final rider approach to merchant,990,2,3.3271135772390577,7.063637450000002,0.1218867545000663
+lluvia_hora_num,Drizzle | 18,t_wait_at_pu_min,Final rider waiting at pickup,990,2,4.34014266611111,9.299628851666666,0.15899845056643172
+lluvia_hora_num,Drizzle | 18,t_last_mile_min,Pickup to destination arrival,990,2,7.794863092777777,13.36371246,0.2855600033165826
+lluvia_hora_num,Drizzle | 19,t_created_to_notify_min,Creation to final rider notification,2949,3,12.814992603554881,26.552899756666676,0.45322570346775476
+lluvia_hora_num,Drizzle | 19,t_notify_to_accept_min,Final rider notification to acceptance,2949,3,0.22568133911495422,0.48847418000000004,0.007981634234540744
+lluvia_hora_num,Drizzle | 19,t_accept_to_pu_arrival_min,Final rider approach to merchant,2949,3,3.0730144031197013,6.431186073333335,0.10868278724047915
+lluvia_hora_num,Drizzle | 19,t_wait_at_pu_min,Final rider waiting at pickup,2949,3,4.714323379710636,10.084999053333334,0.16673068773766817
+lluvia_hora_num,Drizzle | 19,t_last_mile_min,Pickup to destination arrival,2949,3,7.447067347694134,12.537162283333334,0.2633791873195572
+lluvia_hora_num,Drizzle | 20,t_created_to_notify_min,Creation to final rider notification,4341,3,14.533295945051064,29.49289475,0.4903143781124839
+lluvia_hora_num,Drizzle | 20,t_notify_to_accept_min,Final rider notification to acceptance,4341,3,0.21489661500038393,0.49083583333333336,0.007250034716197401
+lluvia_hora_num,Drizzle | 20,t_accept_to_pu_arrival_min,Final rider approach to merchant,4341,3,2.9347208881133384,6.300994583333334,0.09900960199458404
+lluvia_hora_num,Drizzle | 20,t_wait_at_pu_min,Final rider waiting at pickup,4341,3,5.031639459176073,11.200904783333334,0.16975400360936385
+lluvia_hora_num,Drizzle | 20,t_last_mile_min,Pickup to destination arrival,4341,3,6.926217573423942,11.931481933333334,0.23367198156737085
+lluvia_hora_num,Drizzle | 21,t_created_to_notify_min,Creation to final rider notification,955,1,27.56808746069808,53.743426756666665,0.6811784336685381
+lluvia_hora_num,Drizzle | 21,t_notify_to_accept_min,Final rider notification to acceptance,955,1,0.17183037141361254,0.3911263966666667,0.004245747675571393
+lluvia_hora_num,Drizzle | 21,t_accept_to_pu_arrival_min,Final rider approach to merchant,955,1,3.268268866701571,6.46747514,0.08075548478294949
+lluvia_hora_num,Drizzle | 21,t_wait_at_pu_min,Final rider waiting at pickup,955,1,3.6404924410122166,7.860015063333333,0.08995273764588022
+lluvia_hora_num,Drizzle | 21,t_last_mile_min,Pickup to destination arrival,955,1,5.822489790506109,10.040568643333334,0.14386759622706066
+lluvia_hora_num,Drizzle | 22,t_created_to_notify_min,Creation to final rider notification,655,1,23.904585088015267,44.842839343333345,0.6610698054825084
+lluvia_hora_num,Drizzle | 22,t_notify_to_accept_min,Final rider notification to acceptance,655,1,0.1535963885750636,0.3651073000000001,0.004247634265320917
+lluvia_hora_num,Drizzle | 22,t_accept_to_pu_arrival_min,Final rider approach to merchant,655,1,3.1090458133842236,6.226156640000001,0.08597916690553868
+lluvia_hora_num,Drizzle | 22,t_wait_at_pu_min,Final rider waiting at pickup,655,1,3.530864197811705,7.438006403333334,0.09764435148480274
+lluvia_hora_num,Drizzle | 22,t_last_mile_min,Pickup to destination arrival,655,1,5.462363716437659,9.596041186666667,0.15105904186182914
+lluvia_hora_num,Drizzle | 23,t_created_to_notify_min,Creation to final rider notification,1257,2,10.148386432909042,22.583390813333356,0.4405575090202433
+lluvia_hora_num,Drizzle | 23,t_notify_to_accept_min,Final rider notification to acceptance,1257,2,0.21631992468841157,0.47275847000000015,0.009390790132225487
+lluvia_hora_num,Drizzle | 23,t_accept_to_pu_arrival_min,Final rider approach to merchant,1257,2,2.753365946592416,5.632319706666667,0.11952797135497009
+lluvia_hora_num,Drizzle | 23,t_wait_at_pu_min,Final rider waiting at pickup,1257,2,3.918287930880403,8.416342063333335,0.1700990775099927
+lluvia_hora_num,Drizzle | 23,t_last_mile_min,Pickup to destination arrival,1257,2,5.998967106138956,10.639075300000014,0.26042465198256837
+lluvia_hora_num,Dry | 0,t_created_to_notify_min,Creation to final rider notification,6021,28,7.248855600240823,17.0603796,0.35004529156217284
+lluvia_hora_num,Dry | 0,t_notify_to_accept_min,Final rider notification to acceptance,6021,28,0.24327303083098045,0.5193719166666667,0.011747589371709229
+lluvia_hora_num,Dry | 0,t_accept_to_pu_arrival_min,Final rider approach to merchant,6021,28,2.9134695214609976,5.874644783333333,0.14069066130430816
+lluvia_hora_num,Dry | 0,t_wait_at_pu_min,Final rider waiting at pickup,6021,28,4.080796957645464,8.552724483333332,0.19706058992230133
+lluvia_hora_num,Dry | 0,t_last_mile_min,Pickup to destination arrival,6021,28,6.221941139370537,10.4410295,0.30045586783950845
+lluvia_hora_num,Dry | 1,t_created_to_notify_min,Creation to final rider notification,3299,28,5.8512400555723945,13.561195736666669,0.2997907338091453
+lluvia_hora_num,Dry | 1,t_notify_to_accept_min,Final rider notification to acceptance,3299,28,0.25165891320097,0.5272908466666667,0.012893849772285651
+lluvia_hora_num,Dry | 1,t_accept_to_pu_arrival_min,Final rider approach to merchant,3299,28,2.9357136848691523,6.091112533333338,0.1504125196508243
+lluvia_hora_num,Dry | 1,t_wait_at_pu_min,Final rider waiting at pickup,3299,28,4.469538846630292,9.562075126666667,0.22899869393389613
+lluvia_hora_num,Dry | 1,t_last_mile_min,Pickup to destination arrival,3299,28,6.009596701035668,9.858750613333335,0.3079042028338485
+lluvia_hora_num,Dry | 2,t_created_to_notify_min,Creation to final rider notification,367,24,6.257939846957311,14.87680554666668,0.27652171717453883
+lluvia_hora_num,Dry | 2,t_notify_to_accept_min,Final rider notification to acceptance,367,24,0.3068232150317893,0.6363316700000002,0.013557701793962595
+lluvia_hora_num,Dry | 2,t_accept_to_pu_arrival_min,Final rider approach to merchant,367,24,4.2720828344232515,7.8640126100000005,0.18877197770780155
+lluvia_hora_num,Dry | 2,t_wait_at_pu_min,Final rider waiting at pickup,367,24,4.363865287511353,9.242874873333335,0.19282760018981587
+lluvia_hora_num,Dry | 2,t_last_mile_min,Pickup to destination arrival,367,24,7.430205153860127,12.142725443333335,0.32832100313388113
+lluvia_hora_num,Dry | 3,t_created_to_notify_min,Creation to final rider notification,16,9,27.81844138541667,59.13989240833334,0.6076383581278811
+lluvia_hora_num,Dry | 3,t_notify_to_accept_min,Final rider notification to acceptance,16,9,0.14818782916666667,0.34910972500000004,0.0032368675139568598
+lluvia_hora_num,Dry | 3,t_accept_to_pu_arrival_min,Final rider approach to merchant,16,9,7.940763491666666,15.006877741666667,0.1734501377524204
+lluvia_hora_num,Dry | 3,t_wait_at_pu_min,Final rider waiting at pickup,16,9,2.9350548895833337,6.13763375,0.0641104190350711
+lluvia_hora_num,Dry | 3,t_last_mile_min,Pickup to destination arrival,16,9,6.9387987875,10.625636683333333,0.15156421757067035
+lluvia_hora_num,Dry | 4,t_created_to_notify_min,Creation to final rider notification,2,2,61.82651905833334,106.56604795833334,0.7701610771977299
+lluvia_hora_num,Dry | 4,t_notify_to_accept_min,Final rider notification to acceptance,2,2,0.14739439166666665,0.211233665,0.0018360636372201445
+lluvia_hora_num,Dry | 4,t_accept_to_pu_arrival_min,Final rider approach to merchant,2,2,4.633212708333334,4.937937395,0.05771504112934937
+lluvia_hora_num,Dry | 4,t_wait_at_pu_min,Final rider waiting at pickup,2,2,2.920072583333333,2.9910036366666666,0.036374783515690005
+lluvia_hora_num,Dry | 4,t_last_mile_min,Pickup to destination arrival,2,2,10.750188533333333,11.3573068,0.13391303452001055
+lluvia_hora_num,Dry | 5,t_created_to_notify_min,Creation to final rider notification,9,5,95.78567983703702,141.98234319,0.8299667434442877
+lluvia_hora_num,Dry | 5,t_notify_to_accept_min,Final rider notification to acceptance,9,5,0.17021652962962966,0.30246674333333334,0.001474897490078324
+lluvia_hora_num,Dry | 5,t_accept_to_pu_arrival_min,Final rider approach to merchant,9,5,8.93793426851852,13.745371346666667,0.07744569136620628
+lluvia_hora_num,Dry | 5,t_wait_at_pu_min,Final rider waiting at pickup,9,5,2.8917412055555554,4.551955246666668,0.02505644930789108
+lluvia_hora_num,Dry | 5,t_last_mile_min,Pickup to destination arrival,9,5,7.623485924074073,12.806031923333334,0.06605621839153662
+lluvia_hora_num,Dry | 6,t_created_to_notify_min,Creation to final rider notification,25,10,32.95111383933333,84.29529396666668,0.6041937750348899
+lluvia_hora_num,Dry | 6,t_notify_to_accept_min,Final rider notification to acceptance,25,10,0.2874831726666666,0.5294895133333335,0.005271310226397937
+lluvia_hora_num,Dry | 6,t_accept_to_pu_arrival_min,Final rider approach to merchant,25,10,6.209372475333334,11.87916089,0.11385545917391937
+lluvia_hora_num,Dry | 6,t_wait_at_pu_min,Final rider waiting at pickup,25,10,5.526923525333333,10.807947926666667,0.10134203066344206
+lluvia_hora_num,Dry | 6,t_last_mile_min,Pickup to destination arrival,25,10,9.562434581333333,16.17671377666667,0.17533742490135062
+lluvia_hora_num,Dry | 7,t_created_to_notify_min,Creation to final rider notification,1128,27,9.24736851288416,23.57148373333335,0.3438980312449214
+lluvia_hora_num,Dry | 7,t_notify_to_accept_min,Final rider notification to acceptance,1128,27,0.28755588507683216,0.6240396116666668,0.010693842536180134
+lluvia_hora_num,Dry | 7,t_accept_to_pu_arrival_min,Final rider approach to merchant,1128,27,6.229242739140071,11.049097103333335,0.23165772091295778
+lluvia_hora_num,Dry | 7,t_wait_at_pu_min,Final rider waiting at pickup,1128,27,4.427300550221631,9.135606248333334,0.1646457520136084
+lluvia_hora_num,Dry | 7,t_last_mile_min,Pickup to destination arrival,1128,27,6.698388237145391,12.183046478333333,0.24910465329233236
+lluvia_hora_num,Dry | 8,t_created_to_notify_min,Creation to final rider notification,3666,28,7.559257899104383,19.271862658333333,0.32230910524107015
+lluvia_hora_num,Dry | 8,t_notify_to_accept_min,Final rider notification to acceptance,3666,28,0.24505754361702128,0.5284632083333334,0.010448681427463226
+lluvia_hora_num,Dry | 8,t_accept_to_pu_arrival_min,Final rider approach to merchant,3666,28,4.827016650918349,8.891740941666667,0.20581271845819277
+lluvia_hora_num,Dry | 8,t_wait_at_pu_min,Final rider waiting at pickup,3666,28,3.9784401166484815,8.154084874999999,0.1696313965427844
+lluvia_hora_num,Dry | 8,t_last_mile_min,Pickup to destination arrival,3666,28,6.8436697688034185,11.989507208333332,0.29179809833048964
+lluvia_hora_num,Dry | 9,t_created_to_notify_min,Creation to final rider notification,6653,28,6.823679409416804,17.54282617666667,0.3050693420585529
+lluvia_hora_num,Dry | 9,t_notify_to_accept_min,Final rider notification to acceptance,6653,28,0.23931870987273915,0.5258934233333333,0.010699330519898801
+lluvia_hora_num,Dry | 9,t_accept_to_pu_arrival_min,Final rider approach to merchant,6653,28,4.166716540132271,7.991294983333334,0.18628329339277702
+lluvia_hora_num,Dry | 9,t_wait_at_pu_min,Final rider waiting at pickup,6653,28,4.1423646465278825,8.684899463333334,0.18519458219841484
+lluvia_hora_num,Dry | 9,t_last_mile_min,Pickup to destination arrival,6653,28,6.9955547649531535,12.610670633333335,0.3127534518303564
+lluvia_hora_num,Dry | 10,t_created_to_notify_min,Creation to final rider notification,7666,27,6.539567527330638,17.46999123333333,0.29020736097433303
+lluvia_hora_num,Dry | 10,t_notify_to_accept_min,Final rider notification to acceptance,7666,27,0.26122256820375683,0.5621922416666667,0.011592312768164666
+lluvia_hora_num,Dry | 10,t_accept_to_pu_arrival_min,Final rider approach to merchant,7666,27,3.7389107190973125,7.324515466666666,0.16592219717483112
+lluvia_hora_num,Dry | 10,t_wait_at_pu_min,Final rider waiting at pickup,7666,27,4.466126108350727,9.502232241666665,0.1981939426829474
+lluvia_hora_num,Dry | 10,t_last_mile_min,Pickup to destination arrival,7666,27,7.52829318125924,13.584055916666667,0.33408418639972387
+lluvia_hora_num,Dry | 11,t_created_to_notify_min,Creation to final rider notification,12153,28,7.18585628158205,18.374010390000006,0.3043838822823264
+lluvia_hora_num,Dry | 11,t_notify_to_accept_min,Final rider notification to acceptance,12153,28,0.27821123623522315,0.5824974766666667,0.011784679913080407
+lluvia_hora_num,Dry | 11,t_accept_to_pu_arrival_min,Final rider approach to merchant,12153,28,3.3642064277818924,7.015405683333339,0.14250357551848525
+lluvia_hora_num,Dry | 11,t_wait_at_pu_min,Final rider waiting at pickup,12153,28,4.8614898207191635,10.168268946666666,0.20592662687942367
+lluvia_hora_num,Dry | 11,t_last_mile_min,Pickup to destination arrival,12153,28,7.918110039946241,13.78319513000001,0.33540123540668443
+lluvia_hora_num,Dry | 12,t_created_to_notify_min,Creation to final rider notification,21702,26,9.678908927756275,21.766674263333336,0.37536354300330244
+lluvia_hora_num,Dry | 12,t_notify_to_accept_min,Final rider notification to acceptance,21702,26,0.2493071284198077,0.5473388316666669,0.009668528520944752
+lluvia_hora_num,Dry | 12,t_accept_to_pu_arrival_min,Final rider approach to merchant,21702,26,3.3742752667795592,6.980253855000001,0.13085978271524062
+lluvia_hora_num,Dry | 12,t_wait_at_pu_min,Final rider waiting at pickup,21702,26,4.669370952907566,9.830025561666668,0.18108566136559326
+lluvia_hora_num,Dry | 12,t_last_mile_min,Pickup to destination arrival,21702,26,7.813563901423064,13.657970533333335,0.3030224843949189
+lluvia_hora_num,Dry | 13,t_created_to_notify_min,Creation to final rider notification,22375,26,10.323215118875977,22.541207919999998,0.39696244556225635
+lluvia_hora_num,Dry | 13,t_notify_to_accept_min,Final rider notification to acceptance,22375,26,0.24385952652662946,0.5344043533333337,0.009377221428492809
+lluvia_hora_num,Dry | 13,t_accept_to_pu_arrival_min,Final rider approach to merchant,22375,26,3.2613440125817506,6.673686380000003,0.12540967907246683
+lluvia_hora_num,Dry | 13,t_wait_at_pu_min,Final rider waiting at pickup,22375,26,4.590213709224582,9.736281153333342,0.17650920170552314
+lluvia_hora_num,Dry | 13,t_last_mile_min,Pickup to destination arrival,22375,26,7.5868883924543775,13.292137066666667,0.29174145223126086
+lluvia_hora_num,Dry | 14,t_created_to_notify_min,Creation to final rider notification,18447,26,9.065487181582371,21.25491465666667,0.36999456769640077
+lluvia_hora_num,Dry | 14,t_notify_to_accept_min,Final rider notification to acceptance,18447,26,0.2605857644522145,0.5667253366666667,0.01063542591094415
+lluvia_hora_num,Dry | 14,t_accept_to_pu_arrival_min,Final rider approach to merchant,18447,26,3.075959084069677,6.517080813333334,0.12554076011208093
+lluvia_hora_num,Dry | 14,t_wait_at_pu_min,Final rider waiting at pickup,18447,26,4.517938835914602,9.522071630000003,0.18439304948432184
+lluvia_hora_num,Dry | 14,t_last_mile_min,Pickup to destination arrival,18447,26,7.5817055721634965,13.425323223333338,0.30943619679625234
+lluvia_hora_num,Dry | 15,t_created_to_notify_min,Creation to final rider notification,13654,26,8.391494786718178,20.561541595000012,0.34821785880116907
+lluvia_hora_num,Dry | 15,t_notify_to_accept_min,Final rider notification to acceptance,13654,26,0.26969216834871346,0.5913475583333337,0.01119128734328407
+lluvia_hora_num,Dry | 15,t_accept_to_pu_arrival_min,Final rider approach to merchant,13654,26,3.287708568220546,6.8628748900000005,0.1364284751508199
+lluvia_hora_num,Dry | 15,t_wait_at_pu_min,Final rider waiting at pickup,13654,26,4.319037164266882,8.99498844666667,0.17922502624968814
+lluvia_hora_num,Dry | 15,t_last_mile_min,Pickup to destination arrival,13654,26,7.830471729749524,14.104726055,0.32493735245503885
+lluvia_hora_num,Dry | 16,t_created_to_notify_min,Creation to final rider notification,11810,27,8.431817857337002,20.630153910000008,0.3443654871183812
+lluvia_hora_num,Dry | 16,t_notify_to_accept_min,Final rider notification to acceptance,11810,27,0.2724890052272086,0.5855063816666667,0.011128775621951909
+lluvia_hora_num,Dry | 16,t_accept_to_pu_arrival_min,Final rider approach to merchant,11810,27,3.5993940608650856,7.308720971666667,0.14700354183081032
+lluvia_hora_num,Dry | 16,t_wait_at_pu_min,Final rider waiting at pickup,11810,27,4.1769128588724245,8.679510278333334,0.17059009760807545
+lluvia_hora_num,Dry | 16,t_last_mile_min,Pickup to destination arrival,11810,27,8.00447015538809,14.230183751666669,0.32691209782078123
+lluvia_hora_num,Dry | 17,t_created_to_notify_min,Creation to final rider notification,11015,27,9.373581440932062,22.172676500000005,0.3648116358080295
+lluvia_hora_num,Dry | 17,t_notify_to_accept_min,Final rider notification to acceptance,11015,27,0.2659558647949765,0.5814524,0.010350770908642892
+lluvia_hora_num,Dry | 17,t_accept_to_pu_arrival_min,Final rider approach to merchant,11015,27,3.823384228906037,7.648013166666668,0.14880278831088276
+lluvia_hora_num,Dry | 17,t_wait_at_pu_min,Final rider waiting at pickup,11015,27,4.2065362518202445,8.797339853333334,0.16371473174715687
+lluvia_hora_num,Dry | 17,t_last_mile_min,Pickup to destination arrival,11015,27,8.024847221582691,14.167056666666666,0.312320073225288
+lluvia_hora_num,Dry | 18,t_created_to_notify_min,Creation to final rider notification,13283,27,10.100274479621824,23.911425870000006,0.3817604108945412
+lluvia_hora_num,Dry | 18,t_notify_to_accept_min,Final rider notification to acceptance,13283,27,0.26203985930889107,0.56834607,0.00990432928950022
+lluvia_hora_num,Dry | 18,t_accept_to_pu_arrival_min,Final rider approach to merchant,13283,27,3.5025016705475673,7.201736073333338,0.1323841722920307
+lluvia_hora_num,Dry | 18,t_wait_at_pu_min,Final rider waiting at pickup,13283,27,4.556682784098722,9.515422050000002,0.17222909095028308
+lluvia_hora_num,Dry | 18,t_last_mile_min,Pickup to destination arrival,13283,27,8.035604120669277,13.966738746666667,0.3037219965736448
+lluvia_hora_num,Dry | 19,t_created_to_notify_min,Creation to final rider notification,24054,26,11.432666261373715,24.968133438333332,0.42352465541257206
+lluvia_hora_num,Dry | 19,t_notify_to_accept_min,Final rider notification to acceptance,24054,26,0.2539876038545218,0.5471773350000001,0.009409004858734143
+lluvia_hora_num,Dry | 19,t_accept_to_pu_arrival_min,Final rider approach to merchant,24054,26,2.9668694618448765,6.4835124933333335,0.10990807723717741
+lluvia_hora_num,Dry | 19,t_wait_at_pu_min,Final rider waiting at pickup,24054,26,4.92005764591544,10.47820785,0.18226419554785012
+lluvia_hora_num,Dry | 19,t_last_mile_min,Pickup to destination arrival,24054,26,7.420517517539009,12.784768485,0.2748940669436665
+lluvia_hora_num,Dry | 20,t_created_to_notify_min,Creation to final rider notification,37593,26,12.570471764445065,26.34877456333334,0.4560369417736041
+lluvia_hora_num,Dry | 20,t_notify_to_accept_min,Final rider notification to acceptance,37593,26,0.23375842681305917,0.5109150333333337,0.008480388013690623
+lluvia_hora_num,Dry | 20,t_accept_to_pu_arrival_min,Final rider approach to merchant,37593,26,2.7114455078981905,5.957021936666668,0.09836697781741963
+lluvia_hora_num,Dry | 20,t_wait_at_pu_min,Final rider waiting at pickup,37593,26,5.169482339665629,11.114387243333338,0.18754068748650837
+lluvia_hora_num,Dry | 20,t_last_mile_min,Pickup to destination arrival,37593,26,6.879432925138988,11.831803100000002,0.24957500490877732
+lluvia_hora_num,Dry | 21,t_created_to_notify_min,Creation to final rider notification,35314,27,14.118095115651016,29.56448181,0.4964842520697452
+lluvia_hora_num,Dry | 21,t_notify_to_accept_min,Final rider notification to acceptance,35314,27,0.21899324944686716,0.49113710833333346,0.007701230142543728
+lluvia_hora_num,Dry | 21,t_accept_to_pu_arrival_min,Final rider approach to merchant,35314,27,2.7783254837661175,5.901722266666668,0.09770403432717821
+lluvia_hora_num,Dry | 21,t_wait_at_pu_min,Final rider waiting at pickup,35314,27,4.844817262559703,10.684994493333335,0.17037535554991387
+lluvia_hora_num,Dry | 21,t_last_mile_min,Pickup to destination arrival,35314,27,6.475907712306262,11.198112065,0.22773512791061898
+lluvia_hora_num,Dry | 22,t_created_to_notify_min,Creation to final rider notification,24925,28,12.033253652337011,26.352945023333344,0.47559550340805284
+lluvia_hora_num,Dry | 22,t_notify_to_accept_min,Final rider notification to acceptance,24925,28,0.2237595915078569,0.48957123,0.008843747388711576
+lluvia_hora_num,Dry | 22,t_accept_to_pu_arrival_min,Final rider approach to merchant,24925,28,2.6461663988117694,5.568135006666668,0.10458558232917663
+lluvia_hora_num,Dry | 22,t_wait_at_pu_min,Final rider waiting at pickup,24925,28,4.349916517456369,9.419264320000002,0.17192363725341053
+lluvia_hora_num,Dry | 22,t_last_mile_min,Pickup to destination arrival,24925,28,6.048349219644266,10.341611800000004,0.23905152962064857
+lluvia_hora_num,Dry | 23,t_created_to_notify_min,Creation to final rider notification,13418,27,9.097292052401004,21.349059763333358,0.4132101459320864
+lluvia_hora_num,Dry | 23,t_notify_to_accept_min,Final rider notification to acceptance,13418,27,0.24621759192005763,0.5348374816666669,0.011183504553036995
+lluvia_hora_num,Dry | 23,t_accept_to_pu_arrival_min,Final rider approach to merchant,13418,27,2.5947771072862325,5.497420973333336,0.11785795388200203
+lluvia_hora_num,Dry | 23,t_wait_at_pu_min,Final rider waiting at pickup,13418,27,4.1244564325445925,8.816986563333336,0.1873378621424476
+lluvia_hora_num,Dry | 23,t_last_mile_min,Pickup to destination arrival,13418,27,5.953395920758186,10.097966886666669,0.27041053349042704
+lluvia_hora_num,Rain | 11,t_created_to_notify_min,Creation to final rider notification,347,1,6.955082413400578,19.13345469666668,0.30504005533455997
+lluvia_hora_num,Rain | 11,t_notify_to_accept_min,Final rider notification to acceptance,347,1,0.27033416292026896,0.5095358966666668,0.011856473168044309
+lluvia_hora_num,Rain | 11,t_accept_to_pu_arrival_min,Final rider approach to merchant,347,1,3.255279604466858,6.4793667400000015,0.14277194886473357
+lluvia_hora_num,Rain | 11,t_wait_at_pu_min,Final rider waiting at pickup,347,1,4.82427852790586,10.297478656666671,0.21158601748073586
+lluvia_hora_num,Rain | 11,t_last_mile_min,Pickup to destination arrival,347,1,7.495579814457252,13.02703666666667,0.32874550515192624
+lluvia_hora_num,Rain | 12,t_created_to_notify_min,Creation to final rider notification,725,1,9.084215699425288,20.612712046666672,0.3738346490072962
+lluvia_hora_num,Rain | 12,t_notify_to_accept_min,Final rider notification to acceptance,725,1,0.2620758010344828,0.5406895366666669,0.01078497234485858
+lluvia_hora_num,Rain | 12,t_accept_to_pu_arrival_min,Final rider approach to merchant,725,1,3.3545341337701147,6.721344176666668,0.13804615962171418
+lluvia_hora_num,Rain | 12,t_wait_at_pu_min,Final rider waiting at pickup,725,1,4.187198159862069,8.421222533333333,0.17231204170053588
+lluvia_hora_num,Rain | 12,t_last_mile_min,Pickup to destination arrival,725,1,7.412066429080459,12.998478053333335,0.3050221773255953
+lluvia_hora_num,Rain | 13,t_created_to_notify_min,Creation to final rider notification,926,1,11.018038494060477,23.8408453,0.41959811422319254
+lluvia_hora_num,Rain | 13,t_notify_to_accept_min,Final rider notification to acceptance,926,1,0.2396508798596112,0.5176746833333333,0.009126584311284562
+lluvia_hora_num,Rain | 13,t_accept_to_pu_arrival_min,Final rider approach to merchant,926,1,3.22446804037077,6.639438191666667,0.12279687621729432
+lluvia_hora_num,Rain | 13,t_wait_at_pu_min,Final rider waiting at pickup,926,1,4.389414875269978,8.658906891666668,0.16716135137841198
+lluvia_hora_num,Rain | 13,t_last_mile_min,Pickup to destination arrival,926,1,7.386978739578834,12.865927816666666,0.28131707386981664
+lluvia_hora_num,Unknown | 0,t_created_to_notify_min,Creation to final rider notification,455,2,6.391003923076924,14.21533941666667,0.3154872770397411
+lluvia_hora_num,Unknown | 0,t_notify_to_accept_min,Final rider notification to acceptance,455,2,0.24694189864468863,0.5432034900000001,0.012190107865389719
+lluvia_hora_num,Unknown | 0,t_accept_to_pu_arrival_min,Final rider approach to merchant,455,2,2.759353396593406,5.7472141866666675,0.13621348069248188
+lluvia_hora_num,Unknown | 0,t_wait_at_pu_min,Final rider waiting at pickup,455,2,4.486757179230769,9.545203106666667,0.22148551655598592
+lluvia_hora_num,Unknown | 0,t_last_mile_min,Pickup to destination arrival,455,2,6.373508291098901,10.354873933333337,0.31462361784640136
+lluvia_hora_num,Unknown | 1,t_created_to_notify_min,Creation to final rider notification,200,2,5.246589466583333,13.444367696666665,0.2751023540592616
+lluvia_hora_num,Unknown | 1,t_notify_to_accept_min,Final rider notification to acceptance,200,2,0.2562894946666667,0.5268060383333333,0.013438414374237892
+lluvia_hora_num,Unknown | 1,t_accept_to_pu_arrival_min,Final rider approach to merchant,200,2,2.8096139360833337,5.85284658,0.14732073335205675
+lluvia_hora_num,Unknown | 1,t_wait_at_pu_min,Final rider waiting at pickup,200,2,4.932832700166666,10.476520086666666,0.25865067138177994
+lluvia_hora_num,Unknown | 1,t_last_mile_min,Pickup to destination arrival,200,2,5.826083240583333,9.965866688333332,0.3054878268326637
+lluvia_hora_num,Unknown | 2,t_created_to_notify_min,Creation to final rider notification,9,2,5.241682035185185,9.262111403333334,0.16574520381819258
+lluvia_hora_num,Unknown | 2,t_notify_to_accept_min,Final rider notification to acceptance,9,2,0.3241652740740741,0.7339681166666668,0.010250304971100648
+lluvia_hora_num,Unknown | 2,t_accept_to_pu_arrival_min,Final rider approach to merchant,9,2,2.2965480666666664,4.11983042,0.07261825971755932
+lluvia_hora_num,Unknown | 2,t_wait_at_pu_min,Final rider waiting at pickup,9,2,16.565439194444444,40.25725058,0.5238093568420863
+lluvia_hora_num,Unknown | 2,t_last_mile_min,Pickup to destination arrival,9,2,7.197104881481483,10.172688113333333,0.22757687465106097
+lluvia_hora_num,Unknown | 6,t_created_to_notify_min,Creation to final rider notification,1,1,24.88508845,24.88508845,0.40247591363408564
+lluvia_hora_num,Unknown | 6,t_notify_to_accept_min,Final rider notification to acceptance,1,1,1.3851992499999999,1.3851992499999999,0.022403349492977193
+lluvia_hora_num,Unknown | 6,t_accept_to_pu_arrival_min,Final rider approach to merchant,1,1,11.709790916666666,11.709790916666666,0.18938686141778746
+lluvia_hora_num,Unknown | 6,t_wait_at_pu_min,Final rider waiting at pickup,1,1,2.9959647166666667,2.9959647166666667,0.04845486641442503
+lluvia_hora_num,Unknown | 6,t_last_mile_min,Pickup to destination arrival,1,1,20.8539634,20.8539634,0.33727900904072466
+lluvia_hora_num,Unknown | 7,t_created_to_notify_min,Creation to final rider notification,88,2,5.813639717424243,14.526033261666656,0.2295160248217183
+lluvia_hora_num,Unknown | 7,t_notify_to_accept_min,Final rider notification to acceptance,88,2,0.261516065719697,0.47953314,0.01032436317838993
+lluvia_hora_num,Unknown | 7,t_accept_to_pu_arrival_min,Final rider approach to merchant,88,2,6.936762694128788,13.391791348333332,0.2738556697822716
+lluvia_hora_num,Unknown | 7,t_wait_at_pu_min,Final rider waiting at pickup,88,2,4.831009533522727,8.735882949999999,0.19072287893705525
+lluvia_hora_num,Unknown | 7,t_last_mile_min,Pickup to destination arrival,88,2,7.487066798674241,15.133446003333333,0.29558106328056477
+lluvia_hora_num,Unknown | 8,t_created_to_notify_min,Creation to final rider notification,293,2,5.744969309783844,15.354942696666667,0.2638400177483924
+lluvia_hora_num,Unknown | 8,t_notify_to_accept_min,Final rider notification to acceptance,293,2,0.29407210955631397,0.6407553233333334,0.013505379475658911
+lluvia_hora_num,Unknown | 8,t_accept_to_pu_arrival_min,Final rider approach to merchant,293,2,4.741430171046644,8.993238183333334,0.21775208065102408
+lluvia_hora_num,Unknown | 8,t_wait_at_pu_min,Final rider waiting at pickup,293,2,3.697941504721274,7.826757213333335,0.16982944549009044
+lluvia_hora_num,Unknown | 8,t_last_mile_min,Pickup to destination arrival,293,2,7.296029458418658,12.707369566666667,0.3350730766348342
+lluvia_hora_num,Unknown | 9,t_created_to_notify_min,Creation to final rider notification,542,2,4.939740751199262,13.11683309,0.2399371493750136
+lluvia_hora_num,Unknown | 9,t_notify_to_accept_min,Final rider notification to acceptance,542,2,0.2578952935116851,0.5429486516666671,0.012526702245943447
+lluvia_hora_num,Unknown | 9,t_accept_to_pu_arrival_min,Final rider approach to merchant,542,2,4.190162639175892,7.919272033333334,0.20352802499148637
+lluvia_hora_num,Unknown | 9,t_wait_at_pu_min,Final rider waiting at pickup,542,2,4.1700305512300115,8.411694725,0.20255015266255316
+lluvia_hora_num,Unknown | 9,t_last_mile_min,Pickup to destination arrival,542,2,7.029815337915129,12.296119785,0.3414579707250034
+lluvia_hora_num,Unknown | 10,t_created_to_notify_min,Creation to final rider notification,546,2,5.485848595360195,16.139766708333333,0.25728813155698216
+lluvia_hora_num,Unknown | 10,t_notify_to_accept_min,Final rider notification to acceptance,546,2,0.2790446885531135,0.577636525,0.013087289102264517
+lluvia_hora_num,Unknown | 10,t_accept_to_pu_arrival_min,Final rider approach to merchant,546,2,3.568987955250306,7.49825535,0.16738672724806283
+lluvia_hora_num,Unknown | 10,t_wait_at_pu_min,Final rider waiting at pickup,546,2,4.272242889407814,9.0880756,0.20036961856785757
+lluvia_hora_num,Unknown | 10,t_last_mile_min,Pickup to destination arrival,546,2,7.715685634523808,14.099736183333334,0.3618682335248328
+lluvia_hora_num,Unknown | 11,t_created_to_notify_min,Creation to final rider notification,802,2,6.510327736658354,17.054427639999997,0.29014421655198513
+lluvia_hora_num,Unknown | 11,t_notify_to_accept_min,Final rider notification to acceptance,802,2,0.28688585105985037,0.6065063666666667,0.01278557299456857
+lluvia_hora_num,Unknown | 11,t_accept_to_pu_arrival_min,Final rider approach to merchant,802,2,3.124743290627598,6.767125526666667,0.1392596856345934
+lluvia_hora_num,Unknown | 11,t_wait_at_pu_min,Final rider waiting at pickup,802,2,4.833468265939318,10.430023773333332,0.2154120222478502
+lluvia_hora_num,Unknown | 11,t_last_mile_min,Pickup to destination arrival,802,2,7.682822338383208,13.203516783333333,0.3423985025710028
+lluvia_hora_num,Unknown | 12,t_created_to_notify_min,Creation to final rider notification,1752,2,9.152383502682648,21.092196808333334,0.36434026189853186
+lluvia_hora_num,Unknown | 12,t_notify_to_accept_min,Final rider notification to acceptance,1752,2,0.2547218277777778,0.5575786816666668,0.010140027176158665
+lluvia_hora_num,Unknown | 12,t_accept_to_pu_arrival_min,Final rider approach to merchant,1752,2,3.397751543445586,6.958626513333334,0.13525850253567878
+lluvia_hora_num,Unknown | 12,t_wait_at_pu_min,Final rider waiting at pickup,1752,2,4.511839737347793,9.31003338666667,0.17960839065230078
+lluvia_hora_num,Unknown | 12,t_last_mile_min,Pickup to destination arrival,1752,2,7.8037318996955864,13.074482308333334,0.3106528177373299
+lluvia_hora_num,Unknown | 13,t_created_to_notify_min,Creation to final rider notification,1757,2,9.241768593672926,20.702399910000004,0.37167204191274333
+lluvia_hora_num,Unknown | 13,t_notify_to_accept_min,Final rider notification to acceptance,1757,2,0.2394267959779928,0.5285115366666667,0.009628919535021605
+lluvia_hora_num,Unknown | 13,t_accept_to_pu_arrival_min,Final rider approach to merchant,1757,2,3.232712626769114,6.804716310000002,0.13000854660340214
+lluvia_hora_num,Unknown | 13,t_wait_at_pu_min,Final rider waiting at pickup,1757,2,4.6572431952286095,9.953026353333339,0.18729825038466083
+lluvia_hora_num,Unknown | 13,t_last_mile_min,Pickup to destination arrival,1757,2,7.494234266666667,12.907993446666667,0.3013922415641722
+lluvia_hora_num,Unknown | 14,t_created_to_notify_min,Creation to final rider notification,1388,2,7.730728148955331,18.507481251666665,0.3354848556746589
+lluvia_hora_num,Unknown | 14,t_notify_to_accept_min,Final rider notification to acceptance,1388,2,0.26504152056916425,0.5514441333333332,0.011501816460581894
+lluvia_hora_num,Unknown | 14,t_accept_to_pu_arrival_min,Final rider approach to merchant,1388,2,3.013510243792027,6.274431181666664,0.13077513912441627
+lluvia_hora_num,Unknown | 14,t_wait_at_pu_min,Final rider waiting at pickup,1388,2,4.369067822790585,9.512338864999998,0.1896012975388051
+lluvia_hora_num,Unknown | 14,t_last_mile_min,Pickup to destination arrival,1388,2,7.665101224975985,13.899551456666664,0.3326368912015378
+lluvia_hora_num,Unknown | 15,t_created_to_notify_min,Creation to final rider notification,986,2,7.219307189756593,18.818881841666666,0.3150129386802366
+lluvia_hora_num,Unknown | 15,t_notify_to_accept_min,Final rider notification to acceptance,986,2,0.2738846948951995,0.613806175,0.011950900596236538
+lluvia_hora_num,Unknown | 15,t_accept_to_pu_arrival_min,Final rider approach to merchant,986,2,3.2252914112576065,6.779413308333334,0.14073490694536328
+lluvia_hora_num,Unknown | 15,t_wait_at_pu_min,Final rider waiting at pickup,986,2,4.53499049704192,9.452463591666666,0.19788334888798217
+lluvia_hora_num,Unknown | 15,t_last_mile_min,Pickup to destination arrival,986,2,7.664020389993239,13.566001091666667,0.3344179048901814
+lluvia_hora_num,Unknown | 16,t_created_to_notify_min,Creation to final rider notification,783,2,6.473479925542784,16.678761670000014,0.29158079877455406
+lluvia_hora_num,Unknown | 16,t_notify_to_accept_min,Final rider notification to acceptance,783,2,0.2927127214559387,0.6160941566666668,0.013184471121448613
+lluvia_hora_num,Unknown | 16,t_accept_to_pu_arrival_min,Final rider approach to merchant,783,2,3.2984966000425713,7.120201163333333,0.14857206393745342
+lluvia_hora_num,Unknown | 16,t_wait_at_pu_min,Final rider waiting at pickup,783,2,4.314459833950617,9.16826168666667,0.19433344339266947
+lluvia_hora_num,Unknown | 16,t_last_mile_min,Pickup to destination arrival,783,2,7.822175398361005,13.840309976666676,0.3523292227738744
+lluvia_hora_num,Unknown | 17,t_created_to_notify_min,Creation to final rider notification,821,2,7.251129096467722,18.97047375,0.3028358079735147
+lluvia_hora_num,Unknown | 17,t_notify_to_accept_min,Final rider notification to acceptance,821,2,0.2771647818311003,0.6252836666666667,0.011575496661411265
+lluvia_hora_num,Unknown | 17,t_accept_to_pu_arrival_min,Final rider approach to merchant,821,2,3.806610994173772,7.490887433333333,0.15897911907581908
+lluvia_hora_num,Unknown | 17,t_wait_at_pu_min,Final rider waiting at pickup,821,2,4.320970198741373,9.310268016666667,0.18046079223755093
+lluvia_hora_num,Unknown | 17,t_last_mile_min,Pickup to destination arrival,821,2,8.288219073365813,14.929846666666666,0.34614878405170374
+lluvia_hora_num,Unknown | 18,t_created_to_notify_min,Creation to final rider notification,975,2,7.419354762871794,19.014306443333332,0.3117106086157277
+lluvia_hora_num,Unknown | 18,t_notify_to_accept_min,Final rider notification to acceptance,975,2,0.29644585789743594,0.6354978233333334,0.012454630050747722
+lluvia_hora_num,Unknown | 18,t_accept_to_pu_arrival_min,Final rider approach to merchant,975,2,3.0658932254017093,6.644130610000001,0.12880789149256067
+lluvia_hora_num,Unknown | 18,t_wait_at_pu_min,Final rider waiting at pickup,975,2,4.629572790410257,9.486698546666666,0.19450302597082192
+lluvia_hora_num,Unknown | 18,t_last_mile_min,Pickup to destination arrival,975,2,8.390793857350427,14.391317966666668,0.352523843870142
+lluvia_hora_num,Unknown | 19,t_created_to_notify_min,Creation to final rider notification,1789,2,9.221481580873858,21.44265634666667,0.3741551837319611
+lluvia_hora_num,Unknown | 19,t_notify_to_accept_min,Final rider notification to acceptance,1789,2,0.25532884075833795,0.52905462,0.010359789637724527
+lluvia_hora_num,Unknown | 19,t_accept_to_pu_arrival_min,Final rider approach to merchant,1789,2,2.6543627042016023,6.103575293333334,0.1076989154694708
+lluvia_hora_num,Unknown | 19,t_wait_at_pu_min,Final rider waiting at pickup,1789,2,4.945670633901622,10.212076390000002,0.2006671366717485
+lluvia_hora_num,Unknown | 19,t_last_mile_min,Pickup to destination arrival,1789,2,7.569297685895286,12.751431863333334,0.30711897448909514
+lluvia_hora_num,Unknown | 20,t_created_to_notify_min,Creation to final rider notification,2965,2,11.220528928341766,24.106205483333333,0.42173040853689153
+lluvia_hora_num,Unknown | 20,t_notify_to_accept_min,Final rider notification to acceptance,2965,2,0.24586640994378867,0.5059744933333332,0.009241038650966399
+lluvia_hora_num,Unknown | 20,t_accept_to_pu_arrival_min,Final rider approach to merchant,2965,2,2.5490833981506467,5.9189506666666665,0.0958088508805755
+lluvia_hora_num,Unknown | 20,t_wait_at_pu_min,Final rider waiting at pickup,2965,2,5.351907305053401,11.34887551,0.20115469320797041
+lluvia_hora_num,Unknown | 20,t_last_mile_min,Pickup to destination arrival,2965,2,7.238542061416527,12.307362996666667,0.27206500872359607
+lluvia_hora_num,Unknown | 21,t_created_to_notify_min,Creation to final rider notification,2202,2,16.323312616129275,34.04404818000001,0.5323044636766344
+lluvia_hora_num,Unknown | 21,t_notify_to_accept_min,Final rider notification to acceptance,2202,2,0.2078254222222222,0.4646092083333334,0.006777202796756997
+lluvia_hora_num,Unknown | 21,t_accept_to_pu_arrival_min,Final rider approach to merchant,2202,2,2.9411574168104755,5.954445743333332,0.09591136665463816
+lluvia_hora_num,Unknown | 21,t_wait_at_pu_min,Final rider waiting at pickup,2202,2,4.794546637163185,10.674339023333332,0.1563505298395094
+lluvia_hora_num,Unknown | 21,t_last_mile_min,Pickup to destination arrival,2202,2,6.39852656414623,10.922495045000003,0.20865643703246117
+lluvia_hora_num,Unknown | 22,t_created_to_notify_min,Creation to final rider notification,1671,2,12.791144364093359,27.22122745,0.49329253635678666
+lluvia_hora_num,Unknown | 22,t_notify_to_accept_min,Final rider notification to acceptance,1671,2,0.21843506343506883,0.47494519999999996,0.008423983296882931
+lluvia_hora_num,Unknown | 22,t_accept_to_pu_arrival_min,Final rider approach to merchant,1671,2,2.8435575037103535,5.6708527,0.10966225173873076
+lluvia_hora_num,Unknown | 22,t_wait_at_pu_min,Final rider waiting at pickup,1671,2,4.143936776501096,9.017131016666667,0.1598115872040886
+lluvia_hora_num,Unknown | 22,t_last_mile_min,Pickup to destination arrival,1671,2,5.933065958597647,10.327612499999999,0.22880964140351104
+lluvia_hora_num,Unknown | 23,t_created_to_notify_min,Creation to final rider notification,1035,2,8.256230205748793,18.625272673333335,0.38392329350650983
+lluvia_hora_num,Unknown | 23,t_notify_to_accept_min,Final rider notification to acceptance,1035,2,0.2701018898389694,0.6348726,0.01256001886394891
+lluvia_hora_num,Unknown | 23,t_accept_to_pu_arrival_min,Final rider approach to merchant,1035,2,2.572351628615137,5.526208296666667,0.11961702674267784
+lluvia_hora_num,Unknown | 23,t_wait_at_pu_min,Final rider waiting at pickup,1035,2,4.205246425813204,9.260747270000001,0.19554833350946504
+lluvia_hora_num,Unknown | 23,t_last_mile_min,Pickup to destination arrival,1035,2,6.200965086586151,10.645637453333332,0.2883513273773983
+pressure_band,High,t_created_to_notify_min,Creation to final rider notification,108510,31,9.524328622298098,21.90697734500001,0.3768051687925807
+pressure_band,High,t_notify_to_accept_min,Final rider notification to acceptance,108510,31,0.25180761632276594,0.5448457183333334,0.009962110205817668
+pressure_band,High,t_accept_to_pu_arrival_min,Final rider approach to merchant,108510,31,3.280611079548275,6.919256506666673,0.1297888030320536
+pressure_band,High,t_wait_at_pu_min,Final rider waiting at pickup,108510,31,4.7771872831940225,10.113998463333335,0.18899692902063686
+pressure_band,High,t_last_mile_min,Pickup to destination arrival,108510,31,7.442599297620957,12.92256771166667,0.29444698894891125
+pressure_band,Low,t_created_to_notify_min,Creation to final rider notification,59818,32,13.503027180311669,30.62129409,0.49950431381237664
+pressure_band,Low,t_notify_to_accept_min,Final rider notification to acceptance,59818,32,0.22527578635611353,0.5006398816666667,0.00833340743373641
+pressure_band,Low,t_accept_to_pu_arrival_min,Final rider approach to merchant,59818,32,2.9331704144045267,6.012299046666668,0.10850391216557415
+pressure_band,Low,t_wait_at_pu_min,Final rider waiting at pickup,59818,32,4.22625568806853,9.139258433333334,0.15633775443645367
+pressure_band,Low,t_last_mile_min,Pickup to destination arrival,59818,32,6.1451249161475925,10.572517136666669,0.2273206121518592
+pressure_band,Medium,t_created_to_notify_min,Creation to final rider notification,164043,31,10.21787239616503,23.058975086666674,0.39978188346101345
+pressure_band,Medium,t_notify_to_accept_min,Final rider notification to acceptance,164043,31,0.24935187935988326,0.5449082900000004,0.009756078380118723
+pressure_band,Medium,t_accept_to_pu_arrival_min,Final rider approach to merchant,164043,31,3.1096239272942663,6.581954823333335,0.1216663569781633
+pressure_band,Medium,t_wait_at_pu_min,Final rider waiting at pickup,164043,31,4.62063619455407,9.84939841333334,0.18078583965682174
+pressure_band,Medium,t_last_mile_min,Pickup to destination arrival,164043,31,7.361133486224444,12.932082403333336,0.2880098415238826
+pressure_band,Unknown,t_created_to_notify_min,Creation to final rider notification,7,4,70.47460079285715,120.96256337,0.7699086309851323
+pressure_band,Unknown,t_notify_to_accept_min,Final rider notification to acceptance,7,4,0.1623991904761905,0.34087062333333334,0.0017741503606401423
+pressure_band,Unknown,t_accept_to_pu_arrival_min,Final rider approach to merchant,7,4,10.936158347619047,15.617565290000003,0.11947343591771559
+pressure_band,Unknown,t_wait_at_pu_min,Final rider waiting at pickup,7,4,3.0423560142857142,6.530896176666669,0.033236600528079925
+pressure_band,Unknown,t_last_mile_min,Pickup to destination arrival,7,4,6.920803026190476,10.948525666666667,0.07560718220843218

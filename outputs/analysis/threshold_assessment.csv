@@ -1,0 +1,3 @@
+metric,candidate_cutoff,status,validated_association,discovery_dates,holdout_dates,consistent_adjacent_discovery_bins,rule
+_late5,2.4094047215497802,No validated operational threshold,False,20,10,False,"Three supported upper discovery quartiles must deteriorate monotonically; one discovery P75 candidate, held-out final 10 complete dates; each comparison side >=100 orders, 30 hours and 10 dates; positive date-bootstrap intervals in both splits."
+pre_any,2.4094047215497802,No validated operational threshold,False,20,10,False,"Three supported upper discovery quartiles must deteriorate monotonically; one discovery P75 candidate, held-out final 10 complete dates; each comparison side >=100 orders, 30 hours and 10 dates; positive date-bootstrap intervals in both splits."
