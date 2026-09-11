@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "artifact": "orders.parquet",
+      "status": "passed"
+    },
+    {
+      "artifact": "hours.parquet",
+      "status": "passed"
+    },
+    {
+      "artifact": "rider_hours.parquet",
+      "status": "passed"
+    },
+    {
+      "artifact": "cost_records.parquet",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/capacity_bins.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/headline_contrasts.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/hypotheses.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/kpis.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/merchant_screening.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/model_coefficients.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/model_diagnostics.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/operational_segments.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/priorities.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/recorded_cost.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/rider_exposure.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/stage_by_segment.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/stage_late_contrasts.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/stage_summary.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/tail_segments.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/temporal_holdout.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/threshold_assessment.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/threshold_discovery_bins.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis/weather_support.csv",
+      "status": "passed"
+    },
+    {
+      "artifact": "manifest.json",
+      "status": "passed"
+    },
+    {
+      "artifact": "data_audit.json",
+      "status": "passed"
+    },
+    {
+      "artifact": "analysis_results.json",
+      "status": "passed"
+    },
+    {
+      "artifact": "data_dictionary.csv",
+      "status": "passed"
+    }
+  ],
+  "status": "passed"
+}

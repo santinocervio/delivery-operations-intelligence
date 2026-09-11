@@ -1,0 +1,130 @@
+[
+  {
+    "action": "Capture first-dispatch, offer, acceptance and reassignment timestamps. Review long initial intervals before choosing a dispatch intervention.",
+    "confidence": "Strong descriptive evidence",
+    "evidence": {
+      "completed_process_orders": 332378,
+      "initial_late_gap_min": 6.053612468497388,
+      "initial_late_gap_share": 0.5097087259420433,
+      "initial_mean_min": 10.583951833054835,
+      "pickup_late_gap_share": 0.23984510450403704
+    },
+    "id": "F01",
+    "interpretation": "The complete timeline changes where management should investigate first. The initial interval may contain scheduling, merchant coordination and earlier assignment attempts; its components are not separately observed.",
+    "limitation": "A time decomposition identifies where time accrues; it does not identify a causal dispatch mechanism.",
+    "observation": "Creation to final notification averages 10.58 minutes. It contributes 6.05 minutes, or 51.0%, of the late-versus-on-time duration difference. Pickup waiting contributes 24.0%.",
+    "source_table": "analysis/stage_late_contrasts.csv",
+    "title": "The main measured deterioration occurs before the final rider notification"
+  },
+  {
+    "action": "Pilot review after four recorded pre events, checking unresolved assignment and merchant readiness. Track time to final notification, completion, late >5 minutes and recorded cost per reviewed order.",
+    "confidence": "Strong concentration evidence; pilot effect untested",
+    "evidence": {
+      "ci95_high": 21.75169747277198,
+      "ci95_low": 19.979693340801607,
+      "late5_rate": 0.670585967617579,
+      "mean_difference_min": 20.805428701600214,
+      "order_share": 0.03134034440859765,
+      "orders": 10472,
+      "pre_event_share": 0.3662970400768358,
+      "service_mean_min": 45.880647648419426
+    },
+    "id": "F02",
+    "interpretation": "The observed service gap is 20.81 minutes (95% date-bootstrap interval 19.98–21.75). This is an exception cohort worth reviewing, not a measured preventable loss.",
+    "limitation": "Four is a diagnostic grouping, not an optimized trigger. Final-state counters do not reveal attempt order, offer compensation or rejecting rider identity.",
+    "observation": "10,472 orders with at least four pre events represent 3.1% of orders with known pre counts and 36.6% of recorded pre events. Their completed orders average 45.88 minutes; 67.1% exceed the promise by more than five minutes.",
+    "source_table": "analysis/headline_contrasts.csv",
+    "title": "A small repeated-pre-event cohort concentrates operational problems"
+  },
+  {
+    "action": "Review long-distance offers by service vertical and clock hour, logging offered compensation, assignment sequence and time to final notification. Test an assignment-policy change with pre incidence, service tails and recorded cost guardrails.",
+    "confidence": "Strong descriptive association; pricing mechanism untested",
+    "evidence": {
+      "ci95_high": 0.31607347203470265,
+      "ci95_low": 0.2948558933723757,
+      "difference": 0.30593931696942067,
+      "long_distance_orders": 25562,
+      "long_distance_pre_rate": 0.479305218683984,
+      "short_distance_orders": 148201,
+      "short_distance_pre_rate": 0.17336590171456334
+    },
+    "id": "F03",
+    "interpretation": "Distance adds an order-complexity dimension to the exception review. The association does not establish insufficient compensation: final recorded cost is not the offered payment and other route characteristics can differ.",
+    "limitation": "Distance units follow the project's metre interpretation; route and offer-level evidence is incomplete. This supports targeted investigation rather than a causal price recommendation.",
+    "observation": "Orders with recorded dropoff distance above 3 km have 47.9% pre-event incidence, versus 17.3% at 1 km or less. The difference is 30.59 percentage points, with a 95% date-bootstrap interval of 29.49–31.61 points.",
+    "source_table": "analysis/headline_contrasts.csv",
+    "title": "Longer recorded delivery distances identify a high-pre-event population"
+  },
+  {
+    "action": "Repair and monitor shift coverage; use the same-hour relative demand/supply comparisons and conditional models before prospectively testing scheduling changes.",
+    "confidence": "Exploratory association with measured coverage limitations",
+    "evidence": {
+      "ci95_high": 0.012494512143224109,
+      "ci95_low": -0.0213740881834429,
+      "late5_difference": -0.005818112440532014,
+      "matched_throughput": 1.7267894219743238,
+      "observed_rider_hours": 193500.7220613889,
+      "thresholds": [
+        {
+          "candidate_cutoff": 2.4094047215497802,
+          "consistent_adjacent_discovery_bins": false,
+          "discovery_dates": 20,
+          "holdout_dates": 10,
+          "metric": "_late5",
+          "rule": "Three supported upper discovery quartiles must deteriorate monotonically; one discovery P75 candidate, held-out final 10 complete dates; each comparison side >=100 orders, 30 hours and 10 dates; positive date-bootstrap intervals in both splits.",
+          "status": "No validated operational threshold",
+          "validated_association": false
+        },
+        {
+          "candidate_cutoff": 2.4094047215497802,
+          "consistent_adjacent_discovery_bins": false,
+          "discovery_dates": 20,
+          "holdout_dates": 10,
+          "metric": "pre_any",
+          "rule": "Three supported upper discovery quartiles must deteriorate monotonically; one discovery P75 candidate, held-out final 10 complete dates; each comparison side >=100 orders, 30 hours and 10 dates; positive date-bootstrap intervals in both splits.",
+          "status": "No validated operational threshold",
+          "validated_association": false
+        }
+      ]
+    },
+    "id": "F04",
+    "interpretation": "The crude pressure comparison does not support a simple claim that more orders per recorded rider-hour necessarily worsens service. Demand, hour, order mix and reactive staffing can confound the relationship.",
+    "limitation": "Missing shifts are not actual zero capacity; the ratio does not measure busy time or a capacity limit. Check held-out threshold results separately.",
+    "observation": "High versus low observed pressure differs by -0.58 percentage points in late >5-minute incidence; the 95% date-bootstrap interval is -2.14 to 1.25 points. The corrected matched-hour throughput is 1.727 orders per observed rider-hour.",
+    "source_table": "analysis/threshold_assessment.csv",
+    "title": "Pressure alone does not establish a staffing deterioration threshold"
+  },
+  {
+    "action": "Keep recorded cost components separate when evaluating an exception pilot. Obtain offer compensation and complete cost definitions before testing a pricing policy.",
+    "confidence": "Strong reconciliation; economic mechanism unverified",
+    "evidence": {
+      "cost_share": 0.0033393498206537612,
+      "reason_bearing_cost": 384517.813853603,
+      "total_recorded_cost": 115147509.09754163
+    },
+    "id": "F05",
+    "interpretation": "The much larger CPO differences between difficult and ordinary orders cannot simply be booked as savings from removing these extra records. Cost, distance and service complexity vary together.",
+    "limitation": "Currency and cost completeness are undocumented. Recorded exposure is not guaranteed recoverable savings or an upper bound on total economic harm.",
+    "observation": "Reason-bearing records contain 384,517.81 cost units, 0.334% of 115,147,509.10 total recorded cost units.",
+    "source_table": "analysis/recorded_cost.csv",
+    "title": "Recorded extra-record cost is a small accounting exposure"
+  },
+  {
+    "action": "Collect more independent wet days, matched dry periods and complete rider coverage. Monitor the existing episode without adopting an inferred weather surcharge.",
+    "confidence": "Strong evidence about sample support; weather effect unresolved",
+    "evidence": {
+      "rain_dates": 1,
+      "rain_hours": 3,
+      "rain_orders": 2010,
+      "weather_missing_orders": 21166,
+      "wet_dates": 5,
+      "wet_hours": 44
+    },
+    "id": "F06",
+    "interpretation": "Rain, peak demand and supply can be compared descriptively, but this window cannot establish a general rain effect or rank weather against staffing as an explanation.",
+    "limitation": "Shared hourly weather does not become independent when joined to many orders.",
+    "observation": "The Rain category contains 2,010 orders across 3 hours and 1 recorded date. All positive precipitation, including drizzle, covers 44 hours on 5 dates.",
+    "source_table": "analysis/weather_support.csv",
+    "title": "The rainfall evidence is one episode, not thousands of independent tests"
+  }
+]

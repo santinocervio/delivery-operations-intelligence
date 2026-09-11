@@ -1,0 +1,163 @@
+{
+  "checks": [
+    {
+      "check": "unique_order_grain",
+      "expected": null,
+      "observed": 334144,
+      "status": "passed"
+    },
+    {
+      "check": "order_count_matches_raw_unique_ids",
+      "expected": 334144,
+      "observed": 334144,
+      "status": "passed"
+    },
+    {
+      "check": "unique_hour_grain",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "full_calendar_hour_spine",
+      "expected": null,
+      "observed": 743,
+      "status": "passed"
+    },
+    {
+      "check": "order_to_hour_integrity",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "hourly_demand_reconciles",
+      "expected": 334144,
+      "observed": 334144.0,
+      "status": "passed"
+    },
+    {
+      "check": "recorded_cost_reconciles_to_raw",
+      "expected": 115147509.09754162,
+      "observed": 115147509.09754163,
+      "status": "passed"
+    },
+    {
+      "check": "hourly_cost_reconciles",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "cost_components_reconcile_per_order",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "unique_rider_hour_grain",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "rider_hour_bounds",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "rider_hours_reconcile",
+      "expected": 193500.7220613889,
+      "observed": 193500.7220613889,
+      "status": "passed"
+    },
+    {
+      "check": "mixed_shift_parser_loses_no_complete_timestamp",
+      "expected": 0,
+      "observed": 0,
+      "status": "passed"
+    },
+    {
+      "check": "missing_supply_has_no_throughput",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "hourly_throughput_arithmetic",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "additive_process_matches_timestamp_endpoint",
+      "expected": "<=1e-8 minute",
+      "observed": 5.684341886080802e-14,
+      "status": "passed"
+    },
+    {
+      "check": "nonnegative_complete_process_cohort",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "ineligible_lateness_is_unknown",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "cancelled_and_pending_excluded_from_service",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "pre_unknown_preserved",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "post_unknown_preserved",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "affected_orders_vs_events",
+      "expected": null,
+      "observed": null,
+      "status": "passed"
+    },
+    {
+      "check": "source_unchanged_orders",
+      "expected": "69d2df9138b060ef35bf45cf917688c9c2b93ee30503a50abbc2cbcadc67dafb",
+      "observed": "69d2df9138b060ef35bf45cf917688c9c2b93ee30503a50abbc2cbcadc67dafb",
+      "status": "passed"
+    },
+    {
+      "check": "source_unchanged_weather",
+      "expected": "6bb4248788f57c445812b1e0c3189716a127938ce8c022ebeb948f70b08c0ec9",
+      "observed": "6bb4248788f57c445812b1e0c3189716a127938ce8c022ebeb948f70b08c0ec9",
+      "status": "passed"
+    },
+    {
+      "check": "source_unchanged_events",
+      "expected": "add9cae64743f2466034e2787b52adcd8a2afb703375b0d94cc0f80955ddec86",
+      "observed": "add9cae64743f2466034e2787b52adcd8a2afb703375b0d94cc0f80955ddec86",
+      "status": "passed"
+    },
+    {
+      "check": "source_unchanged_shifts",
+      "expected": "38c7f6d24c523b13b7ac216d1e9de0b649ef5264e84b9457c21cfcbaf73368c3",
+      "observed": "38c7f6d24c523b13b7ac216d1e9de0b649ef5264e84b9457c21cfcbaf73368c3",
+      "status": "passed"
+    }
+  ],
+  "failed": 0,
+  "passed": 26,
+  "status": "passed"
+}

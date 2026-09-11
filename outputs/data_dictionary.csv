@@ -1,0 +1,220 @@
+dataset,variable,meaning,unit,type,missing_values,missing_fraction,unique_values,semantic_status,source,business_interpretation
+raw_orders,id_pedido,Unique order identifier,identifier,string,0,0.0,334144,source,Base de Pedidos (1).csv,Unique order identifier
+raw_orders,id_comercio,Merchant identifier,identifier,string,0,0.0,2709,source,Base de Pedidos (1).csv,Merchant identifier
+raw_orders,vertical,Order/service vertical,category,str,0,0.0,21,source,Base de Pedidos (1).csv,Order/service vertical
+raw_orders,fecha_creacion,Recorded order creation time,"timestamp, timezone undocumented",str,0,0.0,334144,source,Base de Pedidos (1).csv,Recorded order creation time
+raw_orders,sent_to_vendor_at,Recorded order sent to merchant,timestamp,str,8,2.3012046806503205e-05,334134,source,Base de Pedidos (1).csv,Recorded order sent to merchant
+raw_orders,vendor_accepted_at,Recorded merchant acceptance; may follow rider notification,timestamp,str,38,0.00010930722233089022,334107,source,Base de Pedidos (1).csv,Recorded merchant acceptance; may follow rider notification
+raw_orders,rider_accepted_at,Recorded final rider acceptance,timestamp,str,0,0.0,334144,source,Base de Pedidos (1).csv,Recorded final rider acceptance
+raw_orders,rider_notified_at,Recorded final rider notification,timestamp,str,0,0.0,334144,source,Base de Pedidos (1).csv,Recorded final rider notification
+raw_orders,rider_at_pu,Recorded rider arrival at pickup,timestamp,str,0,0.0,334144,source,Base de Pedidos (1).csv,Recorded rider arrival at pickup
+raw_orders,rider_picked_up,Recorded pickup,timestamp,str,0,0.0,334144,source,Base de Pedidos (1).csv,Recorded pickup
+raw_orders,rider_at_do,Recorded destination arrival; endpoint matched by tiempo_real,timestamp,str,549,0.0015792017120962825,333662,verified against elapsed time,Base de Pedidos (1).csv,Recorded destination arrival; endpoint matched by tiempo_real
+raw_orders,rider_droped_off,Recorded final handoff; source spelling retained,timestamp,str,1683,0.004841159346918112,332586,source,Base de Pedidos (1).csv,Recorded final handoff; source spelling retained
+raw_orders,vehicle,Retained rider vehicle; availability at earlier dispatch attempts is unobserved,category,str,0,0.0,3,source,Base de Pedidos (1).csv,Retained rider vehicle; availability at earlier dispatch attempts is unobserved
+raw_orders,id_repartidor,Retained/final rider identifier; not the identity of a prior rejecting rider,identifier,string,0,0.0,5832,source,Base de Pedidos (1).csv,Retained/final rider identifier; not the identity of a prior rejecting rider
+raw_orders,order_status,Recorded final snapshot status,category,str,0,0.0,3,source,Base de Pedidos (1).csv,Recorded final snapshot status
+raw_orders,tiempo_estimado,Declared promised elapsed time,seconds,int64,0,0.0,1141,source interpretation; promise endpoint not independently documented,Base de Pedidos (1).csv,Declared promised elapsed time
+raw_orders,tiempo_real,Declared elapsed time; compare creation to destination arrival,seconds,int64,0,0.0,5792,"timestamp-verified, rounding tolerance 1 second",Base de Pedidos (1).csv,Declared elapsed time; compare creation to destination arrival
+raw_orders,pu_distance,Recorded final-rider approach distance,assumed metres,int64,0,0.0,3326,inferred; final assignment descriptor,Base de Pedidos (1).csv,Recorded final-rider approach distance
+raw_orders,do_distance,Recorded pickup-to-destination distance,assumed metres,int64,0,0.0,6234,inferred,Base de Pedidos (1).csv,Recorded pickup-to-destination distance
+raw_orders,undispatch_reason,Reason recorded on additional cost record; not a complete dispatch-event history,category,str,334144,0.9611671710140258,4,source,Base de Pedidos (1).csv,Reason recorded on additional cost record; not a complete dispatch-event history
+raw_orders,demora_local,Opaque platform merchant-delay field; not equivalent to total pickup waiting,source units undocumented,float64,40503,0.11650711647547492,1850,unverified,Base de Pedidos (1).csv,Opaque platform merchant-delay field; not equivalent to total pickup waiting
+raw_orders,f0_,Opaque recorded order-value field,source monetary units undocumented,float64,0,0.0,42281,inferred interpretation,Base de Pedidos (1).csv,Opaque recorded order-value field
+raw_orders,pre_accept_undispatchs,Recorded pre-acceptance undispatch count,events,float64,8,2.3012046806503205e-05,34,source,Base de Pedidos (1).csv,Recorded pre-acceptance undispatch count
+raw_orders,post_accept_undispatchs,Recorded post-acceptance undispatch count,events,float64,8,2.3012046806503205e-05,6,source,Base de Pedidos (1).csv,Recorded post-acceptance undispatch count
+raw_orders,undispatch_impact,Opaque platform undispatch-impact field; not used as a causal estimate,undocumented,float64,3747,0.010778267422995938,3527,unverified,Base de Pedidos (1).csv,Opaque platform undispatch-impact field; not used as a causal estimate
+raw_orders,cpo,Raw per-record cost in source; total recorded order cost in derived orders,source monetary units undocumented,float64,0,0.0,336963,source/derived according to dataset,Base de Pedidos (1).csv,Raw per-record cost in source; total recorded order cost in derived orders
+raw_weather,date,date,see metric/field name,datetime64[us],0,0.0,2136,source meaning undocumented,Base de Clima.xlsx,date
+raw_weather,event_type,Source event type or union of active event-window categories,category,str,0,0.0,1,source/derived,Base de Clima.xlsx,Source event type or union of active event-window categories
+raw_weather,temperature,Hourly recorded temperature,assumed degrees Celsius,float64,0,0.0,176,source interpretation,Base de Clima.xlsx,Hourly recorded temperature
+raw_weather,precip_mm,Hourly recorded precipitation,mm,float64,0,0.0,59,source column label,Base de Clima.xlsx,Hourly recorded precipitation
+raw_weather,wind,Hourly recorded wind magnitude,unit undocumented,float64,0,0.0,87,source,Base de Clima.xlsx,Hourly recorded wind magnitude
+raw_weather,condition,Hourly weather condition label,category,str,0,0.0,16,source,Base de Clima.xlsx,Hourly weather condition label
+raw_events,date,date,see metric/field name,datetime64[us],0,0.0,73,source meaning undocumented,Base de Eventos Especiales.xlsx,date
+raw_events,event_type,Source event type or union of active event-window categories,category,str,0,0.0,2,source/derived,Base de Eventos Especiales.xlsx,Source event type or union of active event-window categories
+raw_shifts,shift_id,Recorded shift identifier,identifier,str,0,0.0,176235,source,Base de Turnos.xlsx,Recorded shift identifier
+raw_shifts,rider_id,Rider identifier in recorded shifts,identifier,int64,0,0.0,5786,source,Base de Turnos.xlsx,Rider identifier in recorded shifts
+raw_shifts,fecha_inicio,fecha inicio,calendar date,datetime64[us],67806,0.3847476380968593,64,source meaning undocumented,Base de Turnos.xlsx,fecha inicio
+raw_shifts,hora_inicio,hora inicio,time of day,object,67806,0.3847476380968593,97268,source meaning undocumented,Base de Turnos.xlsx,hora inicio
+raw_shifts,fecha_fin,fecha fin,calendar date,datetime64[us],67806,0.3847476380968593,64,source meaning undocumented,Base de Turnos.xlsx,fecha fin
+raw_shifts,hora_fin,hora fin,time of day,object,67806,0.3847476380968593,92727,source meaning undocumented,Base de Turnos.xlsx,hora fin
+orders,id_pedido,Unique order identifier,identifier,string,0,0.0,334144,source,Base de Pedidos (1).csv,Unique order identifier
+orders,id_comercio,Merchant identifier,identifier,string,0,0.0,2709,source,Base de Pedidos (1).csv,Merchant identifier
+orders,vertical,Order/service vertical,category,str,0,0.0,21,source,Base de Pedidos (1).csv,Order/service vertical
+orders,fecha_creacion,Recorded order creation time,"timestamp, timezone undocumented",datetime64[us],0,0.0,334144,source,Base de Pedidos (1).csv,Recorded order creation time
+orders,sent_to_vendor_at,Recorded order sent to merchant,timestamp,datetime64[us],8,2.3941773606588775e-05,334134,source,Base de Pedidos (1).csv,Recorded order sent to merchant
+orders,vendor_accepted_at,Recorded merchant acceptance; may follow rider notification,timestamp,datetime64[us],37,0.00011073070293047308,334107,source,Base de Pedidos (1).csv,Recorded merchant acceptance; may follow rider notification
+orders,rider_accepted_at,Recorded final rider acceptance,timestamp,datetime64[us],0,0.0,334144,source,Base de Pedidos (1).csv,Recorded final rider acceptance
+orders,rider_notified_at,Recorded final rider notification,timestamp,datetime64[us],0,0.0,334144,source,Base de Pedidos (1).csv,Recorded final rider notification
+orders,rider_at_pu,Recorded rider arrival at pickup,timestamp,datetime64[us],0,0.0,334144,source,Base de Pedidos (1).csv,Recorded rider arrival at pickup
+orders,rider_picked_up,Recorded pickup,timestamp,datetime64[us],0,0.0,334144,source,Base de Pedidos (1).csv,Recorded pickup
+orders,rider_at_do,Recorded destination arrival; endpoint matched by tiempo_real,timestamp,datetime64[us],482,0.0014424918597969738,333662,verified against elapsed time,Base de Pedidos (1).csv,Recorded destination arrival; endpoint matched by tiempo_real
+orders,rider_droped_off,Recorded final handoff; source spelling retained,timestamp,datetime64[us],1558,0.004662660409883164,332586,source,Base de Pedidos (1).csv,Recorded final handoff; source spelling retained
+orders,vehicle,Retained rider vehicle; availability at earlier dispatch attempts is unobserved,category,str,0,0.0,3,source,Base de Pedidos (1).csv,Retained rider vehicle; availability at earlier dispatch attempts is unobserved
+orders,id_repartidor,Retained/final rider identifier; not the identity of a prior rejecting rider,identifier,string,0,0.0,5832,source,Base de Pedidos (1).csv,Retained/final rider identifier; not the identity of a prior rejecting rider
+orders,order_status,Recorded final snapshot status,category,str,0,0.0,3,source,Base de Pedidos (1).csv,Recorded final snapshot status
+orders,tiempo_estimado,Declared promised elapsed time,seconds,int64,0,0.0,1141,source interpretation; promise endpoint not independently documented,Base de Pedidos (1).csv,Declared promised elapsed time
+orders,tiempo_real,Declared elapsed time; compare creation to destination arrival,seconds,int64,0,0.0,5792,"timestamp-verified, rounding tolerance 1 second",Base de Pedidos (1).csv,Declared elapsed time; compare creation to destination arrival
+orders,pu_distance,Recorded final-rider approach distance,assumed metres,int64,0,0.0,3326,inferred; final assignment descriptor,Base de Pedidos (1).csv,Recorded final-rider approach distance
+orders,do_distance,Recorded pickup-to-destination distance,assumed metres,int64,0,0.0,6234,inferred,Base de Pedidos (1).csv,Recorded pickup-to-destination distance
+orders,demora_local,Opaque platform merchant-delay field; not equivalent to total pickup waiting,source units undocumented,float64,31696,0.09485730702930473,1850,unverified,Base de Pedidos (1).csv,Opaque platform merchant-delay field; not equivalent to total pickup waiting
+orders,f0_,Opaque recorded order-value field,source monetary units undocumented,float64,0,0.0,42281,inferred interpretation,Base de Pedidos (1).csv,Opaque recorded order-value field
+orders,pre_accept_undispatchs,Recorded pre-acceptance undispatch count,events,float64,6,1.795633020494158e-05,34,source,Base de Pedidos (1).csv,Recorded pre-acceptance undispatch count
+orders,post_accept_undispatchs,Recorded post-acceptance undispatch count,events,float64,6,1.795633020494158e-05,6,source,Base de Pedidos (1).csv,Recorded post-acceptance undispatch count
+orders,undispatch_impact,Opaque platform undispatch-impact field; not used as a causal estimate,undocumented,float64,3319,0.009932843325033518,3527,unverified,Base de Pedidos (1).csv,Opaque platform undispatch-impact field; not used as a causal estimate
+orders,cpo_entrega,"Cost on principal order record, including non-completed order statuses",recorded cost units,float64,0,0.0,323986,derived,Base de Pedidos (1).csv,"Cost on principal order record, including non-completed order statuses"
+orders,source_row_id,source row id,see metric/field name,int64,0,0.0,334144,derived,Base de Pedidos (1).csv,source row id
+orders,cost_record_type,cost record type,see metric/field name,str,0,0.0,1,derived,Base de Pedidos (1).csv,cost record type
+orders,cpo_total,Sum of all recorded cost rows for order/hour,recorded cost units,float64,0,0.0,324073,derived and reconciled,Base de Pedidos (1).csv,Sum of all recorded cost rows for order/hour
+orders,cost_record_count,Number of source records for an order; not all dispatch attempts,rows,int64,0,0.0,4,derived,Base de Pedidos (1).csv,Number of source records for an order; not all dispatch attempts
+orders,cpo_undispatch,Sum of costs on reason-bearing records for this order,recorded cost units,float64,0,0.0,12806,derived; not guaranteed savings,Base de Pedidos (1).csv,Sum of costs on reason-bearing records for this order
+orders,undispatch_reasons_all,undispatch reasons all,see metric/field name,str,0,0.0,12,derived,Base de Pedidos (1).csv,undispatch reasons all
+orders,undispatch_reason,Reason recorded on additional cost record; not a complete dispatch-event history,category,str,0,0.0,12,source,Base de Pedidos (1).csv,Reason recorded on additional cost record; not a complete dispatch-event history
+orders,date_hour,date hour,see metric/field name,datetime64[us],0,0.0,650,derived,Base de Pedidos (1).csv,date hour
+orders,fecha,fecha,see metric/field name,datetime64[us],0,0.0,32,derived,Base de Pedidos (1).csv,fecha
+orders,hora_num,hora num,time of day,int32,0,0.0,24,derived,Base de Pedidos (1).csv,hora num
+orders,dia_semana,dia semana,see metric/field name,str,0,0.0,7,derived,Base de Pedidos (1).csv,dia semana
+orders,completed_flag,completed flag,see metric/field name,int64,0,0.0,2,derived,Base de Pedidos (1).csv,completed flag
+orders,cancelled_flag,cancelled flag,see metric/field name,int64,0,0.0,2,derived,Base de Pedidos (1).csv,cancelled flag
+orders,actual_min,actual min,minutes,float64,0,0.0,5792,derived,Base de Pedidos (1).csv,actual min
+orders,promised_min,promised min,minutes,float64,0,0.0,1141,derived,Base de Pedidos (1).csv,promised min
+orders,service_eligible,Completed order with finite nonnegative declared service duration,boolean,bool,0,0.0,2,cohort rule,Base de Pedidos (1).csv,Completed order with finite nonnegative declared service duration
+orders,late_eligible,Service-eligible order with finite nonnegative promised duration,boolean,bool,0,0.0,2,cohort rule,Base de Pedidos (1).csv,Service-eligible order with finite nonnegative promised duration
+orders,gap_min,gap min,minutes,float64,1766,0.005285146523654472,12692,derived,Base de Pedidos (1).csv,gap min
+orders,tardio,Declared service duration exceeds declared promise; unknown if ineligible,0/1,float64,1766,0.005285146523654472,2,"derived, strict >0 minute gap",Base de Pedidos (1).csv,Declared service duration exceeds declared promise; unknown if ineligible
+orders,tardio_5min,Declared service duration exceeds promise by more than 5 minutes,0/1,float64,1766,0.005285146523654472,2,derived,Base de Pedidos (1).csv,Declared service duration exceeds promise by more than 5 minutes
+orders,muy_tardio,Declared service duration exceeds promise by more than 15 minutes,0/1,float64,1766,0.005285146523654472,2,derived,Base de Pedidos (1).csv,Declared service duration exceeds promise by more than 15 minutes
+orders,t_created_to_notify_min,Creation to final rider notification,minutes,float64,0,0.0,334098,timestamp-derived,Base de Pedidos (1).csv,Creation to final rider notification
+orders,t_notify_to_accept_min,Rider notification to acceptance,minutes,float64,0,0.0,330641,timestamp-derived,Base de Pedidos (1).csv,Rider notification to acceptance
+orders,t_accept_to_pu_arrival_min,Rider approach to pickup,minutes,float64,0,0.0,313229,timestamp-derived,Base de Pedidos (1).csv,Rider approach to pickup
+orders,t_wait_at_pu_min,Rider waiting at pickup,minutes,float64,0,0.0,333929,timestamp-derived,Base de Pedidos (1).csv,Rider waiting at pickup
+orders,t_last_mile_min,Pickup to destination arrival,minutes,float64,482,0.0014424918597969738,333602,timestamp-derived,Base de Pedidos (1).csv,Pickup to destination arrival
+orders,t_creacion_a_envio_min,t creacion a envio min,minutes,float64,8,2.3941773606588775e-05,333614,derived,Base de Pedidos (1).csv,t creacion a envio min
+orders,t_vendor_response_min,t vendor response min,minutes,float64,37,0.00011073070293047308,328705,derived,Base de Pedidos (1).csv,t vendor response min
+orders,t_espera_asignacion_min,Signed merchant acceptance to final notification interval; overlap is allowed,minutes,float64,37,0.00011073070293047308,333890,timestamp-derived; not pure assignment queue,Base de Pedidos (1).csv,Signed merchant acceptance to final notification interval; overlap is allowed
+orders,t_entrega_final_min,t entrega final min,minutes,float64,1558,0.004662660409883164,332220,derived,Base de Pedidos (1).csv,t entrega final min
+orders,t_total_from_created_min,t total from created min,minutes,float64,1558,0.004662660409883164,332559,derived,Base de Pedidos (1).csv,t total from created min
+orders,process_eligible,Completed order with all five additive stages present and nonnegative,boolean,bool,0,0.0,2,cohort rule,Base de Pedidos (1).csv,Completed order with all five additive stages present and nonnegative
+orders,dispatch_paralelo,dispatch paralelo,see metric/field name,float64,37,0.00011073070293047308,2,derived,Base de Pedidos (1).csv,dispatch paralelo
+orders,service_timestamp_min,service timestamp min,minutes,float64,482,0.0014424918597969738,333641,derived,Base de Pedidos (1).csv,service timestamp min
+orders,service_residual_seconds,service residual seconds,see metric/field name,float64,482,0.0014424918597969738,311139,derived,Base de Pedidos (1).csv,service residual seconds
+orders,pre_undispatches,pre undispatches,see metric/field name,float64,6,1.795633020494158e-05,34,derived,Base de Pedidos (1).csv,pre undispatches
+orders,pre_any,pre any,see metric/field name,float64,6,1.795633020494158e-05,2,derived,Base de Pedidos (1).csv,pre any
+orders,post_undispatches,post undispatches,see metric/field name,float64,6,1.795633020494158e-05,6,derived,Base de Pedidos (1).csv,post undispatches
+orders,post_any,post any,see metric/field name,float64,6,1.795633020494158e-05,2,derived,Base de Pedidos (1).csv,post any
+orders,total_undispatches,total undispatches,see metric/field name,float64,6,1.795633020494158e-05,35,derived,Base de Pedidos (1).csv,total undispatches
+orders,any_undispatch,any undispatch,see metric/field name,float64,6,1.795633020494158e-05,2,derived,Base de Pedidos (1).csv,any undispatch
+orders,segmento_undispatch,segmento undispatch,see metric/field name,str,0,0.0,5,derived,Base de Pedidos (1).csv,segmento undispatch
+orders,cpo,Raw per-record cost in source; total recorded order cost in derived orders,source monetary units undocumented,float64,0,0.0,324073,source/derived according to dataset,Base de Pedidos (1).csv,Raw per-record cost in source; total recorded order cost in derived orders
+orders,order_value,Raw f0_ retained as order-value proxy; does not measure physical parcel size,source monetary units undocumented,float64,0,0.0,42281,inferred interpretation,Base de Pedidos (1).csv,Raw f0_ retained as order-value proxy; does not measure physical parcel size
+orders,pu_km,pu km,see metric/field name,float64,0,0.0,3326,derived,Base de Pedidos (1).csv,pu km
+orders,do_km,do km,see metric/field name,float64,0,0.0,6234,derived,Base de Pedidos (1).csv,do km
+orders,dist_total_km,dist total km,see metric/field name,float64,0,0.0,12611,derived,Base de Pedidos (1).csv,dist total km
+orders,distance_outlier,distance outlier,see metric/field name,bool,0,0.0,2,derived,Base de Pedidos (1).csv,distance outlier
+orders,dist_bucket,dist bucket,see metric/field name,string,0,0.0,5,derived,Base de Pedidos (1).csv,dist bucket
+orders,prep_bucket,prep bucket,see metric/field name,string,0,0.0,5,derived,Base de Pedidos (1).csv,prep bucket
+orders,ticket_bucket,ticket bucket,see metric/field name,str,0,0.0,3,derived,Base de Pedidos (1).csv,ticket bucket
+orders,prep_time_min,prep time min,minutes,float64,0,0.0,333929,derived,Base de Pedidos (1).csv,prep time min
+orders,temperature,Hourly recorded temperature,assumed degrees Celsius,float64,21166,0.06334394751963225,132,source interpretation,Base de Pedidos (1).csv,Hourly recorded temperature
+orders,precip_mm,Hourly recorded precipitation,mm,float64,21166,0.06334394751963225,23,source column label,Base de Pedidos (1).csv,Hourly recorded precipitation
+orders,wind,Hourly recorded wind magnitude,unit undocumented,float64,21166,0.06334394751963225,70,source,Base de Pedidos (1).csv,Hourly recorded wind magnitude
+orders,condition,Hourly weather condition label,category,str,0,0.0,12,source,Base de Pedidos (1).csv,Hourly weather condition label
+orders,lluvia,"Dry=0mm; Drizzle=(0,0.5)mm; Rain>=0.5mm; Unknown=missing/invalid",category,str,0,0.0,4,declared segmentation,Base de Pedidos (1).csv,"Dry=0mm; Drizzle=(0,0.5)mm; Rain>=0.5mm; Unknown=missing/invalid"
+orders,country_holiday_count,country holiday count,see metric/field name,int64,0,0.0,2,derived,Base de Pedidos (1).csv,country holiday count
+orders,country_holiday,country holiday,see metric/field name,bool,0,0.0,2,derived,Base de Pedidos (1).csv,country holiday
+orders,football_match_count,football match count,see metric/field name,int64,0,0.0,4,derived,Base de Pedidos (1).csv,football match count
+orders,football_match,football match,see metric/field name,bool,0,0.0,2,derived,Base de Pedidos (1).csv,football match
+orders,event_type,Source event type or union of active event-window categories,category,str,0,0.0,4,source/derived,Base de Pedidos (1).csv,Source event type or union of active event-window categories
+orders,pedidos,pedidos,see metric/field name,Int64,0,0.0,472,derived,Base de Pedidos (1).csv,pedidos
+orders,completed,completed,see metric/field name,float64,0,0.0,469,derived,Base de Pedidos (1).csv,completed
+orders,late_count,late count,see metric/field name,float64,0,0.0,329,derived,Base de Pedidos (1).csv,late count
+orders,late_eligible_count,late eligible count,see metric/field name,float64,0,0.0,469,derived,Base de Pedidos (1).csv,late eligible count
+orders,pre_affected,pre affected,see metric/field name,float64,0,0.0,283,derived,Base de Pedidos (1).csv,pre affected
+orders,pre_eligible_count,pre eligible count,see metric/field name,float64,0,0.0,473,derived,Base de Pedidos (1).csv,pre eligible count
+orders,post_affected,post affected,see metric/field name,float64,0,0.0,83,derived,Base de Pedidos (1).csv,post affected
+orders,post_eligible_count,post eligible count,see metric/field name,float64,0,0.0,473,derived,Base de Pedidos (1).csv,post eligible count
+orders,mean_actual_min,mean actual min,minutes,float64,2,5.985443401647194e-06,648,derived,Base de Pedidos (1).csv,mean actual min
+orders,p90_actual_min,p90 actual min,minutes,float64,2,5.985443401647194e-06,629,derived,Base de Pedidos (1).csv,p90 actual min
+orders,mean_pre_undispatches,mean pre undispatches,see metric/field name,float64,0,0.0,599,derived,Base de Pedidos (1).csv,mean pre undispatches
+orders,mean_post_undispatches,mean post undispatches,see metric/field name,float64,0,0.0,537,derived,Base de Pedidos (1).csv,mean post undispatches
+orders,rider_hours_total,Union of dated rider shift intervals within hour; missing means no usable recorded supply,observed rider-hours,float64,9,2.6934495307412374e-05,643,derived; not total actual capacity,Base de Pedidos (1).csv,Union of dated rider shift intervals within hour; missing means no usable recorded supply
+orders,observed_riders,observed riders,see metric/field name,float64,9,2.6934495307412374e-05,443,derived,Base de Pedidos (1).csv,observed riders
+orders,supply_observed,supply observed,see metric/field name,bool,0,0.0,2,derived,Base de Pedidos (1).csv,supply observed
+orders,utr_proxy,Recorded orders / observed rider-hours over matching calendar hours,orders per observed rider-hour,Float64,9,2.6934495307412374e-05,644,derived throughput proxy; not busy-time utilization,Base de Pedidos (1).csv,Recorded orders / observed rider-hours over matching calendar hours
+orders,demand_band,demand band,see metric/field name,str,0,0.0,3,derived,Base de Pedidos (1).csv,demand band
+orders,supply_band,supply band,see metric/field name,str,0,0.0,4,derived,Base de Pedidos (1).csv,supply band
+orders,pressure_band,pressure band,see metric/field name,str,0,0.0,4,derived,Base de Pedidos (1).csv,pressure band
+orders,relative_demand_band,relative demand band,see metric/field name,str,0,0.0,3,derived,Base de Pedidos (1).csv,relative demand band
+orders,relative_supply_band,relative supply band,see metric/field name,str,0,0.0,4,derived,Base de Pedidos (1).csv,relative supply band
+orders,peak_hour,peak hour,see metric/field name,boolean,0,0.0,2,derived,Base de Pedidos (1).csv,peak hour
+orders,partial_boundary_day,partial boundary day,see metric/field name,bool,0,0.0,2,derived,Base de Pedidos (1).csv,partial boundary day
+cost_records,id_pedido,Unique order identifier,identifier,string,0,0.0,334144,source,Canonical pipeline,Unique order identifier
+cost_records,id_comercio,Merchant identifier,identifier,string,0,0.0,2709,source,Canonical pipeline,Merchant identifier
+cost_records,vertical,Order/service vertical,category,str,0,0.0,21,source,Canonical pipeline,Order/service vertical
+cost_records,fecha_creacion,Recorded order creation time,"timestamp, timezone undocumented",str,0,0.0,334144,source,Canonical pipeline,Recorded order creation time
+cost_records,sent_to_vendor_at,Recorded order sent to merchant,timestamp,str,8,2.3012046806503205e-05,334134,source,Canonical pipeline,Recorded order sent to merchant
+cost_records,vendor_accepted_at,Recorded merchant acceptance; may follow rider notification,timestamp,str,38,0.00010930722233089022,334107,source,Canonical pipeline,Recorded merchant acceptance; may follow rider notification
+cost_records,rider_accepted_at,Recorded final rider acceptance,timestamp,str,0,0.0,334144,source,Canonical pipeline,Recorded final rider acceptance
+cost_records,rider_notified_at,Recorded final rider notification,timestamp,str,0,0.0,334144,source,Canonical pipeline,Recorded final rider notification
+cost_records,rider_at_pu,Recorded rider arrival at pickup,timestamp,str,0,0.0,334144,source,Canonical pipeline,Recorded rider arrival at pickup
+cost_records,rider_picked_up,Recorded pickup,timestamp,str,0,0.0,334144,source,Canonical pipeline,Recorded pickup
+cost_records,rider_at_do,Recorded destination arrival; endpoint matched by tiempo_real,timestamp,str,549,0.0015792017120962825,333662,verified against elapsed time,Canonical pipeline,Recorded destination arrival; endpoint matched by tiempo_real
+cost_records,rider_droped_off,Recorded final handoff; source spelling retained,timestamp,str,1683,0.004841159346918112,332586,source,Canonical pipeline,Recorded final handoff; source spelling retained
+cost_records,vehicle,Retained rider vehicle; availability at earlier dispatch attempts is unobserved,category,str,0,0.0,3,source,Canonical pipeline,Retained rider vehicle; availability at earlier dispatch attempts is unobserved
+cost_records,id_repartidor,Retained/final rider identifier; not the identity of a prior rejecting rider,identifier,string,0,0.0,5832,source,Canonical pipeline,Retained/final rider identifier; not the identity of a prior rejecting rider
+cost_records,order_status,Recorded final snapshot status,category,str,0,0.0,3,source,Canonical pipeline,Recorded final snapshot status
+cost_records,tiempo_estimado,Declared promised elapsed time,seconds,int64,0,0.0,1141,source interpretation; promise endpoint not independently documented,Canonical pipeline,Declared promised elapsed time
+cost_records,tiempo_real,Declared elapsed time; compare creation to destination arrival,seconds,int64,0,0.0,5792,"timestamp-verified, rounding tolerance 1 second",Canonical pipeline,Declared elapsed time; compare creation to destination arrival
+cost_records,pu_distance,Recorded final-rider approach distance,assumed metres,int64,0,0.0,3326,inferred; final assignment descriptor,Canonical pipeline,Recorded final-rider approach distance
+cost_records,do_distance,Recorded pickup-to-destination distance,assumed metres,int64,0,0.0,6234,inferred,Canonical pipeline,Recorded pickup-to-destination distance
+cost_records,undispatch_reason,Reason recorded on additional cost record; not a complete dispatch-event history,category,str,334144,0.9611671710140258,4,source,Canonical pipeline,Reason recorded on additional cost record; not a complete dispatch-event history
+cost_records,demora_local,Opaque platform merchant-delay field; not equivalent to total pickup waiting,source units undocumented,float64,40503,0.11650711647547492,1850,unverified,Canonical pipeline,Opaque platform merchant-delay field; not equivalent to total pickup waiting
+cost_records,f0_,Opaque recorded order-value field,source monetary units undocumented,float64,0,0.0,42281,inferred interpretation,Canonical pipeline,Opaque recorded order-value field
+cost_records,pre_accept_undispatchs,Recorded pre-acceptance undispatch count,events,float64,8,2.3012046806503205e-05,34,source,Canonical pipeline,Recorded pre-acceptance undispatch count
+cost_records,post_accept_undispatchs,Recorded post-acceptance undispatch count,events,float64,8,2.3012046806503205e-05,6,source,Canonical pipeline,Recorded post-acceptance undispatch count
+cost_records,undispatch_impact,Opaque platform undispatch-impact field; not used as a causal estimate,undocumented,float64,3747,0.010778267422995938,3527,unverified,Canonical pipeline,Opaque platform undispatch-impact field; not used as a causal estimate
+cost_records,cpo,Raw per-record cost in source; total recorded order cost in derived orders,source monetary units undocumented,float64,0,0.0,336963,source/derived according to dataset,Canonical pipeline,Raw per-record cost in source; total recorded order cost in derived orders
+cost_records,source_row_id,source row id,see metric/field name,int64,0,0.0,347644,derived,Canonical pipeline,source row id
+cost_records,cost_record_type,cost record type,see metric/field name,str,0,0.0,2,derived,Canonical pipeline,cost record type
+rider_hours,rider_id,Rider identifier in recorded shifts,identifier,string,0,0.0,3668,source,Canonical pipeline,Rider identifier in recorded shifts
+rider_hours,date_hour,date hour,see metric/field name,datetime64[us],0,0.0,697,derived,Canonical pipeline,date hour
+rider_hours,rider_hours,Non-overlapping recorded time for one rider within one hour,hours,float64,0,0.0,86740,derived,Canonical pipeline,Non-overlapping recorded time for one rider within one hour
+hours,date_hour,date hour,see metric/field name,datetime64[us],0,0.0,743,derived,Canonical pipeline,date hour
+hours,temperature,Hourly recorded temperature,assumed degrees Celsius,float64,48,0.06460296096904442,138,source interpretation,Canonical pipeline,Hourly recorded temperature
+hours,precip_mm,Hourly recorded precipitation,mm,float64,48,0.06460296096904442,24,source column label,Canonical pipeline,Hourly recorded precipitation
+hours,wind,Hourly recorded wind magnitude,unit undocumented,float64,48,0.06460296096904442,71,source,Canonical pipeline,Hourly recorded wind magnitude
+hours,condition,Hourly weather condition label,category,str,0,0.0,12,source,Canonical pipeline,Hourly weather condition label
+hours,lluvia,"Dry=0mm; Drizzle=(0,0.5)mm; Rain>=0.5mm; Unknown=missing/invalid",category,str,0,0.0,4,declared segmentation,Canonical pipeline,"Dry=0mm; Drizzle=(0,0.5)mm; Rain>=0.5mm; Unknown=missing/invalid"
+hours,country_holiday_count,country holiday count,see metric/field name,int64,0,0.0,2,derived,Canonical pipeline,country holiday count
+hours,country_holiday,country holiday,see metric/field name,bool,0,0.0,2,derived,Canonical pipeline,country holiday
+hours,football_match_count,football match count,see metric/field name,int64,0,0.0,4,derived,Canonical pipeline,football match count
+hours,football_match,football match,see metric/field name,bool,0,0.0,2,derived,Canonical pipeline,football match
+hours,event_type,Source event type or union of active event-window categories,category,str,0,0.0,4,source/derived,Canonical pipeline,Source event type or union of active event-window categories
+hours,fecha,fecha,see metric/field name,datetime64[us],0,0.0,32,derived,Canonical pipeline,fecha
+hours,hora_num,hora num,time of day,int32,0,0.0,24,derived,Canonical pipeline,hora num
+hours,dia_semana,dia semana,see metric/field name,str,0,0.0,7,derived,Canonical pipeline,dia semana
+hours,pedidos,pedidos,see metric/field name,Int64,0,0.0,473,derived,Canonical pipeline,pedidos
+hours,completed,completed,see metric/field name,float64,0,0.0,469,derived,Canonical pipeline,completed
+hours,late_count,late count,see metric/field name,float64,0,0.0,329,derived,Canonical pipeline,late count
+hours,late_eligible_count,late eligible count,see metric/field name,float64,0,0.0,469,derived,Canonical pipeline,late eligible count
+hours,pre_affected,pre affected,see metric/field name,float64,0,0.0,283,derived,Canonical pipeline,pre affected
+hours,pre_eligible_count,pre eligible count,see metric/field name,float64,0,0.0,474,derived,Canonical pipeline,pre eligible count
+hours,post_affected,post affected,see metric/field name,float64,0,0.0,83,derived,Canonical pipeline,post affected
+hours,post_eligible_count,post eligible count,see metric/field name,float64,0,0.0,474,derived,Canonical pipeline,post eligible count
+hours,cpo_total,Sum of all recorded cost rows for order/hour,recorded cost units,float64,0,0.0,651,derived and reconciled,Canonical pipeline,Sum of all recorded cost rows for order/hour
+hours,mean_actual_min,mean actual min,minutes,float64,95,0.1278600269179004,648,derived,Canonical pipeline,mean actual min
+hours,p90_actual_min,p90 actual min,minutes,float64,95,0.1278600269179004,629,derived,Canonical pipeline,p90 actual min
+hours,mean_pre_undispatches,mean pre undispatches,see metric/field name,float64,93,0.12516823687752354,599,derived,Canonical pipeline,mean pre undispatches
+hours,mean_post_undispatches,mean post undispatches,see metric/field name,float64,93,0.12516823687752354,537,derived,Canonical pipeline,mean post undispatches
+hours,rider_hours_total,Union of dated rider shift intervals within hour; missing means no usable recorded supply,observed rider-hours,float64,46,0.06191117092866756,693,derived; not total actual capacity,Canonical pipeline,Union of dated rider shift intervals within hour; missing means no usable recorded supply
+hours,observed_riders,observed riders,see metric/field name,float64,46,0.06191117092866756,451,derived,Canonical pipeline,observed riders
+hours,supply_observed,supply observed,see metric/field name,bool,0,0.0,2,derived,Canonical pipeline,supply observed
+hours,utr_proxy,Recorded orders / observed rider-hours over matching calendar hours,orders per observed rider-hour,Float64,46,0.06191117092866756,645,derived throughput proxy; not busy-time utilization,Canonical pipeline,Recorded orders / observed rider-hours over matching calendar hours
+hours,demand_band,demand band,see metric/field name,str,0,0.0,3,derived,Canonical pipeline,demand band
+hours,supply_band,supply band,see metric/field name,str,0,0.0,4,derived,Canonical pipeline,supply band
+hours,pressure_band,pressure band,see metric/field name,str,0,0.0,4,derived,Canonical pipeline,pressure band
+hours,relative_demand_band,relative demand band,see metric/field name,str,0,0.0,3,derived,Canonical pipeline,relative demand band
+hours,relative_supply_band,relative supply band,see metric/field name,str,0,0.0,4,derived,Canonical pipeline,relative supply band
+hours,peak_hour,peak hour,see metric/field name,boolean,0,0.0,2,derived,Canonical pipeline,peak hour
+hours,partial_boundary_day,partial boundary day,see metric/field name,bool,0,0.0,2,derived,Canonical pipeline,partial boundary day

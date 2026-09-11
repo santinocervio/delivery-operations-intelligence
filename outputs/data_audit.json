@@ -1,0 +1,279 @@
+{
+  "coverage": {
+    "calendar_hours": 743,
+    "hours_with_orders": 650,
+    "hours_with_supply": 697,
+    "order_hours_without_supply": 6,
+    "orders_with_weather": 312978,
+    "orders_without_hourly_supply": 9,
+    "weather_hours": 695,
+    "zero_recorded_demand_supply_hours": 53
+  },
+  "events": {
+    "event_window_assumption": "Football: floor(event time)-1h through +3h inclusive; holiday: recorded calendar day.",
+    "exact_duplicate_events": 5,
+    "raw_events": 78,
+    "unparseable_event_dates": 0
+  },
+  "orders": {
+    "cost_reconciliation_error": 1.4901161193847656e-08,
+    "exact_duplicate_rows": 0,
+    "invalid_process_orders": 0,
+    "order_cost_total": 115147509.09754163,
+    "orders_with_varying_final_assignment_fields": {
+      "fecha_creacion": 0,
+      "id_repartidor": 0,
+      "rider_accepted_at": 0,
+      "rider_at_do": 0,
+      "rider_at_pu": 0,
+      "rider_droped_off": 0,
+      "rider_notified_at": 0,
+      "rider_picked_up": 0,
+      "sent_to_vendor_at": 0,
+      "vendor_accepted_at": 0
+    },
+    "principal_rows": 334144,
+    "raw_cost_total": 115147509.09754162,
+    "raw_rows": 347644,
+    "reason_bearing_rows": 13500,
+    "source_cost_records_are_not_event_histories": true,
+    "status_counts": {
+      "cancelled": 1761,
+      "completed": 332378,
+      "pending": 5
+    },
+    "unique_orders": 334144
+  },
+  "segmentation": {
+    "band_method": "Full-period empirical tertiles; tied values stay together; <=lower is Low, <=upper is Medium, otherwise High.",
+    "bands": {
+      "demand_band": [
+        161.33333333333331,
+        540.9999999999999
+      ],
+      "pressure_band": [
+        1.4368654733275807,
+        2.151562983370695
+      ],
+      "relative_demand_band": {
+        "0": [
+          196.0,
+          221.0
+        ],
+        "1": [
+          100.0,
+          123.0
+        ],
+        "10": [
+          269.0,
+          306.0
+        ],
+        "11": [
+          399.0,
+          470.0
+        ],
+        "12": [
+          801.0,
+          910.0
+        ],
+        "13": [
+          849.0,
+          941.0
+        ],
+        "14": [
+          683.0,
+          746.0
+        ],
+        "15": [
+          485.0,
+          542.0
+        ],
+        "16": [
+          397.0,
+          439.0
+        ],
+        "17": [
+          387.0,
+          432.0
+        ],
+        "18": [
+          470.0,
+          512.0
+        ],
+        "19": [
+          905.0,
+          964.0
+        ],
+        "2": [
+          2.0,
+          8.0
+        ],
+        "20": [
+          1347.0,
+          1569.0
+        ],
+        "21": [
+          1152.6666666666667,
+          1453.0
+        ],
+        "22": [
+          716.0,
+          1054.0
+        ],
+        "23": [
+          479.0,
+          554.0
+        ],
+        "3": [
+          0.0,
+          1.0
+        ],
+        "4": [
+          0.0,
+          0.0
+        ],
+        "5": [
+          0.0,
+          0.0
+        ],
+        "6": [
+          0.0,
+          1.0
+        ],
+        "7": [
+          40.0,
+          47.0
+        ],
+        "8": [
+          124.0,
+          153.0
+        ],
+        "9": [
+          234.0,
+          268.0
+        ]
+      },
+      "relative_supply_band": {
+        "0": [
+          198.45365333333334,
+          230.42693833333334
+        ],
+        "1": [
+          111.97555638888889,
+          132.60856194444443
+        ],
+        "10": [
+          113.12948194444445,
+          137.23729083333333
+        ],
+        "11": [
+          174.56109166666667,
+          195.04078638888888
+        ],
+        "12": [
+          311.414775,
+          361.8312827777778
+        ],
+        "13": [
+          426.31159083333336,
+          482.9746044444444
+        ],
+        "14": [
+          396.526105,
+          426.77039444444443
+        ],
+        "15": [
+          296.5412905555556,
+          325.7407686111111
+        ],
+        "16": [
+          242.74784416666665,
+          280.9566091666667
+        ],
+        "17": [
+          214.89081277777777,
+          238.54822944444444
+        ],
+        "18": [
+          236.32431805555555,
+          258.58990166666666
+        ],
+        "19": [
+          383.8387536111111,
+          416.44019583333335
+        ],
+        "2": [
+          52.80242472222222,
+          74.22525305555556
+        ],
+        "20": [
+          664.0394191666667,
+          741.9641305555556
+        ],
+        "21": [
+          774.0075834259259,
+          899.4382962037037
+        ],
+        "22": [
+          645.3273469444445,
+          713.4070436111111
+        ],
+        "23": [
+          434.5365772222222,
+          473.98358
+        ],
+        "3": [
+          0.5781269444444445,
+          5.914937777777777
+        ],
+        "4": [
+          1.1574596296296296,
+          1.9609653703703704
+        ],
+        "5": [
+          0.6203422222222222,
+          1.0
+        ],
+        "6": [
+          0.1377971296296296,
+          0.35075722222222216
+        ],
+        "7": [
+          11.143240277777778,
+          13.180115833333334
+        ],
+        "8": [
+          40.21939694444445,
+          44.26110444444444
+        ],
+        "9": [
+          83.86806777777778,
+          97.96789527777779
+        ]
+      },
+      "supply_band": [
+        124.78758972222222,
+        347.6777641666667
+      ]
+    },
+    "peak_hour_cutoff_mean_orders": 739.8064516129033
+  },
+  "shifts": {
+    "complete_shift_rows": 108429,
+    "dated_window_riders": 3668,
+    "legacy_parse_failures": 25052,
+    "long_shift_policy": "Retain positive durations; report <=16h sensitivity.",
+    "long_shifts_gt16h": 4,
+    "missing_shift_datetime_rows": 67806,
+    "mixed_parse_failures": 0,
+    "nonpositive_durations": 0,
+    "orders_final_rider_without_dated_window_shift": 20206,
+    "overlap_hours_removed": 0.0,
+    "overlapping_shift_rows": 0,
+    "raw_shifts": 176235,
+    "union_window_rider_hours": 193500.7220613889,
+    "unmerged_window_hours": 193500.7220613889,
+    "valid_window_shifts": 54393,
+    "window_hours_excluding_long_shifts_unmerged": 193500.7220613889
+  }
+}

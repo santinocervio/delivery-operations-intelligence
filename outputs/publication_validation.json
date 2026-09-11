@@ -1,0 +1,63 @@
+{
+  "scope": "Public snapshot checks; private source-based records are retained separately",
+  "status": "passed",
+  "synthetic_tests": {
+    "command": "python -m pytest -q",
+    "tests": 40,
+    "failures": 0,
+    "status": "passed",
+    "raw_inputs_required": false
+  },
+  "aggregate_analysis_tables": 17,
+  "checks": [
+    {
+      "check": "no_raw_parquet_actor_or_native_data_files",
+      "status": "passed"
+    },
+    {
+      "check": "static_secret_patterns_and_absolute_user_paths",
+      "status": "passed",
+      "matches": 0,
+      "limitation": "Static pattern inspection, not a guarantee against every possible undisclosed secret."
+    },
+    {
+      "check": "local_markdown_links_resolve",
+      "status": "passed",
+      "missing": 0
+    },
+    {
+      "check": "aggregate_csv_headers_contain_no_direct_actor_order_identifiers",
+      "status": "passed"
+    },
+    {
+      "check": "copied_file_hashes_match_publication_provenance",
+      "status": "passed",
+      "files": 62
+    },
+    {
+      "check": "all_python_source_tests_and_aggregate_csv_bytes_match_private_source",
+      "status": "passed"
+    },
+    {
+      "check": "four_original_raw_hashes_match_recorded_manifest",
+      "status": "passed",
+      "sources": 4,
+      "raw_data_published": false
+    },
+    {
+      "check": "gitignore_blocks_sensitive_and_generated_examples",
+      "status": "passed",
+      "examples": 10
+    },
+    {
+      "check": "analysis_json_numeric_content_preserved",
+      "status": "passed",
+      "only_changes": "Private table references removed and publication metadata added."
+    }
+  ],
+  "limitations": [
+    "Private-source pipeline and full dashboard were not rerun from this public copy; originals are documented in validation.json and reproducibility.json.",
+    "Native Power BI execution remains unverified.",
+    "No network publication was performed by the preparation step."
+  ]
+}
