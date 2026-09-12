@@ -90,9 +90,7 @@ Thumbs.db
 # Portfolio video build artefacts
 portfolio-video/*/node_modules/
 portfolio-video/*/snapshots/
-portfolio-video/*/renders/work-*/
-portfolio-video/*/renders/.*hf-transaction*/
-portfolio-video/*/renders/master.mp4
+portfolio-video/*/renders/
 portfolio-video/*/.hyperframes/
 
 # HyperFrames authoring skills — restore with:

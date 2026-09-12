@@ -17,8 +17,11 @@ portfolio-video/
 │   ├── scripts/extract-data.py    CSV → JSON, deterministic
 │   ├── scripts/verify-claims.mjs  82 assertions: every on-screen figure vs source
 │   ├── assets/vendor/gsap.min.js  vendored (the render host has no CDN egress)
-│   └── renders/                   MP4, WebM, posters
+│   └── renders/                   local build output (git-ignored)
 └── pedidosya-loop/                hero loop (separate project: one root per project)
+
+Shipped files live in `assets/video/` at the repository root, matching the
+convention of the sibling dc-fulfilment-simulation repository.
 ```
 
 ## Rendering
@@ -61,16 +64,17 @@ ffmpeg -i ../../pedidosya-loop/renders/delivery-ops-hero-loop.mp4 -frames:v 1 -q
 
 | File | Format | Duration | Size |
 |---|---|---|---|
-| `pedidosya/renders/delivery-ops-case-study.mp4` | H.264 1920×1080 30 fps | 48.6 s | 2.4 MB |
-| `pedidosya/renders/delivery-ops-case-study.webm` | VP9 1920×1080 30 fps | 48.6 s | 2.3 MB |
-| `pedidosya-loop/renders/delivery-ops-hero-loop.mp4` | H.264 1920×1080 30 fps | 10.0 s | 291 KB |
-| `pedidosya-loop/renders/delivery-ops-hero-loop.webm` | VP9 1920×1080 30 fps | 10.0 s | 258 KB |
-| `pedidosya/renders/posters/case-study-poster.jpg` | JPEG 1920×1080 | — | 114 KB |
-| `pedidosya/renders/posters/case-study-thumbnail.jpg` | JPEG 1920×1080 | — | 121 KB |
-| `pedidosya/renders/posters/hero-loop-poster.jpg` | JPEG 1920×1080 | — | 81 KB |
+| `assets/video/delivery-operations-intelligence.mp4` | H.264 1920×1080 30 fps | 48.6 s | 2.4 MB |
+| `assets/video/delivery-operations-intelligence.webm` | VP9 1920×1080 30 fps | 48.6 s | 2.3 MB |
+| `assets/video/hero-loop.mp4` | H.264 1920×1080 30 fps | 10.0 s | 291 KB |
+| `assets/video/hero-loop.webm` | VP9 1920×1080 30 fps | 10.0 s | 258 KB |
+| `assets/video/delivery-operations-intelligence-poster.jpg` | JPEG 1920×1080 | — | 114 KB |
+| `assets/video/delivery-operations-intelligence-thumbnail.jpg` | JPEG 1920×1080 | — | 121 KB |
+| `assets/video/hero-loop-poster.jpg` | JPEG 1920×1080 | — | 81 KB |
 
-`master.mp4` (8.8 MB) is the ungraded render and is deliberately git-ignored;
-regenerate it from source whenever you need to re-encode.
+The whole `renders/` directory is git-ignored — it is local build output.
+Copy the finished encodes into `assets/video/` (the names in the table above)
+to ship them.
 
 Regenerate the frozen data after any re-run of the pipeline:
 

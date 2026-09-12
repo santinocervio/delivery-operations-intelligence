@@ -81,6 +81,26 @@ Instrument the initial operational interval; pilot review of repeated pre events
 
 Short observational extract; undocumented timezone/currency and opaque fields; missing dated shifts and weather; no offer-level compensation or assignment-event history. Recorded final rider IDs do not identify earlier rejecting riders. No invented savings, causal pricing conclusion or forced staffing threshold. [Validation and self-review](docs/VALIDATION_REPORT.md).
 
+## Case Study Video
+
+A 48-second silent case study, rendered from code and built only from the aggregate
+evidence in this repository:
+[MP4](assets/video/delivery-operations-intelligence.mp4) ·
+[WebM](assets/video/delivery-operations-intelligence.webm).
+An 8–12 second [hero loop](assets/video/hero-loop.mp4) is also provided for project cards.
+
+It follows the analysis rather than a template: the scale of the operation, the real
+hourly demand rhythm, the intuitive pressure hypothesis tested and **rejected** on
+held-out dates, the stage decomposition that locates 51.0% of the late-order gap before
+the rider is notified, the concentrated pre-event cohort, and three ranked pilots with
+their trade-offs stated.
+
+Every figure on screen names its source table and is re-checked against
+`outputs/analysis/` by `portfolio-video/pedidosya/scripts/verify-claims.mjs` — 82
+assertions that fail if a value drifts. Source, storyboard and rendering commands:
+[portfolio-video/README_VIDEO.md](portfolio-video/README_VIDEO.md) and
+[docs/VIDEO_STORYBOARD.md](docs/VIDEO_STORYBOARD.md).
+
 ## Repository Structure
 
 - `delivery_ops/`: import-safe data reconstruction, analysis, reporting, dashboard, export and validation.
@@ -88,6 +108,7 @@ Short observational extract; undocumented timezone/currency and opaque fields; m
 - `docs/`: business case, methodology, audit, phase ledger and interview materials.
 - `outputs/`: selected aggregate evidence, dictionary, source hashes and validation records from the original analysis. Private row-level and actor-level outputs are excluded.
 - `v16/`: maintained compatibility entrypoints, dashboard launcher and Power BI guide. Historical datasets and native projects are excluded from the public repository.
+- `portfolio-video/`: reproducible source for the case-study film and hero loop; `assets/video/` holds the rendered deliverables.
 - `CODEX_TASK.md`: the confirmed 21-phase task brief. The scope and exclusions of this public snapshot are documented in [PUBLICATION.md](docs/PUBLICATION.md).
 
 ## How to Run
