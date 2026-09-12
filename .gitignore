@@ -86,3 +86,18 @@ Thumbs.db
 *.log
 *.tmp
 *.xml
+
+# Portfolio video build artefacts
+portfolio-video/*/node_modules/
+portfolio-video/*/snapshots/
+portfolio-video/*/renders/work-*/
+portfolio-video/*/renders/.*hf-transaction*/
+portfolio-video/*/renders/master.mp4
+portfolio-video/*/.hyperframes/
+
+# HyperFrames authoring skills — restore with:
+#   npx skills add heygen-com/hyperframes
+# skills-lock.json pins the exact versions, so the toolchain stays reproducible
+# without vendoring 19 MB of third-party skill content into this repository.
+.agents/
+.claude/skills/

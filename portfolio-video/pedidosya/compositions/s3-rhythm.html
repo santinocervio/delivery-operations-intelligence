@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s3-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s3-kicker {
+          position: absolute;
+          left: 120px;
+          top: 122px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s3-head {
+          position: absolute;
+          left: 120px;
+          top: 156px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 60px;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s3-legend {
+          position: absolute;
+          left: 120px;
+          top: 250px;
+          display: flex;
+          gap: 40px;
+          font-size: 19px;
+          color: #8a8084;
+        }
+        .s3-swatch {
+          display: inline-block;
+          width: 22px;
+          height: 3px;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        .s3-plot {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+        .s3-bar {
+          fill: #3c4249;
+        }
+        .s3-bar-weak {
+          fill: #241c1e;
+        }
+        .s3-bar-peak {
+          fill: #ff2d55;
+        }
+        .s3-axis {
+          stroke: #241c1e;
+          stroke-width: 1;
+        }
+        .s3-line {
+          fill: none;
+          stroke: #f5f1f2;
+          stroke-width: 2.6;
+        }
+        .s3-hour {
+          font-size: 17px;
+          fill: #8a8084;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+        }
+        .s3-gapband {
+          fill: #ff2d55;
+          opacity: 0.05;
+        }
+        .s3-gaptext {
+          font-size: 15px;
+          fill: #8a8084;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+          letter-spacing: 0.1em;
+        }
+        .s3-playhead {
+          stroke: #ff2d55;
+          stroke-width: 2;
+        }
+        .s3-readout {
+          position: absolute;
+          width: 322px;
+          background: #141011;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+          padding: 22px 24px;
+        }
+        .s3-rlabel {
+          font-size: 16px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s3-rhour {
+          font-size: 44px;
+          font-weight: 700;
+          color: #ff2d55;
+          font-variant-numeric: tabular-nums;
+          margin: 8px 0 14px;
+        }
+        .s3-rrow {
+          font-size: 19px;
+          color: #f5f1f2;
+          font-variant-numeric: tabular-nums;
+          line-height: 1.6;
+        }
+        .s3-rrow span {
+          color: #8a8084;
+        }
+        .s3-verdict {
+          position: absolute;
+          left: 120px;
+          top: 790px;
+          font-size: 30px;
+          line-height: 1.5;
+          max-width: 1580px;
+        }
+        .s3-verdict b {
+          color: #ff2d55;
+          font-weight: 400;
+        }
+        .s3-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s3-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s3-rhythm" data-width="1920" data-height="1080" data-duration="5.6">
+        <div class="s3-grid" id="s3-grid" data-layout-allow-overflow></div>
+
+        <div class="s3-kicker" id="s3-kicker">02 — The rhythm</div>
+        <h2 class="s3-head" id="s3-head">DEMAND IS NOT EVENLY DISTRIBUTED</h2>
+        <div class="s3-legend" id="s3-legend">
+          <div><i class="s3-swatch" style="background: #3c4249"></i>Orders per hour</div>
+          <div><i class="s3-swatch" style="background: #f5f1f2"></i>Mean service time (min)</div>
+        </div>
+
+        <svg class="s3-plot" id="s3-plot" viewBox="0 0 1920 1080" fill="none">
+          <g id="s3-bars"></g>
+          <g id="s3-gap"></g>
+          <path class="s3-line" id="s3-line-a" pathLength="100" />
+          <path class="s3-line" id="s3-line-b" pathLength="100" />
+          <line class="s3-axis" x1="140" y1="700" x2="1800" y2="700" />
+          <g id="s3-hours"></g>
+          <line class="s3-playhead" id="s3-playhead" x1="0" y1="340" x2="0" y2="700" />
+        </svg>
+
+        <div class="s3-readout" id="s3-readout" style="right: 120px; top: 122px">
+          <div class="s3-rlabel">Hour of day</div>
+          <div class="s3-rhour" id="s3-rhour">00</div>
+          <div class="s3-rrow"><span>orders</span> <b id="s3-rorders">0</b></div>
+          <div class="s3-rrow"><span>mean service</span> <b id="s3-rmean">0.00</b> min</div>
+        </div>
+
+        <div class="s3-verdict" id="s3-verdict">
+          Peak load lands at <b>20:00 — 45,112 orders</b>. Service is worst one hour later:
+          <b>21:00 — 28.85 min mean</b>, highest of the 20 well-supported hours.
+        </div>
+
+        <div class="s3-source" id="s3-source">
+          Source — outputs/analysis/operational_segments.csv · family = hour
+        </div>
+        <div class="s3-counter" id="s3-counter">03 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          // All 24 hours, frozen in src/data/hourly.json from
+          // outputs/analysis/operational_segments.csv (family = hour).
+          // [hour, orders, mean_min, descriptive_support]
+          const H = [
+            [0, 6832, 20.68, true], [1, 3749, 19.57, true], [2, 475, 22.62, true],
+            [3, 26, 54.17, false], [4, 3, 80.27, false], [5, 12, 115.4, false],
+            [6, 37, 53.95, false], [7, 1295, 27.31, true], [8, 4097, 23.23, true],
+            [9, 7468, 22.16, true], [10, 8855, 22.34, true], [11, 13351, 23.51, true],
+            [12, 25931, 25.84, true], [13, 26708, 26.09, true], [14, 21935, 24.56, true],
+            [15, 16035, 24.46, true], [16, 13328, 24.96, true], [17, 12692, 25.74, true],
+            [18, 15318, 26.33, true], [19, 28921, 26.97, true], [20, 45112, 27.69, true],
+            [21, 38693, 28.85, true], [22, 27424, 25.59, true], [23, 15847, 22.06, true],
+          ];
+
+          const X0 = 152;
+          const STEP = 68.5;
+          const BAR_W = 44;
+          const BASE = 700;
+          const BAR_MAX = 330;
+          const MAX_ORDERS = 45112;
+          // Service line scale: 18 → 30 min across 190px of headroom.
+          const lineY = (m) => 470 - ((Math.min(Math.max(m, 18), 30) - 18) / 12) * 120;
+          const barX = (i) => X0 + i * STEP;
+          const centerX = (i) => barX(i) + BAR_W / 2;
+
+          const SVG = "http://www.w3.org/2000/svg";
+          const bars = document.getElementById("s3-bars");
+          const hours = document.getElementById("s3-hours");
+          const rects = [];
+
+          H.forEach(([hour, orders, , support], i) => {
+            const h = Math.max((orders / MAX_ORDERS) * BAR_MAX, 2);
+            const r = document.createElementNS(SVG, "rect");
+            r.setAttribute("x", barX(i));
+            r.setAttribute("y", BASE - h);
+            r.setAttribute("width", BAR_W);
+            r.setAttribute("height", h);
+            r.setAttribute("class", !support ? "s3-bar-weak" : hour === 20 ? "s3-bar-peak" : "s3-bar");
+            bars.appendChild(r);
+            rects.push(r);
+
+            if (hour % 2 === 0) {
+              const t = document.createElementNS(SVG, "text");
+              t.setAttribute("x", centerX(i));
+              t.setAttribute("y", 732);
+              t.setAttribute("class", "s3-hour");
+              t.textContent = String(hour).padStart(2, "0");
+              hours.appendChild(t);
+            }
+          });
+
+          // Hours 03–06 carry too little volume to read; mark the band rather
+          // than drawing a service line through 26, 3, 12 and 37 orders.
+          const gap = document.getElementById("s3-gap");
+          const band = document.createElementNS(SVG, "rect");
+          band.setAttribute("x", barX(3) - 10);
+          band.setAttribute("y", 340);
+          band.setAttribute("width", STEP * 4);
+          band.setAttribute("height", BASE - 340);
+          band.setAttribute("class", "s3-gapband");
+          gap.appendChild(band);
+          const gtext = document.createElementNS(SVG, "text");
+          gtext.setAttribute("x", barX(3) - 10 + (STEP * 4) / 2);
+          gtext.setAttribute("y", 378);
+          gtext.setAttribute("class", "s3-gaptext");
+          gtext.textContent = "INSUFFICIENT SUPPORT";
+          gap.appendChild(gtext);
+
+          const toPath = (slice) =>
+            slice
+              .map(([i, m], k) => `${k === 0 ? "M" : "L"} ${centerX(i)} ${lineY(m)}`)
+              .join(" ");
+
+          const segA = H.slice(0, 3).map(([, , m], i) => [i, m]);
+          const segB = H.slice(7).map(([, , m], k) => [k + 7, m]);
+          document.getElementById("s3-line-a").setAttribute("d", toPath(segA));
+          document.getElementById("s3-line-b").setAttribute("d", toPath(segB));
+
+          const group = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          const rhour = document.getElementById("s3-rhour");
+          const rorders = document.getElementById("s3-rorders");
+          const rmean = document.getElementById("s3-rmean");
+          const playhead = document.getElementById("s3-playhead");
+
+          const paint = (i) => {
+            const [hour, orders, mean] = H[i];
+            rhour.textContent = String(hour).padStart(2, "0") + ":00";
+            rorders.textContent = group(orders);
+            rmean.textContent = mean.toFixed(2);
+          };
+          paint(0);
+
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s3-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.4 }, 0)
+            .fromTo(
+              "#s3-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" },
+              0.02
+            )
+            .fromTo(
+              "#s3-head",
+              { opacity: 0, y: 24 },
+              { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" },
+              0.08
+            )
+            .fromTo(
+              "#s3-legend",
+              { opacity: 0, y: 12 },
+              { opacity: 1, y: 0, duration: 0.46, ease: "power3.out" },
+              0.2
+            );
+
+          rects.forEach((r, i) => {
+            tl.fromTo(
+              r,
+              { scaleY: 0, transformOrigin: "center bottom" },
+              { scaleY: 1, duration: 0.5, ease: "power3.out" },
+              0.34 + i * 0.018
+            );
+          });
+
+          tl.fromTo("#s3-hours text", { opacity: 0 }, { opacity: 1, duration: 0.4, stagger: 0.012 }, 0.5)
+            .fromTo("#s3-gap", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 1.0)
+            .fromTo(
+              "#s3-line-a",
+              { strokeDasharray: 100, strokeDashoffset: 100 },
+              { strokeDashoffset: 0, duration: 0.4, ease: "power1.inOut" },
+              0.92
+            )
+            .fromTo(
+              "#s3-line-b",
+              { strokeDasharray: 100, strokeDashoffset: 100 },
+              { strokeDashoffset: 0, duration: 0.95, ease: "power1.inOut" },
+              1.08
+            );
+
+          // Playhead sweep — the readout writes only when the index changes.
+          const scrub = { i: 0 };
+          let last = -1;
+          tl.fromTo(
+            "#s3-readout",
+            { opacity: 0, x: 18 },
+            { opacity: 1, x: 0, duration: 0.44, ease: "power3.out" },
+            1.2
+          )
+            .fromTo(playhead, { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.3)
+            .to(
+              scrub,
+              {
+                i: 21,
+                duration: 2.1,
+                ease: "power1.inOut",
+                onUpdate: () => {
+                  const idx = Math.round(scrub.i);
+                  const x = centerX(idx);
+                  playhead.setAttribute("x1", x);
+                  playhead.setAttribute("x2", x);
+                  if (idx !== last) {
+                    last = idx;
+                    paint(idx);
+                  }
+                },
+              },
+              1.4
+            );
+
+          tl.fromTo(
+            "#s3-verdict",
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.56, ease: "power3.out" },
+            3.66
+          ).fromTo(
+            ["#s3-source", "#s3-counter"],
+            { opacity: 0 },
+            { opacity: 1, duration: 0.44 },
+            0.7
+          );
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s3-grid", { x: -10, duration: 5.6, ease: "none" }, 0);
+
+          window.__timelines["s3-rhythm"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

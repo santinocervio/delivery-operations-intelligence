@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s2-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s2-radial {
+          position: absolute;
+          left: -240px;
+          bottom: -320px;
+          width: 1180px;
+          height: 1180px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255, 45, 85, 0.16) 0%, rgba(255, 45, 85, 0) 62%);
+        }
+        .s2-kicker {
+          position: absolute;
+          left: 120px;
+          top: 128px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s2-head {
+          position: absolute;
+          left: 120px;
+          top: 168px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 62px;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s2-window {
+          position: absolute;
+          left: 120px;
+          top: 254px;
+          font-size: 20px;
+          color: #8a8084;
+          letter-spacing: 0.08em;
+        }
+        .s2-card {
+          position: absolute;
+          width: 520px;
+          height: 268px;
+          background: #141011;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+          padding: 36px 38px;
+        }
+        .s2-label {
+          font-size: 18px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s2-value {
+          font-size: 62px;
+          font-weight: 700;
+          line-height: 1.1;
+          margin-top: 26px;
+          font-variant-numeric: tabular-nums;
+          letter-spacing: -0.02em;
+        }
+        .s2-value-accent {
+          color: #ff2d55;
+        }
+        .s2-unit {
+          font-size: 26px;
+          font-weight: 400;
+          color: #8a8084;
+          margin-left: 10px;
+        }
+        .s2-sub {
+          font-size: 18px;
+          color: #8a8084;
+          margin-top: 20px;
+          line-height: 1.5;
+        }
+        .s2-tick {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4px;
+          height: 268px;
+          background: #ff2d55;
+          transform-origin: top center;
+        }
+        .s2-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s2-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s2-scale" data-width="1920" data-height="1080" data-duration="5.2">
+        <div class="s2-grid" id="s2-grid" data-layout-allow-overflow></div>
+        <div class="s2-radial" id="s2-radial" data-layout-allow-overflow></div>
+
+        <div class="s2-kicker" id="s2-kicker">01 — The operation</div>
+        <h2 class="s2-head" id="s2-head">FOUR RAW SOURCES, ONE TIMELINE</h2>
+        <div class="s2-window" id="s2-window">
+          32 recorded dates · 650 hours · 347,644 cost rows · 176,235 shift rows
+        </div>
+
+        <div class="s2-card" id="s2-c1" style="left: 120px; top: 352px">
+          <i class="s2-tick" id="s2-t1"></i>
+          <div class="s2-label">Orders reconstructed</div>
+          <div class="s2-value" id="s2-v1">0</div>
+          <div class="s2-sub">332,378 completed · 1,761 cancelled</div>
+        </div>
+        <div class="s2-card" id="s2-c2" style="left: 700px; top: 352px">
+          <i class="s2-tick" id="s2-t2"></i>
+          <div class="s2-label">Mean service time</div>
+          <div class="s2-value" id="s2-v2">0<span class="s2-unit">min</span></div>
+          <div class="s2-sub">median 23.02 · P90 41.97</div>
+        </div>
+        <div class="s2-card" id="s2-c3" style="left: 1280px; top: 352px">
+          <i class="s2-tick" id="s2-t3"></i>
+          <div class="s2-label">Late by more than 5 min</div>
+          <div class="s2-value s2-value-accent" id="s2-v3">0<span class="s2-unit">%</span></div>
+          <div class="s2-sub">332,378 service-eligible orders</div>
+        </div>
+        <div class="s2-card" id="s2-c4" style="left: 120px; top: 668px">
+          <i class="s2-tick" id="s2-t4"></i>
+          <div class="s2-label">Observed rider-hours</div>
+          <div class="s2-value" id="s2-v4">0</div>
+          <div class="s2-sub">missing shifts are unknown, not zero</div>
+        </div>
+        <div class="s2-card" id="s2-c5" style="left: 700px; top: 668px">
+          <i class="s2-tick" id="s2-t5"></i>
+          <div class="s2-label">Matched throughput</div>
+          <div class="s2-value" id="s2-v5">0</div>
+          <div class="s2-sub">orders per observed rider-hour · matched hours</div>
+        </div>
+        <div class="s2-card" id="s2-c6" style="left: 1280px; top: 668px">
+          <i class="s2-tick" id="s2-t6"></i>
+          <div class="s2-label">Recorded cost per order</div>
+          <div class="s2-value" id="s2-v6">0</div>
+          <div class="s2-sub">source currency unverified</div>
+        </div>
+
+        <div class="s2-source" id="s2-source">Source — outputs/analysis/kpis.csv</div>
+        <div class="s2-counter" id="s2-counter">02 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          // Values frozen in src/data/scale.json from outputs/analysis/kpis.csv
+          // and verified by scripts/verify-claims.mjs.
+          const D = {
+            orders: 334144,
+            mean_min: 25.724903072204942,
+            late5_pct: 15.592788933082213,
+            rider_hours: 193500.7220613889,
+            throughput: 1.7267894219743238,
+            cost_per_order: 344.6044492719954,
+          };
+
+          const group = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          const fmt = (v, dec) =>
+            dec === 0
+              ? group(Math.round(v))
+              : group(Math.floor(v)) +
+                "." +
+                Math.abs(v - Math.floor(v))
+                  .toFixed(dec)
+                  .slice(2);
+
+          const tl = gsap.timeline({ paused: true });
+
+          const countUp = (id, target, dec, at, unit) => {
+            const el = document.getElementById(id);
+            const unitHtml = unit ? `<span class="s2-unit">${unit}</span>` : "";
+            const proxy = { v: 0 };
+            el.innerHTML = fmt(0, dec) + unitHtml;
+            tl.to(
+              proxy,
+              {
+                v: target,
+                duration: 1.15,
+                ease: "power2.out",
+                onUpdate: () => {
+                  el.innerHTML = fmt(proxy.v, dec) + unitHtml;
+                },
+              },
+              at
+            );
+          };
+
+          tl.fromTo("#s2-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.5, ease: "power2.out" }, 0)
+            .fromTo(
+              "#s2-radial",
+              { opacity: 0.6, scale: 0.96 },
+              { opacity: 1, scale: 1.05, duration: 5.2, ease: "sine.inOut" },
+              0
+            )
+            .fromTo(
+              "#s2-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.42, ease: "power3.out" },
+              0.06
+            )
+            .fromTo(
+              "#s2-head",
+              { opacity: 0, y: 26 },
+              { opacity: 1, y: 0, duration: 0.56, ease: "power3.out" },
+              0.14
+            )
+            .fromTo(
+              "#s2-window",
+              { opacity: 0, y: 12 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              0.28
+            );
+
+          const cards = ["#s2-c1", "#s2-c2", "#s2-c3", "#s2-c4", "#s2-c5", "#s2-c6"];
+          tl.fromTo(
+            cards,
+            { opacity: 0, y: 34 },
+            { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", stagger: 0.07 },
+            0.42
+          ).fromTo(
+            ["#s2-t1", "#s2-t2", "#s2-t3", "#s2-t4", "#s2-t5", "#s2-t6"],
+            { scaleY: 0 },
+            { scaleY: 1, duration: 0.46, ease: "power2.out", stagger: 0.07 },
+            0.5
+          );
+
+          countUp("s2-v1", D.orders, 0, 0.56);
+          countUp("s2-v2", D.mean_min, 2, 0.63, "min");
+          countUp("s2-v3", D.late5_pct, 1, 0.7, "%");
+          countUp("s2-v4", D.rider_hours, 0, 0.77);
+          countUp("s2-v5", D.throughput, 3, 0.84);
+          countUp("s2-v6", D.cost_per_order, 2, 0.91);
+
+          tl.fromTo(
+            ["#s2-source", "#s2-counter"],
+            { opacity: 0 },
+            { opacity: 1, duration: 0.5, ease: "power2.out" },
+            1.0
+          );
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s2-grid", { x: -10, duration: 5.2, ease: "none" }, 0);
+
+          window.__timelines["s2-scale"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

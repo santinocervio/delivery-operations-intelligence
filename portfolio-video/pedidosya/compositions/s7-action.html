@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s7-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s7-kicker {
+          position: absolute;
+          left: 120px;
+          top: 122px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s7-head {
+          position: absolute;
+          left: 120px;
+          top: 158px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 60px;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s7-flow {
+          position: absolute;
+          left: 120px;
+          top: 250px;
+          font-size: 18px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s7-flow b {
+          color: #ff2d55;
+          font-weight: 400;
+        }
+        .s7-card {
+          position: absolute;
+          top: 300px;
+          width: 520px;
+          height: 536px;
+          background: #141011;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+          padding: 30px 34px;
+        }
+        .s7-rank {
+          font-size: 17px;
+          letter-spacing: 0.2em;
+          color: #ff2d55;
+        }
+        .s7-title {
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 29px;
+          line-height: 1.14;
+          letter-spacing: -0.02em;
+          margin: 14px 0 22px;
+          min-height: 66px;
+        }
+        .s7-flabel {
+          font-size: 15px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #8a8084;
+          margin-bottom: 7px;
+        }
+        .s7-ftext {
+          font-size: 18px;
+          line-height: 1.5;
+          color: #f5f1f2;
+          margin-bottom: 20px;
+        }
+        .s7-ftext-muted {
+          color: #8a8084;
+        }
+        .s7-cohort {
+          font-size: 18px;
+          line-height: 1.5;
+          color: #f5f1f2;
+          font-variant-numeric: tabular-nums;
+          margin-bottom: 12px;
+        }
+        .s7-cohort span {
+          color: #8a8084;
+        }
+        .s7-track {
+          position: relative;
+          height: 10px;
+          background: #241c1e;
+          margin-bottom: 22px;
+        }
+        .s7-fill {
+          position: absolute;
+          inset: 0;
+          background: #ff2d55;
+          transform-origin: left center;
+        }
+        .s7-rule {
+          position: absolute;
+          left: 34px;
+          right: 34px;
+          height: 1px;
+          background: #241c1e;
+        }
+        .s7-banner {
+          position: absolute;
+          left: 120px;
+          top: 884px;
+          width: 1680px;
+          border-left: 4px solid #7a8794;
+          padding-left: 26px;
+          box-sizing: border-box;
+          font-size: 24px;
+          line-height: 1.45;
+          color: #8a8084;
+        }
+        .s7-banner b {
+          color: #f5f1f2;
+          font-weight: 400;
+        }
+        .s7-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s7-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s7-action" data-width="1920" data-height="1080" data-duration="6">
+        <div class="s7-grid" id="s7-grid" data-layout-allow-overflow></div>
+
+        <div class="s7-kicker" id="s7-kicker">06 — The decision</div>
+        <h2 class="s7-head" id="s7-head">EVIDENCE BECOMES A TESTABLE DECISION</h2>
+        <div class="s7-flow" id="s7-flow">
+          Observation → Evidence → <b>Action</b> → Guardrail
+        </div>
+
+        <div class="s7-card" id="s7-k1" style="left: 120px">
+          <div class="s7-rank">PRIORITY 01</div>
+          <div class="s7-title">LONG INITIAL INTERVAL</div>
+          <div class="s7-flabel">Trigger</div>
+          <div class="s7-ftext">Creation → notification above the observed P90 of 23.93 min</div>
+          <div class="s7-cohort">33,238 orders <span>· 9.9% of volume</span></div>
+          <div class="s7-cohort"><span>late &gt;5 min</span> 48.6%</div>
+          <div class="s7-track"><i class="s7-fill" id="s7-b1"></i></div>
+          <div class="s7-flabel">Action</div>
+          <div class="s7-ftext">
+            Instrument first dispatch and reassignment before testing an escalation workflow.
+          </div>
+          <div class="s7-flabel">Trade-off</div>
+          <div class="s7-ftext s7-ftext-muted">
+            Manual review adds effort — validate on a small pilot.
+          </div>
+        </div>
+
+        <div class="s7-card" id="s7-k2" style="left: 700px">
+          <div class="s7-rank">PRIORITY 02</div>
+          <div class="s7-title">PICKUP WAITING TAIL</div>
+          <div class="s7-flabel">Trigger</div>
+          <div class="s7-ftext">Rider waiting at pickup above the observed P90 of 9.82 min</div>
+          <div class="s7-cohort">33,238 orders <span>· 9.9% of volume</span></div>
+          <div class="s7-cohort"><span>late &gt;5 min</span> 46.4%</div>
+          <div class="s7-track"><i class="s7-fill" id="s7-b2"></i></div>
+          <div class="s7-flabel">Action</div>
+          <div class="s7-ftext">
+            Review merchant readiness and rider arrival coordination in supported cohorts.
+          </div>
+          <div class="s7-flabel">Trade-off</div>
+          <div class="s7-ftext s7-ftext-muted">
+            Later arrival cuts waiting but can delay delivery.
+          </div>
+        </div>
+
+        <div class="s7-card" id="s7-k3" style="left: 1280px">
+          <div class="s7-rank">PRIORITY 03</div>
+          <div class="s7-title">REPEATED PRE EVENTS</div>
+          <div class="s7-flabel">Trigger</div>
+          <div class="s7-ftext">Four or more recorded pre-dispatch events on one order</div>
+          <div class="s7-cohort">10,472 orders <span>· 3.1% of volume</span></div>
+          <div class="s7-cohort"><span>late &gt;5 min</span> 67.1%</div>
+          <div class="s7-track"><i class="s7-fill" id="s7-b3"></i></div>
+          <div class="s7-flabel">Action</div>
+          <div class="s7-ftext">
+            Pilot an exception review and capture why repeated assignments fail.
+          </div>
+          <div class="s7-flabel">Trade-off</div>
+          <div class="s7-ftext s7-ftext-muted">
+            May raise incentives or manual work — measure it.
+          </div>
+        </div>
+
+        <div class="s7-banner" id="s7-banner">
+          Each row is a <b>pilot design with a monitoring KPI and a stated trade-off</b> — not a
+          projected saving. Intervention effects are untested.
+        </div>
+
+        <div class="s7-source" id="s7-source">Source — outputs/analysis/priorities.csv</div>
+        <div class="s7-counter" id="s7-counter">07 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          // Frozen in src/data/actions.json from outputs/analysis/priorities.csv.
+          const LATE_RATES = [0.4862807629821289, 0.4638365725976292, 0.670585967617579];
+
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s7-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.4 }, 0)
+            .fromTo(
+              "#s7-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" },
+              0.02
+            )
+            .fromTo(
+              "#s7-head",
+              { opacity: 0, y: 24 },
+              { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" },
+              0.08
+            )
+            .fromTo(
+              "#s7-flow",
+              { opacity: 0, y: 12 },
+              { opacity: 1, y: 0, duration: 0.48, ease: "power3.out" },
+              0.24
+            );
+
+          ["#s7-k1", "#s7-k2", "#s7-k3"].forEach((card, i) => {
+            const at = 0.5 + i * 0.22;
+            tl.fromTo(
+              card,
+              { opacity: 0, y: 34 },
+              { opacity: 1, y: 0, duration: 0.52, ease: "power3.out" },
+              at
+            ).fromTo(
+              `${card} > div`,
+              { opacity: 0, y: 10 },
+              { opacity: 1, y: 0, duration: 0.34, ease: "power2.out", stagger: 0.035 },
+              at + 0.12
+            );
+            tl.fromTo(
+              `#s7-b${i + 1}`,
+              { scaleX: 0 },
+              { scaleX: LATE_RATES[i], duration: 0.66, ease: "power3.out" },
+              at + 0.5
+            );
+          });
+
+          tl.fromTo(
+            "#s7-banner",
+            { opacity: 0, y: 18 },
+            { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" },
+            2.4
+          ).fromTo(
+            ["#s7-source", "#s7-counter"],
+            { opacity: 0 },
+            { opacity: 1, duration: 0.44 },
+            0.6
+          );
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s7-grid", { x: -10, duration: 6.0, ease: "none" }, 0);
+
+          window.__timelines["s7-action"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

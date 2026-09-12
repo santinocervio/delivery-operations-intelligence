@@ -1,0 +1,125 @@
+/* Delivery Operations Intelligence — portfolio video components.
+   Tokens mirror frame.md so the page and the film read as one system. */
+
+:root {
+  --dov-bg: #0c0a0b;
+  --dov-fg: #f5f1f2;
+  --dov-muted: #8a8084;
+  --dov-rule: #241c1e;
+  --dov-accent: #ff2d55;
+}
+
+/* ---------------------------------------------------------- VideoHero */
+
+.dov-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--dov-bg);
+  isolation: isolate;
+}
+
+.dov-hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keeps overlaid text legible over the brightest frames of the loop. */
+.dov-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 10, 11, 0.82) 0%,
+    rgba(12, 10, 11, 0.45) 46%,
+    rgba(12, 10, 11, 0.12) 100%
+  );
+  pointer-events: none;
+}
+
+.dov-hero__content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: clamp(20px, 5vw, 72px);
+  color: var(--dov-fg);
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------- ProjectVideo */
+
+.dov-project {
+  margin: 0;
+}
+
+.dov-project__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--dov-bg);
+  border: 1px solid var(--dov-rule);
+  overflow: hidden;
+}
+
+.dov-project__media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: var(--dov-bg);
+}
+
+.dov-project__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  border: 0;
+  background: rgba(12, 10, 11, 0.55);
+  color: var(--dov-fg);
+  font: inherit;
+  font-size: clamp(14px, 1.6vw, 18px);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.dov-project__play:hover,
+.dov-project__play:focus-visible {
+  background: rgba(12, 10, 11, 0.7);
+}
+
+.dov-project__play-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent var(--dov-accent);
+}
+
+.dov-project__caption {
+  margin-top: 12px;
+  color: var(--dov-muted);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* A viewer who asked for stillness gets stillness, even if a stylesheet
+   elsewhere on the page tries to animate these elements. */
+@media (prefers-reduced-motion: reduce) {
+  .dov-hero__media,
+  .dov-project__media {
+    animation: none !important;
+    transition: none !important;
+  }
+}

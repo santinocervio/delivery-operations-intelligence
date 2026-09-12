@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s6-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s6-kicker {
+          position: absolute;
+          left: 120px;
+          top: 122px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s6-head {
+          position: absolute;
+          left: 120px;
+          top: 158px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 60px;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s6-col-label {
+          position: absolute;
+          font-size: 17px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s6-track {
+          position: absolute;
+          height: 54px;
+          width: 800px;
+          background: #1b1517;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+        }
+        .s6-fill {
+          position: absolute;
+          inset: 0;
+          background: #ff2d55;
+          transform-origin: left center;
+        }
+        .s6-fill-steel {
+          background: #3c4249;
+        }
+        .s6-trackcap {
+          position: absolute;
+          font-size: 21px;
+          color: #f5f1f2;
+          font-variant-numeric: tabular-nums;
+        }
+        .s6-trackcap span {
+          color: #8a8084;
+        }
+        .s6-stat {
+          position: absolute;
+          font-size: 21px;
+          line-height: 1.75;
+          color: #f5f1f2;
+          font-variant-numeric: tabular-nums;
+          width: 800px;
+        }
+        .s6-stat span {
+          color: #8a8084;
+        }
+        .s6-stat b {
+          color: #ff2d55;
+          font-weight: 400;
+        }
+        .s6-svg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+        .s6-dbar {
+          fill: #3c4249;
+        }
+        .s6-dbar-hot {
+          fill: #ff2d55;
+        }
+        .s6-dval {
+          font-size: 19px;
+          fill: #f5f1f2;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+          font-variant-numeric: tabular-nums;
+        }
+        .s6-dlab {
+          font-size: 16px;
+          fill: #8a8084;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+        }
+        .s6-dcap {
+          position: absolute;
+          left: 1000px;
+          top: 792px;
+          width: 800px;
+          font-size: 19px;
+          line-height: 1.55;
+          color: #8a8084;
+        }
+        .s6-dcap b {
+          color: #f5f1f2;
+          font-weight: 400;
+        }
+        .s6-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s6-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s6-concentration" data-width="1920" data-height="1080" data-duration="5.8">
+        <div class="s6-grid" id="s6-grid" data-layout-allow-overflow></div>
+
+        <div class="s6-kicker" id="s6-kicker">05 — The concentration</div>
+        <h2 class="s6-head" id="s6-head">THE DAMAGE IS CONCENTRATED</h2>
+
+        <div class="s6-col-label" id="s6-l1" style="left: 120px; top: 300px">
+          Orders with 4 or more pre-dispatch events
+        </div>
+
+        <div class="s6-col-label" id="s6-t1lab" style="left: 120px; top: 352px; color: #8a8084">
+          Share of all orders
+        </div>
+        <div class="s6-track" id="s6-t1" style="left: 120px; top: 384px">
+          <i class="s6-fill s6-fill-steel" id="s6-f1"></i>
+        </div>
+        <div class="s6-trackcap" id="s6-c1" style="left: 120px; top: 452px">
+          3.1% <span>— 10,472 orders</span>
+        </div>
+
+        <div class="s6-col-label" id="s6-t2lab" style="left: 120px; top: 506px; color: #8a8084">
+          Share of all recorded pre-dispatch events
+        </div>
+        <div class="s6-track" id="s6-t2" style="left: 120px; top: 538px">
+          <i class="s6-fill" id="s6-f2"></i>
+        </div>
+        <div class="s6-trackcap" id="s6-c2" style="left: 120px; top: 606px">
+          36.6% <span>— of every pre event in the window</span>
+        </div>
+
+        <div class="s6-stat" id="s6-stats" style="left: 120px; top: 690px">
+          <div><span>mean service</span> 45.88 min <span>vs</span> 25.08 min <span>reference</span></div>
+          <div><span>difference</span> <b>+20.81 min</b> <span>· 95% CI [19.98, 21.75]</span></div>
+          <div><span>late &gt;5 min</span> <b>67.1%</b> <span>of the cohort</span></div>
+        </div>
+
+        <div class="s6-col-label" id="s6-l2" style="left: 1000px; top: 300px">
+          Pre-event incidence by recorded dropoff distance
+        </div>
+
+        <svg class="s6-svg" id="s6-svg" viewBox="0 0 1920 1080" fill="none">
+          <g id="s6-dist"></g>
+        </svg>
+
+        <div class="s6-dcap" id="s6-dcap">
+          Restaurants — <b>84% of all orders</b>. Across every vertical the contrast is
+          <b>17.3% at 1 km or less</b> versus <b>47.9% above 3 km</b>: +30.59 pp, 95% CI
+          [29.49, 31.61].
+        </div>
+
+        <div class="s6-source" id="s6-source">
+          Source — outputs/analysis/headline_contrasts.csv · operational_segments.csv
+        </div>
+        <div class="s6-counter" id="s6-counter">06 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          // Frozen in src/data/concentration.json from
+          // outputs/analysis/headline_contrasts.csv + operational_segments.csv.
+          const ORDER_SHARE = 0.03134034440859765;
+          const EVENT_SHARE = 0.3662970400768358;
+          const LADDER = [
+            ["≤0.5 km", 15.59, 52968],
+            ["0.5–1 km", 18.67, 79195],
+            ["1–2 km", 27.18, 94675],
+            ["2–3 km", 38.67, 36357],
+            ["> 3 km", 46.57, 18653],
+          ];
+
+          const SVG = "http://www.w3.org/2000/svg";
+          const mk = (tag, attrs, cls) => {
+            const el = document.createElementNS(SVG, tag);
+            Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+            if (cls) el.setAttribute("class", cls);
+            return el;
+          };
+
+          const g = document.getElementById("s6-dist");
+          const BASE = 740;
+          const MAX_H = 330;
+          const MAX_V = 50;
+          const bars = [];
+          LADDER.forEach(([label, value], i) => {
+            const x = 1000 + i * 160;
+            const h = (value / MAX_V) * MAX_H;
+            const r = mk(
+              "rect",
+              { x, y: BASE - h, width: 118, height: h, id: `s6-d${i}` },
+              i === LADDER.length - 1 ? "s6-dbar s6-dbar-hot" : "s6-dbar"
+            );
+            g.appendChild(r);
+            bars.push(r);
+            const v = mk("text", { x: x + 59, y: BASE - h - 16 }, "s6-dval");
+            v.textContent = value.toFixed(1) + "%";
+            g.appendChild(v);
+            const l = mk("text", { x: x + 59, y: BASE + 28 }, "s6-dlab");
+            l.textContent = label;
+            g.appendChild(l);
+          });
+
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s6-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.4 }, 0)
+            .fromTo(
+              "#s6-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" },
+              0.02
+            )
+            .fromTo(
+              "#s6-head",
+              { opacity: 0, y: 24 },
+              { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" },
+              0.08
+            )
+            .fromTo(
+              ["#s6-l1", "#s6-l2"],
+              { opacity: 0 },
+              { opacity: 1, duration: 0.4, stagger: 0.06 },
+              0.4
+            );
+
+          // The two proportion tracks are the argument: same cohort, two shares.
+          tl.fromTo(["#s6-t1", "#s6-t1lab"], { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.42 }, 0.6)
+            .fromTo(
+              "#s6-f1",
+              { scaleX: 0 },
+              { scaleX: ORDER_SHARE, duration: 0.6, ease: "power3.out" },
+              0.75
+            )
+            .fromTo("#s6-c1", { opacity: 0 }, { opacity: 1, duration: 0.36 }, 1.1)
+            .fromTo(["#s6-t2", "#s6-t2lab"], { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.42 }, 1.3)
+            .fromTo(
+              "#s6-f2",
+              { scaleX: 0 },
+              { scaleX: EVENT_SHARE, duration: 0.85, ease: "power3.out" },
+              1.45
+            )
+            .fromTo("#s6-c2", { opacity: 0 }, { opacity: 1, duration: 0.36 }, 2.0)
+            .fromTo(
+              "#s6-stats div",
+              { opacity: 0, y: 14 },
+              { opacity: 1, y: 0, duration: 0.42, ease: "power3.out", stagger: 0.1 },
+              2.25
+            );
+
+          bars.forEach((b, i) => {
+            tl.fromTo(
+              b,
+              { scaleY: 0, transformOrigin: "center bottom" },
+              { scaleY: 1, duration: 0.5, ease: "power3.out" },
+              1.5 + i * 0.1
+            );
+          });
+          tl.fromTo("#s6-dist text", { opacity: 0 }, { opacity: 1, duration: 0.36, stagger: 0.04 }, 1.9)
+            .fromTo(
+              "#s6-dcap",
+              { opacity: 0, y: 16 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              2.8
+            )
+            .fromTo(["#s6-source", "#s6-counter"], { opacity: 0 }, { opacity: 1, duration: 0.44 }, 0.6);
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s6-grid", { x: -10, duration: 5.8, ease: "none" }, 0);
+
+          window.__timelines["s6-concentration"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

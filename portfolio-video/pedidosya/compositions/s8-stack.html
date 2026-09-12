@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s8-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s8-kicker {
+          position: absolute;
+          left: 120px;
+          top: 122px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s8-head {
+          position: absolute;
+          left: 120px;
+          top: 158px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 60px;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s8-stage {
+          position: absolute;
+          top: 292px;
+          width: 390px;
+          height: 172px;
+          background: #141011;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+          padding: 22px 24px;
+        }
+        .s8-sname {
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 25px;
+          letter-spacing: -0.02em;
+          color: #ff2d55;
+          margin-bottom: 14px;
+        }
+        .s8-sbody {
+          font-size: 17px;
+          line-height: 1.55;
+          color: #8a8084;
+        }
+        .s8-svg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+        .s8-chev {
+          stroke: #ff2d55;
+          stroke-width: 2;
+          fill: none;
+        }
+        .s8-code {
+          position: absolute;
+          left: 120px;
+          top: 528px;
+          width: 1040px;
+          background: #141011;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+          padding: 26px 30px;
+        }
+        .s8-codebar {
+          font-size: 15px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #8a8084;
+          margin-bottom: 18px;
+        }
+        .s8-codeline {
+          font-size: 18px;
+          line-height: 1.62;
+          color: #f5f1f2;
+          white-space: pre;
+        }
+        .s8-kw {
+          color: #ff2d55;
+        }
+        .s8-dim {
+          color: #7a8794;
+        }
+        .s8-codecap {
+          position: absolute;
+          left: 120px;
+          top: 800px;
+          width: 1040px;
+          font-size: 19px;
+          line-height: 1.5;
+          color: #8a8084;
+        }
+        .s8-codecap b {
+          color: #f5f1f2;
+          font-weight: 400;
+        }
+        .s8-chips {
+          position: absolute;
+          left: 1240px;
+          top: 528px;
+          width: 560px;
+        }
+        .s8-chiplab {
+          font-size: 15px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #8a8084;
+          margin-bottom: 18px;
+        }
+        .s8-chip {
+          display: inline-block;
+          border: 1px solid #3c4249;
+          padding: 9px 16px;
+          margin: 0 8px 10px 0;
+          font-size: 17px;
+          color: #f5f1f2;
+        }
+        .s8-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s8-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s8-stack" data-width="1920" data-height="1080" data-duration="3.4">
+        <div class="s8-grid" id="s8-grid" data-layout-allow-overflow></div>
+
+        <div class="s8-kicker" id="s8-kicker">07 — The build</div>
+        <h2 class="s8-head" id="s8-head">HOW IT WAS BUILT</h2>
+
+        <div class="s8-stage" id="s8-g0" style="left: 120px">
+          <div class="s8-sname">DATA</div>
+          <div class="s8-sbody">
+            <div>4 raw sources · 334,144 orders</div>
+            <div>SHA-256 hashed · full dictionary</div>
+          </div>
+        </div>
+        <div class="s8-stage" id="s8-g1" style="left: 550px">
+          <div class="s8-sname">ANALYSIS</div>
+          <div class="s8-sbody">
+            <div>Seed 42 · 500 date-bootstrap resamples</div>
+            <div>date-clustered models · 20/10 holdout</div>
+          </div>
+        </div>
+        <div class="s8-stage" id="s8-g2" style="left: 980px">
+          <div class="s8-sname">TOOL</div>
+          <div class="s8-sbody">
+            <div>Streamlit decision dashboard</div>
+            <div>Power BI semantic model</div>
+          </div>
+        </div>
+        <div class="s8-stage" id="s8-g3" style="left: 1410px">
+          <div class="s8-sname">DECISION</div>
+          <div class="s8-sbody">
+            <div>6 findings · 5 ranked priorities</div>
+            <div>every limit written down</div>
+          </div>
+        </div>
+
+        <svg class="s8-svg" id="s8-svg" viewBox="0 0 1920 1080" fill="none">
+          <g id="s8-chevs"></g>
+        </svg>
+
+        <div class="s8-code" id="s8-code">
+          <div class="s8-codebar">delivery_ops/analysis.py</div>
+          <div class="s8-codeline" id="s8-cl1"><span class="s8-kw">supported</span> = min(len(a), len(b)) &gt;= SUPPORT[<span class="s8-dim">"descriptive_orders"</span>] <span class="s8-kw">and</span> (</div>
+          <div class="s8-codeline" id="s8-cl2">    min(a.date.nunique(), b.date.nunique()) &gt;= SUPPORT[<span class="s8-dim">"inference_dates"</span>] <span class="s8-kw">and</span></div>
+          <div class="s8-codeline" id="s8-cl3">    min(a.hour.nunique(), b.hour.nunique()) &gt;= SUPPORT[<span class="s8-dim">"inference_hours"</span>])</div>
+        </div>
+
+        <div class="s8-codecap" id="s8-codecap">
+          The gate that decides whether a comparison <b>earns a confidence interval</b> at all.
+          Everything that fails it ships as descriptive, and says so.
+        </div>
+
+        <div class="s8-chips" id="s8-chips">
+          <div class="s8-chiplab">Built with</div>
+          <div>
+            <i class="s8-chip">Python 3.12</i>
+            <i class="s8-chip">pandas</i>
+            <i class="s8-chip">NumPy</i>
+            <i class="s8-chip">SciPy</i>
+            <i class="s8-chip">statsmodels</i>
+            <i class="s8-chip">Plotly</i>
+            <i class="s8-chip">Streamlit</i>
+            <i class="s8-chip">Power BI</i>
+            <i class="s8-chip">pytest</i>
+            <i class="s8-chip">Git</i>
+          </div>
+        </div>
+
+        <div class="s8-source" id="s8-source">
+          21-phase brief · AI-assisted build · 26 canonical validation checks
+        </div>
+        <div class="s8-counter" id="s8-counter">08 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          const SVG = "http://www.w3.org/2000/svg";
+          const chevs = document.getElementById("s8-chevs");
+          [510, 940, 1370].forEach((x) => {
+            const c = document.createElementNS(SVG, "path");
+            c.setAttribute("d", `M ${x + 10} 370 L ${x + 24} 378 L ${x + 10} 386`);
+            c.setAttribute("pathLength", "100");
+            c.setAttribute("class", "s8-chev");
+            chevs.appendChild(c);
+          });
+
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s8-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.3 }, 0)
+            .fromTo(
+              "#s8-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.34, ease: "power3.out" },
+              0
+            )
+            .fromTo(
+              "#s8-head",
+              { opacity: 0, y: 20 },
+              { opacity: 1, y: 0, duration: 0.44, ease: "power3.out" },
+              0.04
+            )
+            .fromTo(
+              ["#s8-g0", "#s8-g1", "#s8-g2", "#s8-g3"],
+              { opacity: 0, y: 26 },
+              { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: 0.09 },
+              0.26
+            )
+            .fromTo(
+              "#s8-chevs path",
+              { strokeDasharray: 100, strokeDashoffset: 100 },
+              { strokeDashoffset: 0, duration: 0.26, ease: "power2.out", stagger: 0.09 },
+              0.42
+            )
+            .fromTo(
+              "#s8-code",
+              { opacity: 0, y: 22 },
+              { opacity: 1, y: 0, duration: 0.44, ease: "power3.out" },
+              0.74
+            )
+            .fromTo(
+              ["#s8-cl1", "#s8-cl2", "#s8-cl3"],
+              { opacity: 0, x: -12 },
+              { opacity: 1, x: 0, duration: 0.32, ease: "power2.out", stagger: 0.1 },
+              0.9
+            )
+            .fromTo(
+              "#s8-chips",
+              { opacity: 0, y: 22 },
+              { opacity: 1, y: 0, duration: 0.44, ease: "power3.out" },
+              0.86
+            )
+            .fromTo(
+              "#s8-chips .s8-chip",
+              { opacity: 0, scale: 0.92, transformOrigin: "left center" },
+              { opacity: 1, scale: 1, duration: 0.28, ease: "power2.out", stagger: 0.035 },
+              1.0
+            )
+            .fromTo(
+              "#s8-codecap",
+              { opacity: 0, y: 14 },
+              { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" },
+              1.42
+            )
+            .fromTo(
+              ["#s8-source", "#s8-counter"],
+              { opacity: 0 },
+              { opacity: 1, duration: 0.4 },
+              0.5
+            );
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s8-grid", { x: -10, duration: 3.4, ease: "none" }, 0);
+
+          window.__timelines["s8-stack"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

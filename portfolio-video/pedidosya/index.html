@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Delivery Operations Intelligence — Case Study</title>
+    <!-- GSAP is vendored locally: the render environment has no CDN egress,
+         and a local copy keeps the render reproducible offline. -->
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background: #0c0a0b;
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0c0a0b;
+      }
+      [data-composition-id="root"] > div[data-composition-src] {
+        position: absolute;
+        inset: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="root"
+      data-start="0"
+      data-width="1920"
+      data-height="1080"
+      data-duration="48.6"
+    >
+      <div
+        id="el-s1"
+        data-composition-id="s1-open"
+        data-composition-src="compositions/s1-open.html"
+        data-start="0"
+        data-duration="3.8"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s2"
+        data-composition-id="s2-scale"
+        data-composition-src="compositions/s2-scale.html"
+        data-start="3.8"
+        data-duration="5.2"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s3"
+        data-composition-id="s3-rhythm"
+        data-composition-src="compositions/s3-rhythm.html"
+        data-start="9"
+        data-duration="5.6"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s4"
+        data-composition-id="s4-rejected"
+        data-composition-src="compositions/s4-rejected.html"
+        data-start="14.6"
+        data-duration="7"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s5"
+        data-composition-id="s5-diagnosis"
+        data-composition-src="compositions/s5-diagnosis.html"
+        data-start="21.6"
+        data-duration="7.4"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s6"
+        data-composition-id="s6-concentration"
+        data-composition-src="compositions/s6-concentration.html"
+        data-start="29"
+        data-duration="5.8"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s7"
+        data-composition-id="s7-action"
+        data-composition-src="compositions/s7-action.html"
+        data-start="34.8"
+        data-duration="6"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s8"
+        data-composition-id="s8-stack"
+        data-composition-src="compositions/s8-stack.html"
+        data-start="40.8"
+        data-duration="3.4"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-s9"
+        data-composition-id="s9-close"
+        data-composition-src="compositions/s9-close.html"
+        data-start="44.2"
+        data-duration="4.4"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+    </div>
+
+    <script>
+      window.__timelines["root"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

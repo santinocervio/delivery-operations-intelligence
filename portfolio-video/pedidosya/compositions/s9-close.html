@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s9-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.26;
+        }
+        .s9-radial {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -700px;
+          margin-top: -700px;
+          width: 1400px;
+          height: 1400px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255, 45, 85, 0.17) 0%, rgba(255, 45, 85, 0) 62%);
+        }
+        .s9-net {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+        .s9-link {
+          fill: none;
+          stroke: #3c4249;
+          stroke-width: 1.5;
+          opacity: 0.65;
+        }
+        .s9-node {
+          fill: #0c0a0b;
+          stroke: #3c4249;
+          stroke-width: 2;
+        }
+        .s9-center {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 296px;
+          text-align: center;
+        }
+        .s9-title {
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 104px;
+          line-height: 1.03;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s9-title em {
+          font-style: normal;
+          color: #ff2d55;
+        }
+        .s9-rule {
+          width: 220px;
+          height: 2px;
+          background: #ff2d55;
+          margin: 44px auto 0;
+          transform-origin: center center;
+        }
+        .s9-name {
+          margin-top: 44px;
+          font-size: 30px;
+          color: #f5f1f2;
+        }
+        .s9-role {
+          margin-top: 16px;
+          font-size: 21px;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s9-ctas {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 786px;
+          text-align: center;
+        }
+        .s9-cta {
+          display: inline-block;
+          border: 1px solid #ff2d55;
+          color: #ff2d55;
+          padding: 17px 34px;
+          margin: 0 10px;
+          font-size: 19px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+        }
+        .s9-cta-ghost {
+          border-color: #3c4249;
+          color: #f5f1f2;
+        }
+        .s9-disc {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 62px;
+          text-align: center;
+          font-size: 17px;
+          letter-spacing: 0.08em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s9-close" data-width="1920" data-height="1080" data-duration="4.4">
+        <div class="s9-grid" id="s9-grid" data-layout-allow-overflow></div>
+        <div class="s9-radial" id="s9-radial" data-layout-allow-overflow></div>
+
+        <svg class="s9-net" id="s9-net" viewBox="0 0 1920 1080" fill="none">
+          <g id="s9-links"></g>
+          <g id="s9-nodes"></g>
+        </svg>
+
+        <div class="s9-center">
+          <h1 class="s9-title" id="s9-t1">DELIVERY OPERATIONS</h1>
+          <h1 class="s9-title" id="s9-t2"><em>ANALYTICS</em></h1>
+          <div class="s9-rule" id="s9-rule"></div>
+          <div class="s9-name" id="s9-name">Santino Cervio · Industrial Engineering — ITBA</div>
+          <div class="s9-role" id="s9-role">Operations · Data · Process improvement</div>
+        </div>
+
+        <div class="s9-ctas" id="s9-ctas">
+          <i class="s9-cta" id="s9-cta1">Live case study</i>
+          <i class="s9-cta s9-cta-ghost" id="s9-cta2">GitHub</i>
+        </div>
+
+        <div class="s9-disc" id="s9-disc">
+          Independent portfolio analysis · Not an official PedidosYa product or proof of employment
+        </div>
+      </div>
+
+      <script>
+        (() => {
+          // The opening network returns, pushed to the frame edges so the
+          // lockup sits in cleared space. Authored constants, not coordinates.
+          const NODES = [
+            { x: 148, y: 168, r: 6 }, { x: 386, y: 96, r: 4 }, { x: 262, y: 352, r: 7 },
+            { x: 96, y: 520, r: 4 }, { x: 214, y: 736, r: 6 }, { x: 420, y: 900, r: 5 },
+            { x: 128, y: 936, r: 4 }, { x: 1512, y: 128, r: 5 }, { x: 1724, y: 264, r: 6 },
+            { x: 1608, y: 468, r: 4 }, { x: 1820, y: 620, r: 5 }, { x: 1660, y: 812, r: 7 },
+            { x: 1452, y: 944, r: 4 }, { x: 1836, y: 948, r: 4 },
+          ];
+          const LINKS = [
+            [0, 1, -42], [0, 2, 34], [2, 3, -30], [3, 4, 28], [4, 5, -34], [4, 6, 26],
+            [2, 4, 40], [7, 8, 36], [8, 9, -32], [9, 10, 30], [9, 11, -36], [11, 12, 28],
+            [11, 13, -26], [8, 10, 44],
+          ];
+
+          const SVG = "http://www.w3.org/2000/svg";
+          const arc = (a, b, bow) => {
+            const mx = (a.x + b.x) / 2;
+            const my = (a.y + b.y) / 2;
+            const dx = b.x - a.x;
+            const dy = b.y - a.y;
+            const len = Math.hypot(dx, dy) || 1;
+            return `M ${a.x} ${a.y} Q ${mx + (-dy / len) * bow} ${my + (dx / len) * bow} ${b.x} ${b.y}`;
+          };
+
+          const lg = document.getElementById("s9-links");
+          const ng = document.getElementById("s9-nodes");
+          LINKS.forEach(([i, j, bow]) => {
+            const p = document.createElementNS(SVG, "path");
+            p.setAttribute("d", arc(NODES[i], NODES[j], bow));
+            p.setAttribute("pathLength", "100");
+            p.setAttribute("class", "s9-link");
+            lg.appendChild(p);
+          });
+          NODES.forEach((n) => {
+            const c = document.createElementNS(SVG, "circle");
+            c.setAttribute("cx", n.x);
+            c.setAttribute("cy", n.y);
+            c.setAttribute("r", n.r);
+            c.setAttribute("class", "s9-node");
+            ng.appendChild(c);
+          });
+
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s9-grid", { opacity: 0 }, { opacity: 0.26, duration: 0.5 }, 0)
+            .fromTo(
+              "#s9-radial",
+              { opacity: 0, scale: 0.88 },
+              { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out" },
+              0
+            )
+            .to("#s9-radial", { scale: 1.06, duration: 2.6, ease: "sine.inOut" }, 1.5)
+            .fromTo(
+              "#s9-links path",
+              { strokeDasharray: 100, strokeDashoffset: 100 },
+              { strokeDashoffset: 0, duration: 0.8, ease: "power2.out", stagger: 0.03 },
+              0.06
+            )
+            .fromTo(
+              "#s9-nodes circle",
+              { scale: 0, transformOrigin: "center center" },
+              { scale: 1, duration: 0.4, ease: "power3.out", stagger: 0.025 },
+              0.3
+            )
+            .fromTo(
+              "#s9-t1",
+              { opacity: 0, y: 32 },
+              { opacity: 1, y: 0, duration: 0.62, ease: "power3.out" },
+              0.34
+            )
+            .fromTo(
+              "#s9-t2",
+              { opacity: 0, y: 32 },
+              { opacity: 1, y: 0, duration: 0.62, ease: "power3.out" },
+              0.46
+            )
+            .fromTo("#s9-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.56, ease: "power3.out" }, 0.86)
+            .fromTo(
+              "#s9-name",
+              { opacity: 0, y: 18 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              1.0
+            )
+            .fromTo(
+              "#s9-role",
+              { opacity: 0, y: 16 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              1.14
+            )
+            .fromTo(
+              ["#s9-cta1", "#s9-cta2"],
+              { opacity: 0, y: 20 },
+              { opacity: 1, y: 0, duration: 0.46, ease: "power3.out", stagger: 0.1 },
+              1.36
+            )
+            .fromTo("#s9-disc", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 1.7);
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s9-grid", { x: -10, duration: 4.4, ease: "none" }, 0);
+
+          window.__timelines["s9-close"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

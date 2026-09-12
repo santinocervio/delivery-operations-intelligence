@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Delivery Operations Intelligence — Hero Loop</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background: #0c0a0b;
+      }
+      /* Seamless by construction: every animated property holds the same value
+         at t=0 and t=10, so the loop point is invisible with no crossfade. */
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0c0a0b;
+        font-family: "IBM Plex Mono", monospace;
+        color: #f5f1f2;
+      }
+      .lp-grid {
+        position: absolute;
+        inset: -40px;
+        background-image: linear-gradient(#241c1e 1px, transparent 1px),
+          linear-gradient(90deg, #241c1e 1px, transparent 1px);
+        background-size: 80px 80px;
+        opacity: 0.26;
+      }
+      .lp-radial {
+        position: absolute;
+        left: -200px;
+        bottom: -380px;
+        width: 1240px;
+        height: 1240px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 45, 85, 0.18) 0%, rgba(255, 45, 85, 0) 62%);
+      }
+      .lp-net,
+      .lp-pulse-layer {
+        position: absolute;
+        right: -40px;
+        top: -60px;
+        width: 1080px;
+        height: 1080px;
+      }
+      .lp-link {
+        fill: none;
+        stroke: #3c4249;
+        stroke-width: 1.5;
+        opacity: 0.6;
+      }
+      .lp-link-hot {
+        stroke: #ff2d55;
+        stroke-width: 2;
+        opacity: 0.75;
+      }
+      .lp-node {
+        fill: #0c0a0b;
+        stroke: #3c4249;
+        stroke-width: 2;
+      }
+      .lp-node-hot {
+        fill: #ff2d55;
+        stroke: #ff2d55;
+      }
+      .lp-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #ff2d55;
+        offset-rotate: 0deg;
+        opacity: 0;
+      }
+      .lp-copy {
+        position: absolute;
+        left: 120px;
+        top: 330px;
+        width: 960px;
+      }
+      .lp-kicker {
+        font-size: 19px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #ff2d55;
+        margin-bottom: 26px;
+      }
+      .lp-title {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-size: 92px;
+        line-height: 1.03;
+        letter-spacing: -0.035em;
+        margin: 0;
+      }
+      .lp-title-accent {
+        color: #ff2d55;
+      }
+      .lp-stats {
+        position: relative;
+        margin-top: 52px;
+        height: 96px;
+      }
+      .lp-stat {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 960px;
+        opacity: 0;
+      }
+      .lp-stat-value {
+        font-size: 46px;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -0.02em;
+        color: #f5f1f2;
+      }
+      .lp-stat-value em {
+        font-style: normal;
+        color: #ff2d55;
+      }
+      .lp-stat-label {
+        margin-top: 12px;
+        font-size: 20px;
+        color: #8a8084;
+      }
+      .lp-chart {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+      .lp-bar {
+        fill: #2f353b;
+      }
+      .lp-bar-peak {
+        fill: #ff2d55;
+        opacity: 0.9;
+      }
+      .lp-axis {
+        stroke: #241c1e;
+        stroke-width: 1;
+      }
+      .lp-play {
+        stroke: #ff2d55;
+        stroke-width: 2;
+        opacity: 0;
+      }
+      .lp-chartlab {
+        position: absolute;
+        right: 120px;
+        top: 706px;
+        font-size: 16px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #8a8084;
+        text-align: right;
+      }
+      .lp-foot {
+        position: absolute;
+        left: 120px;
+        bottom: 64px;
+        font-size: 17px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #8a8084;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="loop"
+      data-start="0"
+      data-width="1920"
+      data-height="1080"
+      data-duration="10"
+    >
+      <div class="lp-grid" id="lp-grid" data-layout-allow-overflow></div>
+      <div class="lp-radial" id="lp-radial" data-layout-allow-overflow></div>
+
+      <svg class="lp-net" id="lp-net" viewBox="0 0 1080 1080" fill="none" data-layout-allow-overflow>
+        <g id="lp-links"></g>
+        <g id="lp-nodes"></g>
+      </svg>
+      <div class="lp-pulse-layer" id="lp-pulse-layer" data-layout-allow-overflow></div>
+
+      <svg class="lp-chart" id="lp-chart" viewBox="0 0 1920 1080" fill="none">
+        <g id="lp-bars"></g>
+        <line class="lp-axis" x1="1040" y1="860" x2="1800" y2="860" />
+        <line class="lp-play" id="lp-play" x1="1040" y1="660" x2="1040" y2="860" />
+      </svg>
+      <div class="lp-chartlab">Orders per hour · 24 h</div>
+
+      <div class="lp-copy">
+        <div class="lp-kicker">Independent operations case study</div>
+        <h1 class="lp-title">DELIVERY OPERATIONS</h1>
+        <h1 class="lp-title lp-title-accent">INTELLIGENCE</h1>
+
+        <div class="lp-stats">
+          <div class="lp-stat" id="lp-s0">
+            <div class="lp-stat-value">334,144 <em>orders</em></div>
+            <div class="lp-stat-label">reconstructed from 4 raw sources across 32 days</div>
+          </div>
+          <div class="lp-stat" id="lp-s1">
+            <div class="lp-stat-value"><em>51.0%</em> of the late gap</div>
+            <div class="lp-stat-label">accrues before a rider is even notified</div>
+          </div>
+          <div class="lp-stat" id="lp-s2">
+            <div class="lp-stat-value"><em>No</em> validated threshold</div>
+            <div class="lp-stat-label">the pressure hypothesis failed on 10 held-out dates</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lp-foot">Santino Cervio · Industrial Engineering — ITBA</div>
+    </div>
+
+    <script>
+      (() => {
+        const SVG = "http://www.w3.org/2000/svg";
+
+        // ---- Schematic network (authored constants, no coordinates exist) ----
+        const NODES = [
+          { x: 132, y: 208, r: 6 }, { x: 352, y: 120, r: 4 }, { x: 528, y: 268, r: 8, hot: true },
+          { x: 296, y: 372, r: 5 }, { x: 108, y: 470, r: 4 }, { x: 500, y: 540, r: 6 },
+          { x: 744, y: 396, r: 5 }, { x: 884, y: 216, r: 4 }, { x: 672, y: 672, r: 8, hot: true },
+          { x: 352, y: 712, r: 5 }, { x: 148, y: 812, r: 4 }, { x: 536, y: 884, r: 6 },
+          { x: 848, y: 828, r: 5 }, { x: 964, y: 568, r: 4 },
+        ];
+        const LINKS = [
+          [0, 1, -46], [1, 2, 40], [0, 3, 36], [3, 2, -32], [3, 4, 30], [2, 6, 48],
+          [6, 7, -42], [2, 5, -36], [5, 8, 42], [6, 8, -34], [5, 9, 32], [9, 10, -28],
+          [9, 11, 36], [11, 8, -40], [8, 12, 34], [6, 13, 38], [13, 8, -30],
+        ];
+        const HOT = new Set([1, 8, 14]);
+
+        const arc = (a, b, bow) => {
+          const mx = (a.x + b.x) / 2;
+          const my = (a.y + b.y) / 2;
+          const dx = b.x - a.x;
+          const dy = b.y - a.y;
+          const len = Math.hypot(dx, dy) || 1;
+          return `M ${a.x} ${a.y} Q ${mx + (-dy / len) * bow} ${my + (dx / len) * bow} ${b.x} ${b.y}`;
+        };
+
+        const lg = document.getElementById("lp-links");
+        const ng = document.getElementById("lp-nodes");
+        const hotPaths = [];
+        LINKS.forEach(([i, j, bow], index) => {
+          const d = arc(NODES[i], NODES[j], bow);
+          const p = document.createElementNS(SVG, "path");
+          p.setAttribute("d", d);
+          p.setAttribute("class", HOT.has(index) ? "lp-link lp-link-hot" : "lp-link");
+          lg.appendChild(p);
+          if (HOT.has(index)) hotPaths.push(d);
+        });
+        NODES.forEach((n) => {
+          const c = document.createElementNS(SVG, "circle");
+          c.setAttribute("cx", n.x);
+          c.setAttribute("cy", n.y);
+          c.setAttribute("r", n.r);
+          c.setAttribute("class", n.hot ? "lp-node lp-node-hot" : "lp-node");
+          ng.appendChild(c);
+        });
+
+        const pulseLayer = document.getElementById("lp-pulse-layer");
+        const pulses = hotPaths.map((d) => {
+          const dot = document.createElement("i");
+          dot.className = "lp-pulse";
+          dot.style.offsetPath = `path("${d}")`;
+          pulseLayer.appendChild(dot);
+          return dot;
+        });
+
+        // ---- Hourly demand, frozen from src/data/hourly.json ----
+        const ORDERS = [
+          6832, 3749, 475, 26, 3, 12, 37, 1295, 4097, 7468, 8855, 13351, 25931,
+          26708, 21935, 16035, 13328, 12692, 15318, 28921, 45112, 38693, 27424, 15847,
+        ];
+        const CX0 = 1046;
+        const CSTEP = 31.5;
+        const CW = 21;
+        const CBASE = 860;
+        const CMAX = 214;
+        const bars = document.getElementById("lp-bars");
+        ORDERS.forEach((v, i) => {
+          const h = Math.max((v / 45112) * CMAX, 2);
+          const r = document.createElementNS(SVG, "rect");
+          r.setAttribute("x", CX0 + i * CSTEP);
+          r.setAttribute("y", CBASE - h);
+          r.setAttribute("width", CW);
+          r.setAttribute("height", h);
+          r.setAttribute("class", i === 20 ? "lp-bar lp-bar-peak" : "lp-bar");
+          bars.appendChild(r);
+        });
+
+        // ---- Timeline ------------------------------------------------------
+        const P = 10;
+        const tl = gsap.timeline({ paused: true });
+
+        // Radial breath: four half-cycles land exactly on the loop point.
+        tl.fromTo(
+          "#lp-radial",
+          { scale: 1, transformOrigin: "center center" },
+          { scale: 1.07, duration: 2.5, ease: "sine.inOut", yoyo: true, repeat: 3 },
+          0
+        );
+
+        // Playhead sweeps and is invisible at both ends of the loop.
+        const play = document.getElementById("lp-play");
+        const sweep = { x: CX0 };
+        tl.fromTo(play, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0.3)
+          .to(
+            sweep,
+            {
+              x: CX0 + 23 * CSTEP,
+              duration: 8.7,
+              ease: "none",
+              onUpdate: () => {
+                play.setAttribute("x1", sweep.x);
+                play.setAttribute("x2", sweep.x);
+              },
+            },
+            0.5
+          )
+          .to(play, { opacity: 0, duration: 0.5, ease: "power2.in" }, 9.2);
+
+        // Three claims rotate; all three are at opacity 0 at t=0 and t=10.
+        const SLOT = P / 3;
+        ["#lp-s0", "#lp-s1", "#lp-s2"].forEach((id, i) => {
+          const start = i * SLOT;
+          tl.fromTo(
+            id,
+            { opacity: 0, y: 16 },
+            { opacity: 1, y: 0, duration: 0.36, ease: "power3.out" },
+            start + 0.3
+          ).to(id, { opacity: 0, y: -12, duration: 0.3, ease: "power2.in" }, start + SLOT - 0.34);
+        });
+
+        // Four pulse passes per hot link, the last finishing on the loop point.
+        pulses.forEach((dot, k) => {
+          for (let pass = 0; pass < 4; pass += 1) {
+            const at = pass * 2.5 + k * 0.28;
+            tl.fromTo(
+              dot,
+              { offsetDistance: "0%", opacity: 0 },
+              { offsetDistance: "100%", opacity: 1, duration: 1.9, ease: "none" },
+              at
+            ).to(dot, { opacity: 0, duration: 0.28, ease: "power1.in" }, at + 1.62);
+          }
+        });
+
+        window.__timelines["loop"] = tl;
+      })();
+    </script>
+  </body>
+</html>

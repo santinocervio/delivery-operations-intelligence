@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s5-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s5-kicker {
+          position: absolute;
+          left: 120px;
+          top: 122px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s5-head {
+          position: absolute;
+          left: 120px;
+          top: 158px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 60px;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s5-station {
+          position: absolute;
+          top: 292px;
+          width: 300px;
+          height: 152px;
+          background: #141011;
+          border: 1px solid #241c1e;
+          box-sizing: border-box;
+          padding: 20px 22px;
+        }
+        .s5-station-hot {
+          border-color: #ff2d55;
+        }
+        .s5-sname {
+          font-size: 16px;
+          line-height: 1.35;
+          color: #8a8084;
+          height: 44px;
+        }
+        .s5-smin {
+          font-size: 38px;
+          font-weight: 700;
+          font-variant-numeric: tabular-nums;
+          margin-top: 12px;
+          letter-spacing: -0.02em;
+        }
+        .s5-smin i {
+          font-size: 18px;
+          font-style: normal;
+          color: #8a8084;
+          font-weight: 400;
+          margin-left: 6px;
+        }
+        .s5-hotnum {
+          color: #ff2d55;
+        }
+        .s5-svg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+        .s5-chev {
+          stroke: #3c4249;
+          stroke-width: 2;
+          fill: none;
+        }
+        .s5-seg {
+          fill: #3c4249;
+        }
+        .s5-seg-hot {
+          fill: #ff2d55;
+        }
+        .s5-seglab {
+          font-size: 19px;
+          fill: #f5f1f2;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+          font-variant-numeric: tabular-nums;
+        }
+        .s5-seglab-on-accent {
+          fill: #0c0a0b;
+          font-weight: 700;
+        }
+        .s5-barlab {
+          position: absolute;
+          left: 120px;
+          font-size: 17px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s5-barlab b {
+          color: #f5f1f2;
+          font-weight: 400;
+          letter-spacing: 0.08em;
+        }
+        .s5-payoff {
+          position: absolute;
+          left: 120px;
+          top: 862px;
+          width: 1680px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 44px;
+          letter-spacing: -0.03em;
+          line-height: 1.16;
+        }
+        .s5-payoff em {
+          font-style: normal;
+          color: #ff2d55;
+        }
+        .s5-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s5-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s5-diagnosis" data-width="1920" data-height="1080" data-duration="7.4">
+        <div class="s5-grid" id="s5-grid" data-layout-allow-overflow></div>
+
+        <div class="s5-kicker" id="s5-kicker">04 — The diagnosis</div>
+        <h2 class="s5-head" id="s5-head">SO WHERE DOES THE TIME ACTUALLY GO?</h2>
+
+        <div class="s5-station s5-station-hot" id="s5-st0" style="left: 120px">
+          <div class="s5-sname">Created → rider notified</div>
+          <div class="s5-smin s5-hotnum">10.58<i>min</i></div>
+        </div>
+        <div class="s5-station" id="s5-st1" style="left: 465px">
+          <div class="s5-sname">Notified → accepted</div>
+          <div class="s5-smin">0.25<i>min</i></div>
+        </div>
+        <div class="s5-station" id="s5-st2" style="left: 810px">
+          <div class="s5-sname">Approach to merchant</div>
+          <div class="s5-smin">3.13<i>min</i></div>
+        </div>
+        <div class="s5-station" id="s5-st3" style="left: 1155px">
+          <div class="s5-sname">Waiting at pickup</div>
+          <div class="s5-smin">4.60<i>min</i></div>
+        </div>
+        <div class="s5-station" id="s5-st4" style="left: 1500px">
+          <div class="s5-sname">Pickup → destination</div>
+          <div class="s5-smin">7.17<i>min</i></div>
+        </div>
+
+        <div class="s5-barlab" id="s5-lab1" style="top: 512px">
+          Share of mean service time — <b>25.73 min</b>
+        </div>
+        <div class="s5-barlab" id="s5-lab2" style="top: 682px">
+          Share of the late-vs-on-time gap — <b>11.88 min</b>
+        </div>
+
+        <svg class="s5-svg" id="s5-svg" viewBox="0 0 1920 1080" fill="none">
+          <g id="s5-chevs"></g>
+          <g id="s5-bar1"></g>
+          <g id="s5-bar2"></g>
+        </svg>
+
+        <div class="s5-payoff" id="s5-payoff">
+          <em>51.0%</em> of the late-order gap accrues before a rider is even notified.
+        </div>
+
+        <div class="s5-source" id="s5-source">
+          Source — outputs/analysis/stage_summary.csv · stage_late_contrasts.csv
+        </div>
+        <div class="s5-counter" id="s5-counter">05 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          // Frozen in src/data/stages.json from outputs/analysis/
+          // stage_summary.csv + stage_late_contrasts.csv.
+          const TIME_SHARE = [
+            0.41129504254300103, 0.009552580384617641, 0.12178235388101773,
+            0.17878572187972927, 0.2785843013116341,
+          ];
+          const GAP_SHARE = [
+            0.5097087259420433, 0.0041803616026560774, 0.09040376627551287,
+            0.23984510450403704, 0.15586204167575074,
+          ];
+
+          const SVG = "http://www.w3.org/2000/svg";
+          const mk = (tag, attrs, cls) => {
+            const el = document.createElementNS(SVG, tag);
+            Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+            if (cls) el.setAttribute("class", cls);
+            return el;
+          };
+
+          const X0 = 120;
+          const W = 1680;
+          const GAP = 3;
+
+          // Chevrons between the five stations.
+          const chevs = document.getElementById("s5-chevs");
+          [420, 765, 1110, 1455].forEach((x) => {
+            const c = mk(
+              "path",
+              { d: `M ${x + 14} 360 L ${x + 28} 368 L ${x + 14} 376`, pathLength: 100 },
+              "s5-chev"
+            );
+            chevs.appendChild(c);
+          });
+
+          const buildBar = (groupId, shares, y, height, labelY) => {
+            const g = document.getElementById(groupId);
+            const segs = [];
+            let cursor = X0;
+            shares.forEach((share, i) => {
+              const w = share * W - (i < shares.length - 1 ? GAP : 0);
+              const r = mk(
+                "rect",
+                { x: cursor, y, width: Math.max(w, 2), height, id: `${groupId}-s${i}` },
+                i === 0 ? "s5-seg s5-seg-hot" : "s5-seg"
+              );
+              g.appendChild(r);
+              // Only label segments wide enough to hold the text; the station
+              // cards above already carry every stage's absolute minutes.
+              if (share >= 0.08) {
+                const t = mk(
+                  "text",
+                  { x: cursor + (share * W) / 2, y: labelY, id: `${groupId}-t${i}` },
+                  i === 0 ? "s5-seglab s5-seglab-on-accent" : "s5-seglab"
+                );
+                t.textContent = (share * 100).toFixed(1) + "%";
+                g.appendChild(t);
+              }
+              segs.push({ el: r, x: cursor });
+              cursor += share * W;
+            });
+            return segs;
+          };
+
+          const bar1 = buildBar("s5-bar1", TIME_SHARE, 552, 56, 587);
+          const bar2 = buildBar("s5-bar2", GAP_SHARE, 722, 56, 757);
+
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s5-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.4 }, 0)
+            .fromTo(
+              "#s5-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" },
+              0.02
+            )
+            .fromTo(
+              "#s5-head",
+              { opacity: 0, y: 24 },
+              { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" },
+              0.08
+            )
+            .fromTo(
+              ["#s5-st0", "#s5-st1", "#s5-st2", "#s5-st3", "#s5-st4"],
+              { opacity: 0, y: 26 },
+              { opacity: 1, y: 0, duration: 0.46, ease: "power3.out", stagger: 0.08 },
+              0.42
+            )
+            .fromTo(
+              "#s5-chevs path",
+              { strokeDasharray: 100, strokeDashoffset: 100 },
+              { strokeDashoffset: 0, duration: 0.3, ease: "power2.out", stagger: 0.08 },
+              0.62
+            );
+
+          const fill = (segs, groupId, at) => {
+            segs.forEach((s, i) => {
+              tl.fromTo(
+                s.el,
+                { scaleX: 0, transformOrigin: `${s.x}px center` },
+                { scaleX: 1, duration: 0.5, ease: "power3.out" },
+                at + i * 0.07
+              );
+            });
+            tl.fromTo(
+              `#${groupId} text`,
+              { opacity: 0 },
+              { opacity: 1, duration: 0.36, stagger: 0.05 },
+              at + 0.42
+            );
+          };
+
+          tl.fromTo("#s5-lab1", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.4 }, 1.26);
+          fill(bar1, "s5-bar1", 1.4);
+
+          tl.fromTo("#s5-lab2", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.4 }, 2.66);
+          fill(bar2, "s5-bar2", 2.8);
+
+          // The first stage is the finding: hold the eye on it in both bars.
+          tl.fromTo(
+            ["#s5-bar1-s0", "#s5-bar2-s0"],
+            { opacity: 1 },
+            { opacity: 0.55, duration: 0.22, ease: "power1.inOut" },
+            4.32
+          )
+            .to(["#s5-bar1-s0", "#s5-bar2-s0"], { opacity: 1, duration: 0.28, ease: "power1.inOut" }, 4.54)
+            .to("#s5-st0", { borderColor: "#ff2d55", duration: 0.3 }, 4.32);
+
+          tl.fromTo(
+            "#s5-payoff",
+            { opacity: 0, y: 22 },
+            { opacity: 1, y: 0, duration: 0.62, ease: "power3.out" },
+            4.9
+          ).fromTo(
+            ["#s5-source", "#s5-counter"],
+            { opacity: 0 },
+            { opacity: 1, duration: 0.44 },
+            0.6
+          );
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s5-grid", { x: -10, duration: 7.4, ease: "none" }, 0);
+
+          window.__timelines["s5-diagnosis"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

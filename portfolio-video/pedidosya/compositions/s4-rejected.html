@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0c0a0b;
+          font-family: "IBM Plex Mono", monospace;
+          color: #f5f1f2;
+        }
+        .s4-grid {
+          position: absolute;
+          inset: -40px;
+          background-image: linear-gradient(#241c1e 1px, transparent 1px),
+            linear-gradient(90deg, #241c1e 1px, transparent 1px);
+          background-size: 80px 80px;
+          opacity: 0.28;
+        }
+        .s4-kicker {
+          position: absolute;
+          left: 120px;
+          top: 122px;
+          font-size: 19px;
+          letter-spacing: 0.34em;
+          text-transform: uppercase;
+          color: #ff2d55;
+        }
+        .s4-head {
+          position: absolute;
+          left: 120px;
+          top: 158px;
+          width: 820px;
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 62px;
+          line-height: 1.04;
+          letter-spacing: -0.035em;
+          margin: 0;
+        }
+        .s4-hyp {
+          position: absolute;
+          left: 120px;
+          top: 372px;
+          width: 800px;
+          border-left: 4px solid #7a8794;
+          padding-left: 28px;
+          box-sizing: border-box;
+        }
+        .s4-hyp-label {
+          font-size: 17px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+          margin-bottom: 14px;
+        }
+        .s4-hyp-text {
+          font-size: 32px;
+          line-height: 1.42;
+          color: #f5f1f2;
+        }
+        .s4-stamp {
+          position: absolute;
+          left: 120px;
+          top: 604px;
+          border: 3px solid #ff2d55;
+          padding: 26px 34px;
+          box-sizing: border-box;
+          display: inline-block;
+        }
+        .s4-stamp-text {
+          font-family: "Archivo Black", sans-serif;
+          font-weight: 400;
+          font-size: 40px;
+          letter-spacing: -0.02em;
+          color: #ff2d55;
+          line-height: 1.12;
+        }
+        .s4-close {
+          position: absolute;
+          left: 120px;
+          top: 762px;
+          width: 810px;
+          font-size: 27px;
+          line-height: 1.5;
+          color: #f5f1f2;
+        }
+        .s4-close b {
+          color: #ff2d55;
+          font-weight: 400;
+        }
+        .s4-panel {
+          position: absolute;
+          left: 1000px;
+          top: 300px;
+          width: 800px;
+        }
+        .s4-plabel {
+          font-size: 17px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s4-cohorts {
+          margin-top: 18px;
+          font-size: 21px;
+          line-height: 1.7;
+          color: #f5f1f2;
+          font-variant-numeric: tabular-nums;
+        }
+        .s4-cohorts span {
+          color: #8a8084;
+        }
+        .s4-svg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+        .s4-axis {
+          stroke: #3c4249;
+          stroke-width: 1.5;
+        }
+        .s4-zero {
+          stroke: #ff2d55;
+          stroke-width: 2;
+          stroke-dasharray: 6 6;
+        }
+        .s4-ci {
+          fill: #7a8794;
+        }
+        .s4-cap {
+          stroke: #7a8794;
+          stroke-width: 3;
+        }
+        .s4-point {
+          fill: #ff2d55;
+        }
+        .s4-tick {
+          font-size: 16px;
+          fill: #8a8084;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+        }
+        .s4-endlab {
+          font-size: 18px;
+          fill: #7a8794;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+        }
+        .s4-pointlab {
+          font-size: 24px;
+          fill: #ff2d55;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+        }
+        .s4-zerolab {
+          font-size: 16px;
+          fill: #ff2d55;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+          letter-spacing: 0.12em;
+        }
+        .s4-qbar {
+          fill: #3c4249;
+        }
+        .s4-qval {
+          font-size: 19px;
+          fill: #f5f1f2;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+          font-variant-numeric: tabular-nums;
+        }
+        .s4-qlab {
+          font-size: 16px;
+          fill: #8a8084;
+          text-anchor: middle;
+          font-family: "IBM Plex Mono", monospace;
+        }
+        .s4-cinote {
+          position: absolute;
+          left: 1000px;
+          top: 636px;
+          width: 800px;
+          font-size: 19px;
+          line-height: 1.55;
+          color: #8a8084;
+        }
+        .s4-qnote {
+          position: absolute;
+          left: 1000px;
+          top: 724px;
+          font-size: 17px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s4-qcap {
+          position: absolute;
+          left: 1000px;
+          top: 942px;
+          width: 800px;
+          font-size: 19px;
+          color: #8a8084;
+        }
+        .s4-source {
+          position: absolute;
+          left: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #8a8084;
+        }
+        .s4-counter {
+          position: absolute;
+          right: 120px;
+          bottom: 62px;
+          font-size: 17px;
+          letter-spacing: 0.12em;
+          color: #8a8084;
+        }
+      </style>
+
+      <div id="root" data-composition-id="s4-rejected" data-width="1920" data-height="1080" data-duration="7">
+        <div class="s4-grid" id="s4-grid" data-layout-allow-overflow></div>
+
+        <div class="s4-kicker" id="s4-kicker">03 — The hypothesis</div>
+        <h2 class="s4-head" id="s4-head">TEST THE OBVIOUS EXPLANATION FIRST</h2>
+
+        <div class="s4-hyp" id="s4-hyp">
+          <div class="s4-hyp-label">Hypothesis</div>
+          <div class="s4-hyp-text">
+            More orders per observed rider-hour should mean more late orders.
+          </div>
+        </div>
+
+        <div class="s4-stamp" id="s4-stamp">
+          <div class="s4-stamp-text">NO VALIDATED</div>
+          <div class="s4-stamp-text">OPERATIONAL THRESHOLD</div>
+        </div>
+
+        <div class="s4-close" id="s4-close">
+          Re-tested on <b>10 held-out dates</b>. The hypothesis was dropped, not decorated.
+        </div>
+
+        <div class="s4-panel" id="s4-panel">
+          <div class="s4-plabel">High vs low orders per observed rider-hour</div>
+          <div class="s4-cohorts">
+            <div>108,510 orders <span>at high pressure —</span> 15.22% late &gt;5 min</div>
+            <div>59,818 orders <span>at low pressure —</span> 15.80% late &gt;5 min</div>
+          </div>
+        </div>
+
+        <svg class="s4-svg" id="s4-svg" viewBox="0 0 1920 1080" fill="none">
+          <g id="s4-ciplot"></g>
+          <g id="s4-quartiles"></g>
+        </svg>
+
+        <div class="s4-cinote" id="s4-cinote">
+          Difference −0.58 pp · 95% date-bootstrap interval [−2.14, +1.25] · 500 resamples.
+          The interval contains zero.
+        </div>
+
+        <div class="s4-qnote" id="s4-qnote">Threshold search — discovery quartiles</div>
+        <div class="s4-qcap" id="s4-qcap">
+          Late &gt;5 min does not deteriorate monotonically with pressure.
+        </div>
+
+        <div class="s4-source" id="s4-source">
+          Source — threshold_assessment.csv · temporal_holdout.csv · headline_contrasts.csv
+        </div>
+        <div class="s4-counter" id="s4-counter">04 / 09</div>
+      </div>
+
+      <script>
+        (() => {
+          // Frozen in src/data/rejected.json from
+          // outputs/analysis/{headline_contrasts,threshold_assessment,
+          // temporal_holdout,threshold_discovery_bins}.csv
+          const CI = { point: -0.5818112440532014, low: -2.13740881834429, high: 1.2494512143224108 };
+          const Q = [
+            ["Q1", 15.262828970210401],
+            ["Q2", 16.98792489521332],
+            ["Q3", 15.49929640851409],
+            ["Q4", 16.52745932962114],
+          ];
+
+          const SVG = "http://www.w3.org/2000/svg";
+          const mk = (tag, attrs, cls) => {
+            const el = document.createElementNS(SVG, tag);
+            Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+            if (cls) el.setAttribute("class", cls);
+            return el;
+          };
+
+          // ---- Confidence-interval number line --------------------------
+          const AX_L = 1020;
+          const AX_R = 1800;
+          const AX_Y = 560;
+          const MIN_PP = -3;
+          const MAX_PP = 2;
+          const px = (pp) => AX_L + ((pp - MIN_PP) / (MAX_PP - MIN_PP)) * (AX_R - AX_L);
+
+          const ci = document.getElementById("s4-ciplot");
+          ci.appendChild(mk("line", { x1: AX_L, y1: AX_Y, x2: AX_R, y2: AX_Y }, "s4-axis"));
+
+          [-3, -2, -1, 0, 1, 2].forEach((t) => {
+            ci.appendChild(mk("line", { x1: px(t), y1: AX_Y, x2: px(t), y2: AX_Y + 9 }, "s4-axis"));
+            const lab = mk("text", { x: px(t), y: AX_Y + 32 }, "s4-tick");
+            lab.textContent = (t > 0 ? "+" : "") + t;
+            ci.appendChild(lab);
+          });
+
+          const zero = mk(
+            "line",
+            { x1: px(0), y1: AX_Y - 92, x2: px(0), y2: AX_Y + 16, id: "s4-zeroline" },
+            "s4-zero"
+          );
+          ci.appendChild(zero);
+          const zlab = mk("text", { x: px(0), y: AX_Y - 104, id: "s4-zerolab" }, "s4-zerolab");
+          zlab.textContent = "NO EFFECT";
+          ci.appendChild(zlab);
+
+          const bar = mk(
+            "rect",
+            {
+              x: px(CI.low),
+              y: AX_Y - 9,
+              width: px(CI.high) - px(CI.low),
+              height: 18,
+              id: "s4-cibar",
+            },
+            "s4-ci"
+          );
+          ci.appendChild(bar);
+          [CI.low, CI.high].forEach((v, i) => {
+            ci.appendChild(
+              mk(
+                "line",
+                { x1: px(v), y1: AX_Y - 24, x2: px(v), y2: AX_Y + 24, id: `s4-cap${i}` },
+                "s4-cap"
+              )
+            );
+            const lab = mk("text", { x: px(v), y: AX_Y + 62, id: `s4-endlab${i}` }, "s4-endlab");
+            lab.textContent = (v > 0 ? "+" : "") + v.toFixed(2);
+            ci.appendChild(lab);
+          });
+          ci.appendChild(
+            mk("circle", { cx: px(CI.point), cy: AX_Y, r: 10, id: "s4-pt" }, "s4-point")
+          );
+          const ptLab = mk("text", { x: px(CI.point), y: AX_Y - 30, id: "s4-ptlab" }, "s4-pointlab");
+          ptLab.textContent = CI.point.toFixed(2) + " pp";
+          ci.appendChild(ptLab);
+
+          // ---- Discovery quartiles --------------------------------------
+          const qg = document.getElementById("s4-quartiles");
+          const Q_BASE = 900;
+          const Q_MIN = 14.5;
+          const Q_MAX = 17.5;
+          const qh = (v) => ((v - Q_MIN) / (Q_MAX - Q_MIN)) * 132;
+          const qbars = [];
+          Q.forEach(([label, value], i) => {
+            const x = 1020 + i * 200;
+            const h = qh(value);
+            const r = mk(
+              "rect",
+              { x, y: Q_BASE - h, width: 150, height: h, id: `s4-q${i}` },
+              "s4-qbar"
+            );
+            qg.appendChild(r);
+            qbars.push(r);
+            const val = mk("text", { x: x + 75, y: Q_BASE - h - 16 }, "s4-qval");
+            val.textContent = value.toFixed(2) + "%";
+            qg.appendChild(val);
+            const lab = mk("text", { x: x + 75, y: Q_BASE + 28 }, "s4-qlab");
+            lab.textContent = label;
+            qg.appendChild(lab);
+          });
+
+          // ---- Timeline --------------------------------------------------
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s4-grid", { opacity: 0 }, { opacity: 0.28, duration: 0.4 }, 0)
+            .fromTo(
+              "#s4-kicker",
+              { opacity: 0, x: -14 },
+              { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" },
+              0.02
+            )
+            .fromTo(
+              "#s4-head",
+              { opacity: 0, y: 24 },
+              { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" },
+              0.08
+            )
+            .fromTo(
+              "#s4-hyp",
+              { opacity: 0, x: -20 },
+              { opacity: 1, x: 0, duration: 0.52, ease: "power3.out" },
+              0.42
+            )
+            .fromTo(
+              "#s4-panel",
+              { opacity: 0, y: 20 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              0.9
+            );
+
+          // The number line builds: axis, then zero, then the interval grows
+          // outward from the point estimate so "it crosses zero" is the motion.
+          tl.fromTo("#s4-ciplot .s4-axis", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 1.3)
+            .fromTo("#s4-ciplot .s4-tick", { opacity: 0 }, { opacity: 1, duration: 0.4, stagger: 0.04 }, 1.4)
+            .fromTo(
+              ["#s4-zeroline", "#s4-zerolab"],
+              { opacity: 0 },
+              { opacity: 1, duration: 0.4, ease: "power2.out" },
+              1.6
+            )
+            .fromTo(
+              "#s4-pt",
+              { scale: 0, transformOrigin: "center center" },
+              { scale: 1, duration: 0.42, ease: "power3.out" },
+              1.9
+            )
+            .fromTo("#s4-ptlab", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 2.0)
+            .fromTo(
+              "#s4-cibar",
+              { scaleX: 0, transformOrigin: `${px(CI.point)}px center` },
+              { scaleX: 1, duration: 0.7, ease: "power2.out" },
+              2.15
+            )
+            .fromTo(
+              ["#s4-cap0", "#s4-cap1", "#s4-endlab0", "#s4-endlab1"],
+              { opacity: 0 },
+              { opacity: 1, duration: 0.36, stagger: 0.05 },
+              2.7
+            )
+            .fromTo(
+              "#s4-cinote",
+              { opacity: 0, y: 14 },
+              { opacity: 1, y: 0, duration: 0.46, ease: "power3.out" },
+              2.95
+            );
+
+          tl.fromTo(
+            "#s4-qnote",
+            { opacity: 0 },
+            { opacity: 1, duration: 0.36 },
+            3.5
+          );
+          qbars.forEach((b, i) => {
+            tl.fromTo(
+              b,
+              { scaleY: 0, transformOrigin: "center bottom" },
+              { scaleY: 1, duration: 0.44, ease: "power3.out" },
+              3.6 + i * 0.09
+            );
+          });
+          tl.fromTo(
+            ["#s4-quartiles text"],
+            { opacity: 0 },
+            { opacity: 1, duration: 0.36, stagger: 0.04 },
+            3.8
+          ).fromTo("#s4-qcap", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 4.3);
+
+          // The single permitted hit in the whole film.
+          tl.fromTo(
+            "#s4-stamp",
+            { opacity: 0, scale: 1.18 },
+            { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out", transformOrigin: "left center" },
+            4.75
+          )
+            .to("#s4-stamp", { x: 5, duration: 0.04, ease: "none" }, 5.05)
+            .to("#s4-stamp", { x: -4, duration: 0.04, ease: "none" }, 5.09)
+            .to("#s4-stamp", { x: 0, duration: 0.04, ease: "none" }, 5.13)
+            .fromTo(
+              "#s4-close",
+              { opacity: 0, y: 16 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              5.3
+            );
+
+          tl.fromTo(
+            ["#s4-source", "#s4-counter"],
+            { opacity: 0 },
+            { opacity: 1, duration: 0.44 },
+            0.6
+          );
+
+          // Ambient drift: the grid never stops moving, so a reading
+          // hold reads as a held shot rather than a frozen frame.
+          tl.to("#s4-grid", { x: -10, duration: 7.0, ease: "none" }, 0);
+
+          window.__timelines["s4-rejected"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
