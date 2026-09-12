@@ -1,0 +1,62 @@
+{
+  "source": "outputs/analysis/stage_summary.csv + stage_late_contrasts.csv",
+  "total_mean_min": 25.73323463277163,
+  "total_difference_min": 11.87661140646377,
+  "rows": [
+    {
+      "stage": "t_created_to_notify_min",
+      "label": "Creation to final rider notification",
+      "short": "Created → rider notified",
+      "position": 1,
+      "mean_min": 10.583951833054835,
+      "p90_min": 23.92657995333333,
+      "share_total_time": 0.41129504254300103,
+      "late_gap_min": 6.053612468497388,
+      "share_of_gap": 0.5097087259420433
+    },
+    {
+      "stage": "t_notify_to_accept_min",
+      "label": "Final rider notification to acceptance",
+      "short": "Notified → accepted",
+      "position": 2,
+      "mean_min": 0.2458187923857776,
+      "p90_min": 0.5371326716666666,
+      "share_total_time": 0.009552580384617641,
+      "late_gap_min": 0.04964853029324834,
+      "share_of_gap": 0.0041803616026560774
+    },
+    {
+      "stage": "t_accept_to_pu_arrival_min",
+      "label": "Final rider approach to merchant",
+      "short": "Approach to merchant",
+      "position": 3,
+      "mean_min": 3.133853886551456,
+      "p90_min": 6.597775978333334,
+      "share_total_time": 0.12178235388101773,
+      "late_gap_min": 1.0736904017350408,
+      "share_of_gap": 0.09040376627551287
+    },
+    {
+      "stage": "t_wait_at_pu_min",
+      "label": "Final rider waiting at pickup",
+      "short": "Waiting at pickup",
+      "position": 4,
+      "mean_min": 4.600734930120526,
+      "p90_min": 9.815682968333334,
+      "share_total_time": 0.17878572187972927,
+      "late_gap_min": 2.848547103937141,
+      "share_of_gap": 0.23984510450403704
+    },
+    {
+      "stage": "t_last_mile_min",
+      "label": "Pickup to destination arrival",
+      "short": "Pickup → destination",
+      "position": 5,
+      "mean_min": 7.168875190659029,
+      "p90_min": 12.558203813333332,
+      "share_total_time": 0.2785843013116341,
+      "late_gap_min": 1.8511129020009527,
+      "share_of_gap": 0.15586204167575074
+    }
+  ]
+}

@@ -101,3 +101,9 @@ portfolio-video/*/.hyperframes/
 # without vendoring 19 MB of third-party skill content into this repository.
 .agents/
 .claude/skills/
+
+# Exception to the blanket data/ rule above: the film's frozen extracts are
+# aggregate values already published in outputs/analysis/, not row-level
+# records. Without them the compositions cannot be traced back to source.
+!portfolio-video/pedidosya/src/data/
+!portfolio-video/pedidosya/src/data/*.json

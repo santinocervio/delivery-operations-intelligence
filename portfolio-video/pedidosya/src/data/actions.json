@@ -1,0 +1,74 @@
+{
+  "source": "outputs/analysis/priorities.csv + outputs/executive_findings.json",
+  "disclaimer": "Intervention effects are untested pilots, not measured savings.",
+  "rows": [
+    {
+      "priority": 1,
+      "issue": "Long initial interval",
+      "trigger": "Creation-to-final-notification > observed P90 (23.927 min); descriptive case-review cutoff",
+      "action": "Instrument first dispatch and reassignment; review high-delay orders before testing an escalation workflow.",
+      "monitoring_kpi": "P90 creation-to-final-notification, late >5min, completion, recorded cost per reviewed order",
+      "trade_off": "Premature escalation and manual review add effort; validate a small pilot.",
+      "affected_orders": 33238,
+      "affected_share": 0.09947208389197472,
+      "late5_rate": 0.4862807629821289,
+      "service_mean_min": 51.02284583909983,
+      "reference_mean_min": 22.91400174945956,
+      "confidence": "Supported descriptive cohort; intervention effect untested"
+    },
+    {
+      "priority": 2,
+      "issue": "Pickup waiting tail",
+      "trigger": "Final-rider pickup waiting > observed P90 (9.816 min)",
+      "action": "Review merchant readiness and rider arrival coordination in supported merchant cohorts.",
+      "monitoring_kpi": "Pickup wait P90, service P90, late >5min, completion",
+      "trade_off": "Later rider arrival can reduce waiting but delay delivery if readiness is misestimated.",
+      "affected_orders": 33238,
+      "affected_share": 0.09947208389197472,
+      "late5_rate": 0.4638365725976292,
+      "service_mean_min": 34.66202840122751,
+      "reference_mean_min": 24.731882507632992,
+      "confidence": "Supported descriptive cohort; intervention effect untested"
+    },
+    {
+      "priority": 3,
+      "issue": "Repeated pre events",
+      "trigger": "At least four recorded pre events; a review cohort, not a calibrated optimum",
+      "action": "Pilot exception review and capture why repeated assignments fail.",
+      "monitoring_kpi": "Time to final notification, pre-event count, completion, late >5min, recorded cost",
+      "trade_off": "Intervention can increase incentives or manual work; measure the trade-off.",
+      "affected_orders": 10472,
+      "affected_share": 0.03133978165102471,
+      "late5_rate": 0.670585967617579,
+      "service_mean_min": 45.880647648419426,
+      "reference_mean_min": 25.07541640528113,
+      "confidence": "Supported descriptive cohort; intervention effect untested"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "title": "The main measured deterioration occurs before the final rider notification",
+      "observation": "Creation to final notification averages 10.58 minutes. It contributes 6.05 minutes, or 51.0%, of the late-versus-on-time duration difference. Pickup waiting contributes 24.0%.",
+      "action": "Capture first-dispatch, offer, acceptance and reassignment timestamps. Review long initial intervals before choosing a dispatch intervention.",
+      "confidence": "Strong descriptive evidence",
+      "limitation": "A time decomposition identifies where time accrues; it does not identify a causal dispatch mechanism."
+    },
+    {
+      "id": "F02",
+      "title": "A small repeated-pre-event cohort concentrates operational problems",
+      "observation": "10,472 orders with at least four pre events represent 3.1% of orders with known pre counts and 36.6% of recorded pre events. Their completed orders average 45.88 minutes; 67.1% exceed the promise by more than five minutes.",
+      "action": "Pilot review after four recorded pre events, checking unresolved assignment and merchant readiness. Track time to final notification, completion, late >5 minutes and recorded cost per reviewed order.",
+      "confidence": "Strong concentration evidence; pilot effect untested",
+      "limitation": "Four is a diagnostic grouping, not an optimized trigger. Final-state counters do not reveal attempt order, offer compensation or rejecting rider identity."
+    },
+    {
+      "id": "F03",
+      "title": "Longer recorded delivery distances identify a high-pre-event population",
+      "observation": "Orders with recorded dropoff distance above 3 km have 47.9% pre-event incidence, versus 17.3% at 1 km or less. The difference is 30.59 percentage points, with a 95% date-bootstrap interval of 29.49–31.61 points.",
+      "action": "Review long-distance offers by service vertical and clock hour, logging offered compensation, assignment sequence and time to final notification. Test an assignment-policy change with pre incidence, service tails and recorded cost guardrails.",
+      "confidence": "Strong descriptive association; pricing mechanism untested",
+      "limitation": "Distance units follow the project's metre interpretation; route and offer-level evidence is incomplete. This supports targeted investigation rather than a causal price recommendation."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "source": "outputs/analysis/operational_segments.csv (family=hour, dimension=hora_num)",
+  "note": "Source timezone is undocumented; hours are as recorded.",
+  "rows": [
+    {
+      "hour": 0,
+      "orders": 6832,
+      "mean_min": 20.680053596892364,
+      "late5_rate": 0.10148989526478831,
+      "pre_rate": 0.28337236533957844,
+      "support": true
+    },
+    {
+      "hour": 1,
+      "orders": 3749,
+      "mean_min": 19.567021754764472,
+      "late5_rate": 0.10652642934196332,
+      "pre_rate": 0.25500133368898376,
+      "support": true
+    },
+    {
+      "hour": 2,
+      "orders": 475,
+      "mean_min": 22.62212825933756,
+      "late5_rate": 0.16701902748414377,
+      "pre_rate": 0.3684210526315789,
+      "support": true
+    },
+    {
+      "hour": 3,
+      "orders": 26,
+      "mean_min": 54.16866666666667,
+      "late5_rate": 0.52,
+      "pre_rate": 0.15384615384615385,
+      "support": false
+    },
+    {
+      "hour": 4,
+      "orders": 3,
+      "mean_min": 80.26666666666667,
+      "late5_rate": 0.5,
+      "pre_rate": 0.0,
+      "support": false
+    },
+    {
+      "hour": 5,
+      "orders": 12,
+      "mean_min": 115.40185185185184,
+      "late5_rate": 0.8888888888888888,
+      "pre_rate": 0.25,
+      "support": false
+    },
+    {
+      "hour": 6,
+      "orders": 37,
+      "mean_min": 53.9530303030303,
+      "late5_rate": 0.6060606060606061,
+      "pre_rate": 0.4594594594594595,
+      "support": false
+    },
+    {
+      "hour": 7,
+      "orders": 1295,
+      "mean_min": 27.312805358550037,
+      "late5_rate": 0.20567375886524822,
+      "pre_rate": 0.3250965250965251,
+      "support": true
+    },
+    {
+      "hour": 8,
+      "orders": 4097,
+      "mean_min": 23.22734381396872,
+      "late5_rate": 0.16556128715303364,
+      "pre_rate": 0.23944349524041983,
+      "support": true
+    },
+    {
+      "hour": 9,
+      "orders": 7468,
+      "mean_min": 22.15711562612128,
+      "late5_rate": 0.15379440258342303,
+      "pre_rate": 0.22455811462238887,
+      "support": true
+    },
+    {
+      "hour": 10,
+      "orders": 8855,
+      "mean_min": 22.33587721289151,
+      "late5_rate": 0.16874716295960054,
+      "pre_rate": 0.22834556747600226,
+      "support": true
+    },
+    {
+      "hour": 11,
+      "orders": 13351,
+      "mean_min": 23.508021350172903,
+      "late5_rate": 0.1656141933543828,
+      "pre_rate": 0.2162121666167216,
+      "support": true
+    },
+    {
+      "hour": 12,
+      "orders": 25931,
+      "mean_min": 25.843159049832174,
+      "late5_rate": 0.1512006196746708,
+      "pre_rate": 0.23752410335518703,
+      "support": true
+    },
+    {
+      "hour": 13,
+      "orders": 26708,
+      "mean_min": 26.08942157047064,
+      "late5_rate": 0.15344989659710473,
+      "pre_rate": 0.2582094581944808,
+      "support": true
+    },
+    {
+      "hour": 14,
+      "orders": 21935,
+      "mean_min": 24.561646439203116,
+      "late5_rate": 0.16354476757499428,
+      "pre_rate": 0.2772737633918395,
+      "support": true
+    },
+    {
+      "hour": 15,
+      "orders": 16035,
+      "mean_min": 24.462208500501507,
+      "late5_rate": 0.1841148445336008,
+      "pre_rate": 0.29722482070470846,
+      "support": true
+    },
+    {
+      "hour": 16,
+      "orders": 13328,
+      "mean_min": 24.963791066535958,
+      "late5_rate": 0.1810572355026016,
+      "pre_rate": 0.31842737094837936,
+      "support": true
+    },
+    {
+      "hour": 17,
+      "orders": 12692,
+      "mean_min": 25.73718953730831,
+      "late5_rate": 0.18853432575817564,
+      "pre_rate": 0.3035770564134888,
+      "support": true
+    },
+    {
+      "hour": 18,
+      "orders": 15318,
+      "mean_min": 26.333464498076253,
+      "late5_rate": 0.17864637985309548,
+      "pre_rate": 0.2704008356182269,
+      "support": true
+    },
+    {
+      "hour": 19,
+      "orders": 28921,
+      "mean_min": 26.971109451699547,
+      "late5_rate": 0.15865518199499862,
+      "pre_rate": 0.24155457971716054,
+      "support": true
+    },
+    {
+      "hour": 20,
+      "orders": 45112,
+      "mean_min": 27.693648336637047,
+      "late5_rate": 0.14076037328225574,
+      "pre_rate": 0.23514807589998227,
+      "support": true
+    },
+    {
+      "hour": 21,
+      "orders": 38693,
+      "mean_min": 28.85419363503245,
+      "late5_rate": 0.15227054144680408,
+      "pre_rate": 0.25532409800475553,
+      "support": true
+    },
+    {
+      "hour": 22,
+      "orders": 27424,
+      "mean_min": 25.592684672122125,
+      "late5_rate": 0.1466368206671315,
+      "pre_rate": 0.2613768961493582,
+      "support": true
+    },
+    {
+      "hour": 23,
+      "orders": 15847,
+      "mean_min": 22.05567260768088,
+      "late5_rate": 0.13456397199236156,
+      "pre_rate": 0.27708714583201866,
+      "support": true
+    }
+  ]
+}

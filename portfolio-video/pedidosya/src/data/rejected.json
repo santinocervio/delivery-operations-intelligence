@@ -1,0 +1,58 @@
+{
+  "source": "outputs/analysis/headline_contrasts.csv, threshold_assessment.csv, temporal_holdout.csv, threshold_discovery_bins.csv",
+  "pressure_contrast": {
+    "label": "High vs low orders per observed rider-hour",
+    "metric": "Late >5 min incidence",
+    "exposed_orders": 108510,
+    "reference_orders": 59818,
+    "exposed_mean": 0.1521610911436734,
+    "reference_mean": 0.15797920358420542,
+    "difference_pp": -0.5818112440532014,
+    "ci_low_pp": -2.13740881834429,
+    "ci_high_pp": 1.2494512143224108,
+    "bootstrap_samples": 500
+  },
+  "threshold": {
+    "status": "No validated operational threshold",
+    "candidate_cutoff": 2.4094047215497802,
+    "discovery_dates": 20,
+    "holdout_dates": 10,
+    "validated": false
+  },
+  "discovery_bins": [
+    {
+      "bin": "Q1",
+      "late5_rate": 0.15262828970210401,
+      "orders": 29048
+    },
+    {
+      "bin": "Q2",
+      "late5_rate": 0.1698792489521332,
+      "orders": 76500
+    },
+    {
+      "bin": "Q3",
+      "late5_rate": 0.1549929640851409,
+      "orders": 79244
+    },
+    {
+      "bin": "Q4",
+      "late5_rate": 0.1652745932962114,
+      "orders": 36829
+    }
+  ],
+  "holdout": [
+    {
+      "split": "discovery",
+      "difference_pp": 0.44878257898182117,
+      "ci_low_pp": -0.683230167320434,
+      "ci_high_pp": 1.5998044824704072
+    },
+    {
+      "split": "holdout",
+      "difference_pp": -1.0330793310932174,
+      "ci_low_pp": -1.7761434005814944,
+      "ci_high_pp": -0.3726526602472507
+    }
+  ]
+}

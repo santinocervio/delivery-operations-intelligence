@@ -1,0 +1,55 @@
+{
+  "source": "outputs/analysis/headline_contrasts.csv, operational_segments.csv, outputs/executive_findings.json#F02",
+  "cohort": {
+    "orders": 10472,
+    "order_share": 0.03134034440859765,
+    "pre_event_share": 0.3662970400768358,
+    "service_mean_min": 45.880647648419426,
+    "late5_rate": 0.670585967617579,
+    "reference_mean_min": 25.075218946819213,
+    "difference_min": 20.805428701600214,
+    "ci_low": 19.979693340801607,
+    "ci_high": 21.75169747277198
+  },
+  "distance": {
+    "long_pre_rate": 0.479305218683984,
+    "short_pre_rate": 0.17336590171456334,
+    "difference_pp": 30.593931696942068,
+    "ci_low_pp": 29.48558933723757,
+    "ci_high_pp": 31.607347203470265,
+    "long_orders": 25562,
+    "short_orders": 148201
+  },
+  "restaurant_ladder": [
+    {
+      "band": "<=0.5km",
+      "orders": 52968,
+      "mean_min": 19.655847400448113,
+      "pre_rate": 0.15591428301708676
+    },
+    {
+      "band": "0.5-1km",
+      "orders": 79195,
+      "mean_min": 22.863473797604712,
+      "pre_rate": 0.1867037060420481
+    },
+    {
+      "band": "1-2km",
+      "orders": 94675,
+      "mean_min": 27.663830035294495,
+      "pre_rate": 0.2717670296705502
+    },
+    {
+      "band": "2-3km",
+      "orders": 36357,
+      "mean_min": 33.14659730654598,
+      "pre_rate": 0.3867205765052122
+    },
+    {
+      "band": ">3km",
+      "orders": 18653,
+      "mean_min": 36.820982735723774,
+      "pre_rate": 0.4656873257559511
+    }
+  ]
+}

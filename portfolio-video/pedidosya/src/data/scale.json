@@ -1,0 +1,19 @@
+{
+  "source": "outputs/analysis/kpis.csv, outputs/manifest.json, outputs/executive_findings.json#F04",
+  "orders": 334144,
+  "dates": 32,
+  "hours": 650,
+  "source_files": 4,
+  "cost_records": 347644,
+  "shift_records": 176235,
+  "weather_rows": 2136,
+  "mean_min": 25.724903072204942,
+  "median_min": 23.016666666666666,
+  "p90_min": 41.96666666666667,
+  "late5_rate": 0.15592788933082213,
+  "pre_rate": 0.25813286725843815,
+  "recorded_cost_mean": 344.6044492719954,
+  "rider_hours": 193500.7220613889,
+  "throughput": 1.7267894219743238,
+  "completed_orders": 332378
+}
